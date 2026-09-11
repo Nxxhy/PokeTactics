@@ -14,11 +14,13 @@ class Publisher : PixelForm {
  readonly System.Windows.Forms.Timer timer = new() { Interval=30000 };
  readonly string preferences=Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"PokeTacticsPublisher");
  bool busy;
+ string gitToken="";
  public Publisher() : base("POKÉ TACTICS · GITHUB RELEASES") {
   Size=new Size(880,1000);
   Label("Spiel-Repository · Eigentümer/Repository"); repository=Input("Nxxhy/PokeTactics"); repository.ReadOnly=true;
   Label("Persönlicher GitHub-Token · Actions: Write und Contents: Write").Height=80;
   token=Input(); token.UseSystemPasswordChar=true;
+  Button("Vorhandene GitHub-Anmeldung von Git verwenden",()=>_ = Run(UseGitLogin));
   Button("Zugang Windows-geschützt speichern",()=>{
    Directory.CreateDirectory(preferences); SecureStore.Save(Path.Combine(preferences,"github-token.bin"),token.Text); status!.Text="Zugang nur für diesen Windows-Benutzer gespeichert.";
   });
@@ -33,16 +35,32 @@ class Publisher : PixelForm {
   publish=Button("Ausgewählten fertigen Entwurf veröffentlichen",()=>_ = Run(Publish));
   Label("Auch direkt in GitHub veröffentlichte Releases verwenden dieselben signierten Dateien. Keine lokalen Paket-Uploads mehr.").Height=100;
   try { if(File.Exists(Path.Combine(preferences,"github-token.bin"))) token.Text=SecureStore.Load(Path.Combine(preferences,"github-token.bin")); } catch { status.Text="Gespeicherten GitHub-Zugang bitte erneuern."; }
-  timer.Tick+=async(_,_)=>{ if(!string.IsNullOrWhiteSpace(token.Text)) await Run(RefreshStatus); };
+  timer.Tick+=async(_,_)=>{ if(!string.IsNullOrWhiteSpace(token.Text)||gitToken.Length>0) await Run(RefreshStatus); };
   Shown+=(_,_)=>timer.Start(); Disposed+=(_,_)=>timer.Dispose();
   FormClosing+=(_,e)=>{if(busy){e.Cancel=true;status.Text="Bitte laufende GitHub-Anfrage abwarten.";}};
  }
  async Task Run(Func<Task> action) { if(busy)return; busy=true; publish.Enabled=false; try {await action();} catch(Exception e){status.Text=e.Message;} finally {busy=false;publish.Enabled=true;} }
+ async Task UseGitLogin() {
+  var start=new ProcessStartInfo("git") {UseShellExecute=false,CreateNoWindow=true,RedirectStandardInput=true,RedirectStandardOutput=true,RedirectStandardError=true,ArgumentList={"credential","fill"}};
+  start.Environment["GIT_TERMINAL_PROMPT"]="0"; start.Environment["GCM_INTERACTIVE"]="Never";
+  using var process=Process.Start(start) ?? throw new Exception("Git konnte nicht gestartet werden.");
+  try {
+   var output=process.StandardOutput.ReadToEndAsync();var error=process.StandardError.ReadToEndAsync();
+   await process.StandardInput.WriteAsync("protocol=https\nhost=github.com\npath=Nxxhy/PokeTactics.git\n\n");process.StandardInput.Close();
+   using var deadline=new CancellationTokenSource(TimeSpan.FromSeconds(15));await process.WaitForExitAsync(deadline.Token);
+   var text=await output;await error;
+   if(process.ExitCode!=0) throw new Exception("Keine bestehende GitHub-Anmeldung gefunden. Git anmelden oder persönlichen Token eingeben.");
+   gitToken=text.Split('\n').FirstOrDefault(l=>l.StartsWith("password="))?[9..].TrimEnd('\r') ?? "";
+   if(gitToken.Length==0)throw new Exception("Git hat keinen GitHub-Zugang bereitgestellt.");
+   await RefreshStatus();status.Text="Bestehende GitHub-Anmeldung verbunden. Zugang bleibt nur im Arbeitsspeicher dieser Entwickler-App.";
+  } finally {if(!process.HasExited)process.Kill();}
+ }
  async Task<JsonElement> Api(HttpMethod method,string path,object? body=null) {
   GitHubUpdates.ValidateRepository(repository.Text);
-  if(string.IsNullOrWhiteSpace(token.Text)) throw new Exception("GitHub-Zugang fehlt. Token nur hier in der Entwickler-App eingeben.");
+  var access=string.IsNullOrWhiteSpace(token.Text)?gitToken:token.Text;
+  if(string.IsNullOrWhiteSpace(access)) throw new Exception("GitHub-Zugang fehlt. Vorhandene Git-Anmeldung verbinden oder Token in der Entwickler-App eingeben.");
   using var client=Files.Client();
-  using var q=GitHubUpdates.Request(method,new Uri($"https://api.github.com/repos/{repository.Text}/{path}"),token.Text);
+  using var q=GitHubUpdates.Request(method,new Uri($"https://api.github.com/repos/{repository.Text}/{path}"),access);
   if(body!=null) q.Content=new StringContent(JsonSerializer.Serialize(body),Encoding.UTF8,"application/json");
   using var timeout=new CancellationTokenSource(TimeSpan.FromSeconds(30));
   using var response=await client.SendAsync(q,timeout.Token);
@@ -74,7 +92,7 @@ class Publisher : PixelForm {
   if(!File.Exists(configPath)) throw new Exception("updates.json mit dem öffentlichen Signierschlüssel fehlt neben der Entwickler-App.");
   var config=Files.Read<UpdateConfig>(configPath);
   if(config.Repository!=repository.Text) throw new Exception("Signierkonfiguration gehört zu einem anderen Repository.");
-  using var updates=new GitHubUpdates(config,Path.Combine(preferences,"unused-cache.json"),token.Text);
+  using var updates=new GitHubUpdates(config,Path.Combine(preferences,"unused-cache.json"),string.IsNullOrWhiteSpace(token.Text)?gitToken:token.Text);
   var offer=await updates.Validate(release);
   if(!release.Draft) throw new Exception("Release ist bereits veröffentlicht.");
   if(MessageBox.Show($"{config.Repository}: {offer.Manifest.Version} mit geprüfter Signatur jetzt öffentlich veröffentlichen?","Release veröffentlichen",MessageBoxButtons.YesNo)!=DialogResult.Yes) return;

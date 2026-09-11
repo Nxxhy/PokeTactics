@@ -4,15 +4,15 @@ if($env:GITHUB_REPOSITORY -ne 'Nxxhy/PokeTactics') { throw 'Release publishing i
 $headers=@{Authorization="Bearer $env:GH_TOKEN";Accept='application/vnd.github+json';'X-GitHub-Api-Version'='2026-03-10';'User-Agent'='PokeTactics-Release'}
 $api='https://api.github.com/repos/Nxxhy/PokeTactics'
 $tag="v$Version"
+$existing=$null
 for($page=1;;$page++) {
  $rows=@(Invoke-RestMethod "$api/releases?per_page=100&page=$page" -Headers $headers)
  foreach($row in $rows) {
+  if($row.tag_name -eq $tag) {$existing=$row}
   if($row.tag_name -match '^v(\d+)\.(\d+)\.(\d+)$' -and !$row.prerelease -and [version]$row.tag_name.Substring(1) -gt [version]$Version) {throw 'A higher stable version already exists'}
  }
  if($rows.Count -lt 100) {break}
 }
-$existing=$null
-try { $existing=Invoke-RestMethod "$api/releases/tags/$tag" -Headers $headers } catch { if([int]$_.Exception.Response.StatusCode -ne 404) { throw } }
 $notes=if($NotesFile -and (Test-Path -LiteralPath $NotesFile)){Get-Content -LiteralPath $NotesFile -Raw}else{"Poké Tactics $tag"}
 if(!$existing) {
  $existing=Invoke-RestMethod "$api/releases" -Method Post -Headers $headers -ContentType 'application/json' -Body (@{tag_name=$tag;target_commitish=$Commit;name=$tag;body=$notes;draft=$true;prerelease=$false} | ConvertTo-Json)
