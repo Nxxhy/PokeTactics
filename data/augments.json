@@ -1,0 +1,473 @@
+[
+  {
+    "id": "grant",
+    "name": "Reisekasse",
+    "description": "Sofort +12 Gold.",
+    "gold": 12
+  },
+  {
+    "id": "win_gold",
+    "name": "Siegesprämie",
+    "description": "Nach jedem Sieg +3 Gold.",
+    "win_gold": 3
+  },
+  {
+    "id": "loss_gold",
+    "name": "Rückendeckung",
+    "description": "Nach jeder Niederlage +4 Gold.",
+    "loss_gold": 4
+  },
+  {
+    "id": "saver",
+    "name": "Sparvertrag",
+    "description": "Ab 50 Gold vor Auszahlung +2 Bonusgold je gewertetem Kampf. Zinsen bleiben maximal 5.",
+    "saver": 2
+  },
+  {
+    "id": "xp_round",
+    "name": "Feldstudium",
+    "description": "Nach jedem gewerteten Kampf +2 EP.",
+    "xp_round": 2
+  },
+  {
+    "id": "xp_buy",
+    "name": "Lerntempo",
+    "description": "EP-Käufe geben 6 statt 4 EP für 4 Gold.",
+    "xp_buy": 2
+  },
+  {
+    "id": "free_roll",
+    "name": "Frische Auswahl",
+    "description": "Ein kostenloser Shopwechsel sofort und nach jedem gewerteten Kampf. Nicht ansparbar.",
+    "free_roll": 1
+  },
+  {
+    "id": "discount",
+    "name": "Treuerabatt",
+    "description": "Der erste Kauf sofort und nach jedem gewerteten Kampf kostet 1 Gold weniger, mindestens 1.",
+    "discount": 1
+  },
+  {
+    "id": "dividend",
+    "name": "Vielfaltsprämie",
+    "description": "Mit mindestens 4 verschiedenen Typen auf dem Feld +2 Gold je gewertetem Kampf.",
+    "dividend": 2
+  },
+  {
+    "id": "underdog",
+    "name": "Kleines Budget",
+    "description": "Mit mindestens 3 verschiedenen Kosten-1-Linien auf dem Feld +3 Gold je gewertetem Kampf.",
+    "underdog": 3
+  },
+  {
+    "id": "front",
+    "name": "Vorhut",
+    "description": "Start in vorderster eigener Reihe: +25 Rüstung.",
+    "condition": "front",
+    "mods": {
+      "armor": 25
+    }
+  },
+  {
+    "id": "back",
+    "name": "Rückendeckung aus der Ferne",
+    "description": "Start in hinterster eigener Reihe: +25 % Fähigkeitsstärke.",
+    "condition": "back",
+    "mods": {
+      "power_pct": 0.25
+    }
+  },
+  {
+    "id": "solo",
+    "name": "Einzelkämpfer",
+    "description": "Ohne orthogonal benachbarten Verbündeten beim Start: +25 % Angriff.",
+    "condition": "solo",
+    "mods": {
+      "attack_pct": 0.25
+    }
+  },
+  {
+    "id": "neighbors",
+    "name": "Schulter an Schulter",
+    "description": "Mit orthogonal benachbartem Verbündeten beim Start: +20 % Leben.",
+    "condition": "neighbors",
+    "mods": {
+      "hp_pct": 0.2
+    }
+  },
+  {
+    "id": "edges",
+    "name": "Flankenwache",
+    "description": "Start in äußerster linker oder rechter Spalte: Schild in Höhe von 25 % maximalem Leben.",
+    "condition": "edges",
+    "mods": {
+      "shield_pct": 0.25
+    }
+  },
+  {
+    "id": "center",
+    "name": "Mittelfeld",
+    "description": "Start in mittlerer Spalte: +30 Startmana.",
+    "condition": "center",
+    "mods": {
+      "start_mana": 30
+    }
+  },
+  {
+    "id": "pairs",
+    "name": "Doppelaufstellung",
+    "description": "Mit einer zweiten Einheit derselben Linie auf dem Feld: +20 % Angriff.",
+    "condition": "pairs",
+    "mods": {
+      "attack_pct": 0.2
+    }
+  },
+  {
+    "id": "mono",
+    "name": "Spezialisten",
+    "description": "Pokémon mit genau einem Typ: +20 % Leben und +20 Rüstung.",
+    "condition": "mono",
+    "mods": {
+      "hp_pct": 0.2,
+      "armor": 20
+    }
+  },
+  {
+    "id": "diverse",
+    "name": "Bunte Mannschaft",
+    "description": "Bei mindestens 6 verschiedenen Teamtypen: alle +20 % Fähigkeitsstärke.",
+    "condition": "diverse",
+    "mods": {
+      "power_pct": 0.2
+    }
+  },
+  {
+    "id": "lowcost",
+    "name": "Kleine Helden",
+    "description": "Kosten-1- und Kosten-2-Pokémon: +25 % Leben.",
+    "condition": "lowcost",
+    "mods": {
+      "hp_pct": 0.25
+    }
+  },
+  {
+    "id": "tank_battery",
+    "name": "Schmerzspeicher",
+    "description": "Tanks: zusätzlich 10 Mana pro Treffer mit Lebensverlust.",
+    "condition": "Tank",
+    "mods": {
+      "hit_mana": 10
+    }
+  },
+  {
+    "id": "attacker_battery",
+    "name": "Angriffsrhythmus",
+    "description": "Angreifer: zusätzlich 8 Mana pro normalem Angriff.",
+    "condition": "Angreifer",
+    "mods": {
+      "attack_mana": 8
+    }
+  },
+  {
+    "id": "mage_battery",
+    "name": "Meditation",
+    "description": "Magier: zusätzlich 6 Mana pro Sekunde.",
+    "condition": "Magier",
+    "mods": {
+      "passive_mana": 6
+    }
+  },
+  {
+    "id": "support_battery",
+    "name": "Hilfsbereitschaft",
+    "description": "Unterstützer: +35 % ausgehende Heilung.",
+    "condition": "Unterstützer",
+    "mods": {
+      "healing": 0.35
+    }
+  },
+  {
+    "id": "grass_count",
+    "name": "Pflanzenbund",
+    "description": "Dein Team zählt für Pflanze als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit.",
+    "emblem": "Pflanze"
+  },
+  {
+    "id": "fire_count",
+    "name": "Feuerbund",
+    "description": "Dein Team zählt für Feuer als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit.",
+    "emblem": "Feuer"
+  },
+  {
+    "id": "water_count",
+    "name": "Wasserbund",
+    "description": "Dein Team zählt für Wasser als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit.",
+    "emblem": "Wasser"
+  },
+  {
+    "id": "electric_count",
+    "name": "Elektrobund",
+    "description": "Dein Team zählt für Elektro als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit.",
+    "emblem": "Elektro"
+  },
+  {
+    "id": "ghost_count",
+    "name": "Geisterbund",
+    "description": "Dein Team zählt für Geist als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit.",
+    "emblem": "Geist"
+  },
+  {
+    "id": "steel_count",
+    "name": "Stahlbund",
+    "description": "Dein Team zählt für Stahl als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit.",
+    "emblem": "Stahl"
+  },
+  {
+    "id": "lifesteal",
+    "name": "Vampirzahn",
+    "description": "Normale Angriffe heilen um 20 % des tatsächlich verursachten Lebensverlusts.",
+    "mods": {
+      "lifesteal": 0.2
+    }
+  },
+  {
+    "id": "spell_vamp",
+    "name": "Zauberquelle",
+    "description": "Fähigkeitsschaden heilt den Anwender um 15 % des tatsächlich verursachten Lebensverlusts.",
+    "mods": {
+      "spell_vamp": 0.15
+    }
+  },
+  {
+    "id": "thorns",
+    "name": "Dornenschild",
+    "description": "Nach gegnerischem normalem Treffer: 25 direkter Rückschaden. Keine Reflexionsketten.",
+    "mods": {
+      "thorns": 25
+    }
+  },
+  {
+    "id": "execute",
+    "name": "Vollstrecker",
+    "description": "+30 % Schaden gegen Ziele unter 30 % Leben.",
+    "mods": {
+      "execute": 0.3
+    }
+  },
+  {
+    "id": "giant",
+    "name": "Riesentöter",
+    "description": "+25 % Schaden gegen Ziele mit mehr maximalem Leben als der Angreifer.",
+    "mods": {
+      "giant": 0.25
+    }
+  },
+  {
+    "id": "firsthit",
+    "name": "Eröffnungsschlag",
+    "description": "Der erste normale Angriff jedes Pokémon je Kampf verursacht +80 % Rohschaden.",
+    "mods": {
+      "firsthit": 0.8
+    }
+  },
+  {
+    "id": "thirdhit",
+    "name": "Dreiertakt",
+    "description": "Jeder dritte normale Angriff verursacht +60 % Rohschaden.",
+    "mods": {
+      "thirdhit": 0.6
+    }
+  },
+  {
+    "id": "splash",
+    "name": "Splittertreffer",
+    "description": "Normale Angriffe treffen andere Gegner im Radius 1 des Ziels für 20 % Angriff als typisierten Zusatzschaden.",
+    "mods": {
+      "splash": 0.2
+    }
+  },
+  {
+    "id": "chain",
+    "name": "Kettenfunke",
+    "description": "Jeder dritte normale Angriff trifft einen weiteren Gegner für 50 % Angriff als Elektroschaden.",
+    "mods": {
+      "chain": 0.5
+    }
+  },
+  {
+    "id": "poison_attack",
+    "name": "Giftspitzen",
+    "description": "Normale Treffer vergiften für 12 Schaden pro Sekunde über 4 Sekunden.",
+    "mods": {
+      "poison_attack": 12
+    }
+  },
+  {
+    "id": "burn_spell",
+    "name": "Nachglut",
+    "description": "Schadensfähigkeiten verbrennen getroffene Gegner für 18 Schaden pro Sekunde über 4 Sekunden.",
+    "mods": {
+      "burn_spell": 18
+    }
+  },
+  {
+    "id": "stun_first",
+    "name": "Überraschung",
+    "description": "Der erste normale Treffer jedes Pokémon betäubt 1 Sekunde.",
+    "mods": {
+      "stun_first": 10
+    }
+  },
+  {
+    "id": "shred_attack",
+    "name": "Panzerbrecher",
+    "description": "Jeder dritte normale Treffer senkt die Rüstung 4 Sekunden lang um 18.",
+    "mods": {
+      "shred_attack": 40
+    }
+  },
+  {
+    "id": "shield_cast",
+    "name": "Schutzzauber",
+    "description": "Jede Fähigkeitsauslösung gibt dem Anwender einen Schild in Höhe von 12 % maximalem Leben.",
+    "mods": {
+      "shield_cast": 0.12
+    }
+  },
+  {
+    "id": "heal_cast",
+    "name": "Heilende Worte",
+    "description": "Jede Fähigkeitsauslösung heilt den verletztesten Verbündeten um 8 % seines maximalen Lebens.",
+    "mods": {
+      "heal_cast": 0.08
+    }
+  },
+  {
+    "id": "mana_cast",
+    "name": "Inspiration",
+    "description": "Jede Fähigkeitsauslösung gibt anderen lebenden Verbündeten 5 Mana.",
+    "mods": {
+      "mana_cast": 5
+    }
+  },
+  {
+    "id": "kill_haste",
+    "name": "Siegesrausch",
+    "description": "Nach einem besiegten Gegner: 4 Sekunden +35 % Angriffstempo.",
+    "mods": {
+      "kill_haste": 40
+    }
+  },
+  {
+    "id": "revive",
+    "name": "Zweiter Atem",
+    "description": "Jedes Pokémon verhindert einmal pro Kampf seinen Tod und erhält 20 % Leben zurück.",
+    "mods": {
+      "revive": 0.2
+    }
+  },
+  {
+    "id": "regen",
+    "name": "Erholung",
+    "description": "Jede Sekunde heilen lebende Pokémon 1,5 % ihres maximalen Lebens.",
+    "mods": {
+      "regen": 0.015
+    }
+  },
+  {
+    "id": "cleanse_tick",
+    "name": "Klarer Kopf",
+    "description": "Alle 8 Sekunden entfernen eigene Pokémon alle negativen Status.",
+    "mods": {
+      "cleanse_tick": 80
+    }
+  },
+  {
+    "id": "mana_burn",
+    "name": "Gedankenraub",
+    "description": "Jeder dritte normale Treffer entzieht dem Ziel 15 Mana und gibt dem Angreifer bis zu 15 Mana.",
+    "mods": {
+      "mana_burn": 15
+    }
+  },
+  {
+    "id": "patient",
+    "name": "Geduld",
+    "description": "Nach 20 Kampfsekunden erhalten eigene Pokémon einmalig +35 % Angriff und Fähigkeitsstärke.",
+    "mods": {
+      "patient": 0.35
+    }
+  },
+  {
+    "id": "type_emblem_0",
+    "name": "Normal-Emblem",
+    "emblem": "Normal",
+    "description": "Dein Team zählt für Normal als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  },
+  {
+    "id": "type_emblem_5",
+    "name": "Eis-Emblem",
+    "emblem": "Eis",
+    "description": "Dein Team zählt für Eis als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  },
+  {
+    "id": "type_emblem_6",
+    "name": "Kampf-Emblem",
+    "emblem": "Kampf",
+    "description": "Dein Team zählt für Kampf als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  },
+  {
+    "id": "type_emblem_7",
+    "name": "Gift-Emblem",
+    "emblem": "Gift",
+    "description": "Dein Team zählt für Gift als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  },
+  {
+    "id": "type_emblem_8",
+    "name": "Boden-Emblem",
+    "emblem": "Boden",
+    "description": "Dein Team zählt für Boden als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  },
+  {
+    "id": "type_emblem_9",
+    "name": "Flug-Emblem",
+    "emblem": "Flug",
+    "description": "Dein Team zählt für Flug als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  },
+  {
+    "id": "type_emblem_10",
+    "name": "Psycho-Emblem",
+    "emblem": "Psycho",
+    "description": "Dein Team zählt für Psycho als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  },
+  {
+    "id": "type_emblem_11",
+    "name": "Käfer-Emblem",
+    "emblem": "Käfer",
+    "description": "Dein Team zählt für Käfer als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  },
+  {
+    "id": "type_emblem_12",
+    "name": "Gestein-Emblem",
+    "emblem": "Gestein",
+    "description": "Dein Team zählt für Gestein als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  },
+  {
+    "id": "type_emblem_14",
+    "name": "Drache-Emblem",
+    "emblem": "Drache",
+    "description": "Dein Team zählt für Drache als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  },
+  {
+    "id": "type_emblem_15",
+    "name": "Unlicht-Emblem",
+    "emblem": "Unlicht",
+    "description": "Dein Team zählt für Unlicht als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  },
+  {
+    "id": "type_emblem_17",
+    "name": "Fee-Emblem",
+    "emblem": "Fee",
+    "description": "Dein Team zählt für Fee als hätte es ein zusätzliches Pokémon dieses Typs. Erzeugt keine Einheit."
+  }
+]

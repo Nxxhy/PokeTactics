@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://nh1kfqfju83w"
+
+[deps]
+
+files=["res://data/source/pokemon_species.identifier.translation", "res://data/source/pokemon_species.generation.translation", "res://data/source/pokemon_species.evolves.translation", "res://data/source/pokemon_species.evolution.translation", "res://data/source/pokemon_species.color.translation", "res://data/source/pokemon_species.shape.translation", "res://data/source/pokemon_species.habitat.translation", "res://data/source/pokemon_species.gender.translation", "res://data/source/pokemon_species.capture.translation", "res://data/source/pokemon_species.base.translation", "res://data/source/pokemon_species.is.translation", "res://data/source/pokemon_species.hatch.translation", "res://data/source/pokemon_species.has.translation", "res://data/source/pokemon_species.growth.translation", "res://data/source/pokemon_species.forms.translation", "res://data/source/pokemon_species.is.translation", "res://data/source/pokemon_species.is.translation", "res://data/source/pokemon_species.order.translation", "res://data/source/pokemon_species.conquest.translation"]
+
+source_file="res://data/source/pokemon_species.csv"
+dest_files=["res://data/source/pokemon_species.identifier.translation", "res://data/source/pokemon_species.generation.translation", "res://data/source/pokemon_species.evolves.translation", "res://data/source/pokemon_species.evolution.translation", "res://data/source/pokemon_species.color.translation", "res://data/source/pokemon_species.shape.translation", "res://data/source/pokemon_species.habitat.translation", "res://data/source/pokemon_species.gender.translation", "res://data/source/pokemon_species.capture.translation", "res://data/source/pokemon_species.base.translation", "res://data/source/pokemon_species.is.translation", "res://data/source/pokemon_species.hatch.translation", "res://data/source/pokemon_species.has.translation", "res://data/source/pokemon_species.growth.translation", "res://data/source/pokemon_species.forms.translation", "res://data/source/pokemon_species.is.translation", "res://data/source/pokemon_species.is.translation", "res://data/source/pokemon_species.order.translation", "res://data/source/pokemon_species.conquest.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

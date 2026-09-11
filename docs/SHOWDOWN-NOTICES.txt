@@ -1,0 +1,16 @@
+Pokemon Showdown effect resources and animation references
+Author: Guangcong Luo <guangcongluo@gmail.com> and Pokemon Showdown contributors.
+Repository: https://github.com/smogon/pokemon-showdown-client
+Pinned revision: 1e3b209011340e7c149a2e94769183eb4351b2e9
+
+The header of play.pokemonshowdown.com/src/battle-animations-moves.ts states @license CC0-1.0.
+The comment in play.pokemonshowdown.com/src/battle-animations.ts explicitly extends CC0 to fx/ images, while listing exceptions. Only the 27 non-exception PNG files listed in assets/showdown/manifest.json are included.
+CC0 information and legal code: https://creativecommons.org/publicdomain/zero/1.0/ and https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+NOT INCLUDED: icicle.png, lightning.png, bone.png, rocks.png, rock1.png, rock2.png.
+NOT INCLUDED: external Showdown Pokemon sprite images, sound files, or its AGPL client interface.
+
+The CC0 statement explicitly does NOT cover sprites/ images or other repository files.
+Existing Pokemon sprites retain their separate PokeAPI attribution and Pokemon rights notices. Pokemon characters and related assets belong to their respective rights holders (Nintendo, Game Freak, Creatures). This is a private fan project and is not affiliated with them.
+
+Our GDScript renderer, per-ability recipes, battlefield alignment, star/overload variants and combat-event integration are project-specific implementations. CC0 move choreography concepts and the listed CC0 images were adapted without adopting the Showdown web client.

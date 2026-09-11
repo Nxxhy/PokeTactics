@@ -1,0 +1,1979 @@
+{
+  "1": {
+    "ability": "Egelsamen",
+    "pattern": "seed",
+    "asset": "energyball",
+    "accent": "leaf1",
+    "color": "78c850",
+    "count": 3,
+    "showdown_move": "leechseed",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      1,
+      2,
+      3
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1
+      },
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.4
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "4": {
+    "ability": "Glut",
+    "pattern": "embers",
+    "asset": "fireball",
+    "accent": "flareball",
+    "color": "f89838",
+    "count": 3,
+    "showdown_move": null,
+    "source": "Eigene Choreografie mit CC0-Showdown-Effekten",
+    "forms": [
+      4,
+      5,
+      6
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1
+      },
+      {
+        "kind": "burn",
+        "target": "enemy",
+        "duration": 40,
+        "scale": 0.15
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "43": {
+    "ability": "Heilpollen",
+    "pattern": "pollen",
+    "asset": "petal",
+    "accent": "poisonwisp",
+    "color": "b8d858",
+    "count": 5,
+    "showdown_move": null,
+    "source": "Eigene Choreografie mit CC0-Showdown-Effekten",
+    "forms": [
+      43,
+      44,
+      182
+    ],
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.6
+      },
+      {
+        "kind": "poison",
+        "target": "enemy",
+        "duration": 50,
+        "scale": 0.18
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "48": {
+    "ability": "Omots Kraftstoß",
+    "pattern": "pulse",
+    "asset": "purplewisp",
+    "accent": "mistball",
+    "color": "c888e0",
+    "count": 3,
+    "showdown_move": "psychic",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      48,
+      49
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 23
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "60": {
+    "ability": "Quappos Kraftstoß",
+    "pattern": "wave",
+    "asset": "waterwisp",
+    "accent": "fist",
+    "color": "4898e8",
+    "count": 3,
+    "showdown_move": "waterpulse",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      60,
+      61,
+      62
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 23
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "69": {
+    "ability": "Sarzenias Lebensfunke",
+    "pattern": "vine",
+    "asset": "leaf2",
+    "accent": "energyball",
+    "color": "68b848",
+    "count": 4,
+    "showdown_move": "gigadrain",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      69,
+      70,
+      71
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.1
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "74": {
+    "ability": "Felswacht",
+    "pattern": "rampart",
+    "asset": "caltrop",
+    "accent": "gear",
+    "color": "b8a068",
+    "count": 4,
+    "showdown_move": "protect",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      74,
+      75,
+      76
+    ],
+    "effects": [
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.6
+      },
+      {
+        "kind": "taunt",
+        "target": "near_enemies",
+        "duration": 30
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "111": {
+    "ability": "Rizeross Schutzstoß",
+    "pattern": "ram",
+    "asset": "fist",
+    "accent": "gear",
+    "color": "b8a890",
+    "count": 2,
+    "showdown_move": "headbutt",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      111,
+      112
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.0
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "122": {
+    "ability": "Pantimoss Kraftstoß",
+    "pattern": "mirror",
+    "asset": "purplewisp",
+    "accent": "gear",
+    "color": "f090b8",
+    "count": 4,
+    "showdown_move": "barrier",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      122
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 23
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "155": {
+    "ability": "Flammenrad",
+    "pattern": "wheel",
+    "asset": "fireball",
+    "accent": "flareball",
+    "color": "f88030",
+    "count": 6,
+    "showdown_move": null,
+    "source": "Eigene Choreografie mit CC0-Showdown-Effekten",
+    "forms": [
+      155,
+      156,
+      157
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 1.2
+      },
+      {
+        "kind": "burn",
+        "target": "area",
+        "scale": 0.12,
+        "duration": 40
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "161": {
+    "ability": "Superzahn",
+    "pattern": "bite",
+    "asset": "topbite",
+    "accent": "bottombite",
+    "color": "e8d888",
+    "count": 2,
+    "showdown_move": "superfang",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      161,
+      162
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.8
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 40
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "172": {
+    "ability": "Kettenblitz",
+    "pattern": "chain",
+    "asset": "electroball",
+    "accent": "hitmarker",
+    "color": "ffe060",
+    "count": 4,
+    "showdown_move": "thunderbolt",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      172,
+      25,
+      26
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "count": 3,
+        "scale": 0.8
+      },
+      {
+        "kind": "stun",
+        "target": "chain",
+        "count": 3,
+        "duration": 5
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "173": {
+    "ability": "Pixis Lebensfunke",
+    "pattern": "moon",
+    "asset": "heart",
+    "accent": "purplewisp",
+    "color": "ffb8d8",
+    "count": 5,
+    "showdown_move": "moonlight",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      173,
+      35,
+      36
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.1
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "179": {
+    "ability": "Donnerwelle",
+    "pattern": "rings",
+    "asset": "electroball",
+    "accent": "energyball",
+    "color": "f8d840",
+    "count": 3,
+    "showdown_move": "thunderwave",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      179,
+      180,
+      181
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "scale": 0.8,
+        "count": 3
+      },
+      {
+        "kind": "stun",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 15
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "238": {
+    "ability": "Rossanas Kraftstoß",
+    "pattern": "beam",
+    "asset": "iceball",
+    "accent": "mistball",
+    "color": "88d8f8",
+    "count": 4,
+    "showdown_move": "icebeam",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      238,
+      124
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 23
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "255": {
+    "ability": "Doppelkick",
+    "pattern": "kick",
+    "asset": "foot",
+    "accent": "flareball",
+    "color": "f8a060",
+    "count": 2,
+    "showdown_move": "doublekick",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      255,
+      256,
+      257
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1
+      },
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "scale": 1,
+        "duration": 30
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "66": {
+    "ability": "Karateschlag",
+    "pattern": "chop",
+    "asset": "fist",
+    "accent": "leftslash",
+    "color": "d8b078",
+    "count": 1,
+    "showdown_move": "karatechop",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      66,
+      67,
+      68
+    ],
+    "effects": [
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 50
+      },
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.2
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "81": {
+    "ability": "Magnetfeld",
+    "pattern": "magnet",
+    "asset": "gear",
+    "accent": "electroball",
+    "color": "a8c8e0",
+    "count": 4,
+    "showdown_move": "magnetrise",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      81,
+      82
+    ],
+    "effects": [
+      {
+        "kind": "shield",
+        "target": "weak_ally",
+        "scale": 1.1
+      },
+      {
+        "kind": "damage",
+        "target": "chain",
+        "count": 2,
+        "scale": 0.8
+      },
+      {
+        "kind": "stun",
+        "target": "chain",
+        "count": 2,
+        "duration": 8
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "92": {
+    "ability": "Nachtmahr",
+    "pattern": "nightmare",
+    "asset": "blackwisp",
+    "accent": "purplewisp",
+    "color": "a878e0",
+    "count": 5,
+    "showdown_move": "nightmare",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      92,
+      93,
+      94
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "weak_enemy",
+        "scale": 1.1
+      },
+      {
+        "kind": "poison",
+        "target": "weak_enemy",
+        "duration": 40,
+        "scale": 0.16
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "95": {
+    "ability": "Erdbeben",
+    "pattern": "quake",
+    "asset": "caltrop",
+    "accent": "gear",
+    "color": "c8a070",
+    "count": 5,
+    "showdown_move": "earthquake",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      95,
+      208
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "near_enemies",
+        "scale": 1
+      },
+      {
+        "kind": "stun",
+        "target": "near_enemies",
+        "duration": 14
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "120": {
+    "ability": "Sternenlicht",
+    "pattern": "star",
+    "asset": "energyball",
+    "accent": "heart",
+    "color": "f8d888",
+    "count": 5,
+    "showdown_move": "wish",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      120,
+      121
+    ],
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.7
+      },
+      {
+        "kind": "mana",
+        "target": "other_allies",
+        "amount": 15
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "133": {
+    "ability": "Nachtaras Kraftstoß",
+    "pattern": "eclipse",
+    "asset": "blackwisp",
+    "accent": "rightslash",
+    "color": "9878c8",
+    "count": 4,
+    "showdown_move": "darkpulse",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      133,
+      197
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 26
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "167": {
+    "ability": "Giftfaden",
+    "pattern": "web",
+    "asset": "poisonwisp",
+    "accent": "caltrop",
+    "color": "b090d8",
+    "count": 6,
+    "showdown_move": null,
+    "source": "Eigene Choreografie mit CC0-Showdown-Effekten",
+    "forms": [
+      167,
+      168
+    ],
+    "effects": [
+      {
+        "kind": "poison",
+        "target": "enemy",
+        "scale": 0.25,
+        "duration": 60
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 50
+      },
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 0.6
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "170": {
+    "ability": "Lichtreserve",
+    "pattern": "lantern",
+    "asset": "electroball",
+    "accent": "waterwisp",
+    "color": "a8e8f8",
+    "count": 2,
+    "showdown_move": "charge",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      170,
+      171
+    ],
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.8
+      },
+      {
+        "kind": "mana",
+        "target": "other_allies",
+        "scale": 1,
+        "amount": 12
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "174": {
+    "ability": "Knuddeluffs Kraftstoß",
+    "pattern": "voice",
+    "asset": "mistball",
+    "accent": "heart",
+    "color": "f8a8d0",
+    "count": 3,
+    "showdown_move": "hypervoice",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      174,
+      39,
+      40
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 26
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "204": {
+    "ability": "Stachler",
+    "pattern": "spikes",
+    "asset": "caltrop",
+    "accent": "gear",
+    "color": "c0c8a0",
+    "count": 6,
+    "showdown_move": "spikes",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      204,
+      205
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "near_enemies",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "near_enemies",
+        "scale": 1,
+        "duration": 50
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "218": {
+    "ability": "Lavapanzer",
+    "pattern": "lava",
+    "asset": "fireball",
+    "accent": "gear",
+    "color": "e89048",
+    "count": 5,
+    "showdown_move": "lavaplume",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      218,
+      219
+    ],
+    "effects": [
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.5
+      },
+      {
+        "kind": "burn",
+        "target": "near_enemies",
+        "scale": 0.2,
+        "duration": 50
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "270": {
+    "ability": "Regentanz",
+    "pattern": "rain",
+    "asset": "waterwisp",
+    "accent": "leaf1",
+    "color": "70c8f0",
+    "count": 7,
+    "showdown_move": "raindance",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      270,
+      271,
+      272
+    ],
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "all_allies",
+        "scale": 0.55
+      },
+      {
+        "kind": "haste",
+        "target": "all_allies",
+        "scale": 1,
+        "duration": 30
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "273": {
+    "ability": "Kugelsaat",
+    "pattern": "volley",
+    "asset": "energyball",
+    "accent": "leaf2",
+    "color": "88c858",
+    "count": 5,
+    "showdown_move": "bulletseed",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      273,
+      274,
+      275
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "scale": 1.2,
+        "count": 3
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "280": {
+    "ability": "Gedankenstoß",
+    "pattern": "vortex",
+    "asset": "purplewisp",
+    "accent": "energyball",
+    "color": "d088e8",
+    "count": 6,
+    "showdown_move": "psychic",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      280,
+      281,
+      282
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 1.6
+      },
+      {
+        "kind": "break",
+        "target": "area",
+        "scale": 1,
+        "duration": 40
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "285": {
+    "ability": "Pilzfaust",
+    "pattern": "punch",
+    "asset": "fist",
+    "accent": "petal",
+    "color": "c0b878",
+    "count": 3,
+    "showdown_move": "machpunch",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      285,
+      286
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.6
+      },
+      {
+        "kind": "stun",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 25
+      },
+      {
+        "kind": "heal",
+        "target": "self",
+        "scale": 0.5
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "298": {
+    "ability": "Azumarills Kraftstoß",
+    "pattern": "tail",
+    "asset": "waterwisp",
+    "accent": "heart",
+    "color": "68c8f8",
+    "count": 2,
+    "showdown_move": null,
+    "source": "Eigene Choreografie mit CC0-Showdown-Effekten",
+    "forms": [
+      298,
+      183,
+      184
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 26
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "123": {
+    "ability": "Kreuzschere",
+    "pattern": "cross",
+    "asset": "leftslash",
+    "accent": "rightslash",
+    "color": "a0d898",
+    "count": 2,
+    "showdown_move": "xscissor",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      123,
+      212
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "weak_enemy",
+        "scale": 0.95
+      },
+      {
+        "kind": "damage",
+        "target": "weak_enemy",
+        "scale": 0.95
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "duration": 40
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "143": {
+    "ability": "Erholung",
+    "pattern": "sleep",
+    "asset": "heart",
+    "accent": "mistball",
+    "color": "a8c8b8",
+    "count": 3,
+    "showdown_move": "rest",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      143
+    ],
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "self",
+        "scale": 2
+      },
+      {
+        "kind": "taunt",
+        "target": "near_enemies",
+        "duration": 20
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "200": {
+    "ability": "Spukgesang",
+    "pattern": "song",
+    "asset": "purplewisp",
+    "accent": "blackwisp",
+    "color": "b888e0",
+    "count": 5,
+    "showdown_move": "perishsong",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      200
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "all_enemies",
+        "scale": 0.8
+      },
+      {
+        "kind": "break",
+        "target": "all_enemies",
+        "scale": 1,
+        "duration": 30
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "209": {
+    "ability": "Knuddler",
+    "pattern": "tumble",
+    "asset": "heart",
+    "accent": "fist",
+    "color": "f8b0d0",
+    "count": 4,
+    "showdown_move": "playrough",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      209,
+      210
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 2.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 50
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "213": {
+    "ability": "Krafttrick",
+    "pattern": "shell",
+    "asset": "gear",
+    "accent": "poisonwisp",
+    "color": "e8b870",
+    "count": 6,
+    "showdown_move": "powertrick",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      213
+    ],
+    "effects": [
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 2.2
+      },
+      {
+        "kind": "poison",
+        "target": "near_enemies",
+        "scale": 0.2,
+        "duration": 60
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "215": {
+    "ability": "Sniebels Kraftstoß",
+    "pattern": "claw",
+    "asset": "leftclaw",
+    "accent": "rightclaw",
+    "color": "b0c8f8",
+    "count": 3,
+    "showdown_move": "nightslash",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      215
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 29
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "220": {
+    "ability": "Keifels Kraftstoß",
+    "pattern": "snow",
+    "asset": "iceball",
+    "accent": "waterwisp",
+    "color": "c0e0f0",
+    "count": 5,
+    "showdown_move": null,
+    "source": "Eigene Choreografie mit CC0-Showdown-Effekten",
+    "forms": [
+      220,
+      221
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 29
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "227": {
+    "ability": "Stahlflügel",
+    "pattern": "wings",
+    "asset": "feather",
+    "accent": "leftslash",
+    "color": "b8d0e0",
+    "count": 4,
+    "showdown_move": "steelwing",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      227
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "near_enemies",
+        "scale": 1.6
+      },
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.3
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "228": {
+    "ability": "Hundemons Kraftstoß",
+    "pattern": "hellbite",
+    "asset": "topbite",
+    "accent": "fireball",
+    "color": "e08068",
+    "count": 3,
+    "showdown_move": "crunch",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      228,
+      229
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 29
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "290": {
+    "ability": "Ninjatoms Kraftstoß",
+    "pattern": "phantom",
+    "asset": "leftclaw",
+    "accent": "blackwisp",
+    "color": "c8b098",
+    "count": 2,
+    "showdown_move": "shadowclaw",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      290,
+      292
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 29
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "296": {
+    "ability": "Wirbelwurf",
+    "pattern": "throw",
+    "asset": "fist",
+    "accent": "mistball",
+    "color": "d8b888",
+    "count": 4,
+    "showdown_move": "seismictoss",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      296,
+      297
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 2
+      },
+      {
+        "kind": "stun",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 30
+      },
+      {
+        "kind": "taunt",
+        "target": "near_enemies",
+        "scale": 1,
+        "duration": 30
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "304": {
+    "ability": "Eisenschädel",
+    "pattern": "iron",
+    "asset": "gear",
+    "accent": "hitmarker",
+    "color": "b8c8d8",
+    "count": 3,
+    "showdown_move": "ironhead",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      304,
+      305,
+      306
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 2.1
+      },
+      {
+        "kind": "stun",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 25
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "307": {
+    "ability": "Meditaliss Kraftstoß",
+    "pattern": "zen",
+    "asset": "purplewisp",
+    "accent": "fist",
+    "color": "e8a8d0",
+    "count": 4,
+    "showdown_move": "zenheadbutt",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      307,
+      308
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 29
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "309": {
+    "ability": "Funkensprung",
+    "pattern": "jump",
+    "asset": "electroball",
+    "accent": "rightslash",
+    "color": "e8e868",
+    "count": 3,
+    "showdown_move": "voltswitch",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      309,
+      310
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "scale": 1.25,
+        "count": 4
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "scale": 1,
+        "duration": 30
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "315": {
+    "ability": "Blütenkur",
+    "pattern": "garden",
+    "asset": "petal",
+    "accent": "leaf1",
+    "color": "e898c0",
+    "count": 7,
+    "showdown_move": null,
+    "source": "Eigene Choreografie mit CC0-Showdown-Effekten",
+    "forms": [
+      315
+    ],
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "all_allies",
+        "scale": 0.7
+      },
+      {
+        "kind": "poison",
+        "target": "area",
+        "scale": 0.2,
+        "duration": 50
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "355": {
+    "ability": "Nachtnebel",
+    "pattern": "fog",
+    "asset": "blackwisp",
+    "accent": "mistball",
+    "color": "a898d0",
+    "count": 6,
+    "showdown_move": "nightshade",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      355,
+      356
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 1.4
+      },
+      {
+        "kind": "slow",
+        "target": "area",
+        "scale": 1,
+        "duration": 60
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "115": {
+    "ability": "Familienwacht",
+    "pattern": "family",
+    "asset": "heart",
+    "accent": "gear",
+    "color": "e8c898",
+    "count": 2,
+    "showdown_move": "protect",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      115
+    ],
+    "effects": [
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.3
+      },
+      {
+        "kind": "shield",
+        "target": "weak_ally",
+        "scale": 1.1
+      },
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "131": {
+    "ability": "Polarlicht",
+    "pattern": "aurora",
+    "asset": "iceball",
+    "accent": "mistball",
+    "color": "88e8e0",
+    "count": 6,
+    "showdown_move": "auroraveil",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      131
+    ],
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "all_allies",
+        "scale": 0.95
+      },
+      {
+        "kind": "slow",
+        "target": "all_enemies",
+        "duration": 30
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "147": {
+    "ability": "Draco Meteor",
+    "pattern": "meteor",
+    "asset": "flareball",
+    "accent": "energyball",
+    "color": "b890f0",
+    "count": 5,
+    "showdown_move": "dracometeor",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      147,
+      148,
+      149
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 1.3
+      },
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.1
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "214": {
+    "ability": "Vielender",
+    "pattern": "horn",
+    "asset": "rightclaw",
+    "accent": "hitmarker",
+    "color": "98b8d8",
+    "count": 1,
+    "showdown_move": "megahorn",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      214
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 50
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "246": {
+    "ability": "Sandsturm",
+    "pattern": "sand",
+    "asset": "caltrop",
+    "accent": "mistball",
+    "color": "d8c090",
+    "count": 7,
+    "showdown_move": "sandstorm",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      246,
+      247,
+      248
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "all_enemies",
+        "scale": 1
+      },
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.2
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "302": {
+    "ability": "Trickschutz",
+    "pattern": "gem",
+    "asset": "purplewisp",
+    "accent": "gear",
+    "color": "c898e8",
+    "count": 4,
+    "showdown_move": "protect",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      302
+    ],
+    "effects": [
+      {
+        "kind": "cleanse",
+        "target": "all_allies",
+        "scale": 1
+      },
+      {
+        "kind": "shield",
+        "target": "all_allies",
+        "scale": 0.8
+      },
+      {
+        "kind": "mana",
+        "target": "weak_ally",
+        "scale": 1,
+        "amount": 30
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "303": {
+    "ability": "Eisenkiefer",
+    "pattern": "jaw",
+    "asset": "topbite",
+    "accent": "bottombite",
+    "color": "d8c068",
+    "count": 4,
+    "showdown_move": "crunch",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      303
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 2.5
+      },
+      {
+        "kind": "heal",
+        "target": "self",
+        "scale": 1
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "328": {
+    "ability": "Erdwelle",
+    "pattern": "rift",
+    "asset": "caltrop",
+    "accent": "flareball",
+    "color": "c89860",
+    "count": 5,
+    "showdown_move": "earthpower",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      328,
+      329,
+      330
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 2
+      },
+      {
+        "kind": "break",
+        "target": "area",
+        "scale": 1,
+        "duration": 60
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "333": {
+    "ability": "Himmelslied",
+    "pattern": "sky",
+    "asset": "feather",
+    "accent": "heart",
+    "color": "b0e0f8",
+    "count": 6,
+    "showdown_move": "sing",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      333,
+      334
+    ],
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "all_allies",
+        "scale": 0.8
+      },
+      {
+        "kind": "haste",
+        "target": "all_allies",
+        "scale": 1,
+        "duration": 50
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "353": {
+    "ability": "Banettes Kraftstoß",
+    "pattern": "curse",
+    "asset": "blackwisp",
+    "accent": "rightclaw",
+    "color": "b890b8",
+    "count": 4,
+    "showdown_move": "shadowball",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      353,
+      354
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 32
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "359": {
+    "ability": "Unheilsklinge",
+    "pattern": "crescent",
+    "asset": "rightslash",
+    "accent": "blackwisp",
+    "color": "c8d8e8",
+    "count": 1,
+    "showdown_move": "nightslash",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      359
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "weak_enemy",
+        "scale": 3.2
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "371": {
+    "ability": "Drachensturz",
+    "pattern": "dive",
+    "asset": "leftclaw",
+    "accent": "flareball",
+    "color": "a098e8",
+    "count": 3,
+    "showdown_move": null,
+    "source": "Eigene Choreografie mit CC0-Showdown-Effekten",
+    "forms": [
+      371,
+      372,
+      373
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 2.1
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "scale": 1,
+        "duration": 50
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "144": {
+    "ability": "Eisorkan",
+    "pattern": "blizzard",
+    "asset": "iceball",
+    "accent": "feather",
+    "color": "a8e8ff",
+    "count": 8,
+    "showdown_move": "blizzard",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      144
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "all_enemies",
+        "scale": 1.4
+      },
+      {
+        "kind": "slow",
+        "target": "all_enemies",
+        "scale": 1,
+        "duration": 60
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "145": {
+    "ability": "Donnergewitter",
+    "pattern": "storm",
+    "asset": "electroball",
+    "accent": "flareball",
+    "color": "ffe878",
+    "count": 6,
+    "showdown_move": "thunder",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      145
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "count": 4,
+        "scale": 1.1
+      },
+      {
+        "kind": "stun",
+        "target": "chain",
+        "count": 4,
+        "duration": 15
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "146": {
+    "ability": "Läuterfeuer",
+    "pattern": "phoenix",
+    "asset": "fireball",
+    "accent": "feather",
+    "color": "ffb058",
+    "count": 7,
+    "showdown_move": "sacredfire",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      146
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 2
+      },
+      {
+        "kind": "burn",
+        "target": "all_enemies",
+        "scale": 0.18,
+        "duration": 60
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "243": {
+    "ability": "Donnerjagd",
+    "pattern": "hunt",
+    "asset": "electroball",
+    "accent": "leftclaw",
+    "color": "f8d858",
+    "count": 5,
+    "showdown_move": "wildcharge",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      243
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "scale": 1.7,
+        "count": 5
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "scale": 1,
+        "duration": 60
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "244": {
+    "ability": "Vulkanwacht",
+    "pattern": "volcano",
+    "asset": "flareball",
+    "accent": "fireball",
+    "color": "f89868",
+    "count": 7,
+    "showdown_move": "eruption",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      244
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "near_enemies",
+        "scale": 2
+      },
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 2
+      },
+      {
+        "kind": "taunt",
+        "target": "near_enemies",
+        "scale": 1,
+        "duration": 60
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "361": {
+    "ability": "Frosdedjes Kraftstoß",
+    "pattern": "frost",
+    "asset": "iceball",
+    "accent": "purplewisp",
+    "color": "b0e0f8",
+    "count": 4,
+    "showdown_move": "icywind",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      361,
+      478
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 35
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "363": {
+    "ability": "Walraisas Kraftstoß",
+    "pattern": "surf",
+    "asset": "waterwisp",
+    "accent": "iceball",
+    "color": "80b8e8",
+    "count": 6,
+    "showdown_move": "surf",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      363,
+      364,
+      365
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 35
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "380": {
+    "ability": "Latiass Kraftstoß",
+    "pattern": "mist",
+    "asset": "mistball",
+    "accent": "heart",
+    "color": "f0a8b8",
+    "count": 4,
+    "showdown_move": "mistball",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      380
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 35
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "381": {
+    "ability": "Latioss Kraftstoß",
+    "pattern": "luster",
+    "asset": "energyball",
+    "accent": "purplewisp",
+    "color": "98b8f8",
+    "count": 5,
+    "showdown_move": "lusterpurge",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      381
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 35
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  },
+  "384": {
+    "ability": "Zenitsturm",
+    "pattern": "zenith",
+    "asset": "feather",
+    "accent": "energyball",
+    "color": "88e8a8",
+    "count": 8,
+    "showdown_move": "hurricane",
+    "source": "https://github.com/smogon/pokemon-showdown-client/blob/1e3b209011340e7c149a2e94769183eb4351b2e9/play.pokemonshowdown.com/src/battle-animations-moves.ts",
+    "forms": [
+      384
+    ],
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "all_enemies",
+        "scale": 1.5
+      },
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 2
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "scale": 1,
+        "duration": 40
+      }
+    ],
+    "variants": "Stern 2: zusätzliche Akzente; Stern 3: goldener Doppelring und größere Signatur. Psycho 6/8: violetter Doppelimpuls; echte zusätzliche Ziele und Nachhall aus Kampfevents."
+  }
+}

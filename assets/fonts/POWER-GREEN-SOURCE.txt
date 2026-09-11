@@ -1,0 +1,8 @@
+Power Green / Power Green Narrow
+Font metadata: (c) 2008 Peter O. http://www.upokecenter.com/
+Source: https://github.com/synaestheory/essentials/tree/master/Fonts
+Files: pkmnem.ttf, pkmnemn.ttf
+Downloaded unchanged on 2026-09-09 for this private project.
+pkmnem.ttf SHA-256: 310E8FD0E5E903173C0C0E4B79DA242E2653D238A87C283FF04B902D458DD726
+These fonts are not covered by the OFL licences of the other fonts in this project.
+No additional font-specific licence text was supplied with these files; the original copyright attribution is retained here.

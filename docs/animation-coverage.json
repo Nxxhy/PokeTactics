@@ -1,0 +1,2102 @@
+[
+  {
+    "ability": "Egelsamen",
+    "form": 1,
+    "id": 1.0,
+    "impacts": 2,
+    "pattern": "seed",
+    "pokemon": "Bisasam",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Egelsamen",
+    "form": 2,
+    "id": 1.0,
+    "impacts": 2,
+    "pattern": "seed",
+    "pokemon": "Bisaknosp",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Egelsamen",
+    "form": 3,
+    "id": 1.0,
+    "impacts": 2,
+    "pattern": "seed",
+    "pokemon": "Bisaflor",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Glut",
+    "form": 4,
+    "id": 4.0,
+    "impacts": 2,
+    "pattern": "embers",
+    "pokemon": "Glumanda",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Glut",
+    "form": 5,
+    "id": 4.0,
+    "impacts": 2,
+    "pattern": "embers",
+    "pokemon": "Glutexo",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Glut",
+    "form": 6,
+    "id": 4.0,
+    "impacts": 2,
+    "pattern": "embers",
+    "pokemon": "Glurak",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Heilpollen",
+    "form": 43,
+    "id": 43.0,
+    "impacts": 2,
+    "pattern": "pollen",
+    "pokemon": "Myrapla",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Heilpollen",
+    "form": 44,
+    "id": 43.0,
+    "impacts": 2,
+    "pattern": "pollen",
+    "pokemon": "Duflor",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Heilpollen",
+    "form": 182,
+    "id": 43.0,
+    "impacts": 2,
+    "pattern": "pollen",
+    "pokemon": "Blubella",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Omots Kraftstoß",
+    "form": 48,
+    "id": 48.0,
+    "impacts": 2,
+    "pattern": "pulse",
+    "pokemon": "Bluzuk",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Omots Kraftstoß",
+    "form": 48,
+    "id": 48.0,
+    "impacts": 2,
+    "pattern": "pulse",
+    "pokemon": "Bluzuk",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Omots Kraftstoß",
+    "form": 49,
+    "id": 48.0,
+    "impacts": 2,
+    "pattern": "pulse",
+    "pokemon": "Omot",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Quappos Kraftstoß",
+    "form": 60,
+    "id": 60.0,
+    "impacts": 2,
+    "pattern": "wave",
+    "pokemon": "Quapsel",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Quappos Kraftstoß",
+    "form": 61,
+    "id": 60.0,
+    "impacts": 2,
+    "pattern": "wave",
+    "pokemon": "Quaputzi",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Quappos Kraftstoß",
+    "form": 62,
+    "id": 60.0,
+    "impacts": 2,
+    "pattern": "wave",
+    "pokemon": "Quappo",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Sarzenias Lebensfunke",
+    "form": 69,
+    "id": 69.0,
+    "impacts": 2,
+    "pattern": "vine",
+    "pokemon": "Knofensa",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Sarzenias Lebensfunke",
+    "form": 70,
+    "id": 69.0,
+    "impacts": 2,
+    "pattern": "vine",
+    "pokemon": "Ultrigaria",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Sarzenias Lebensfunke",
+    "form": 71,
+    "id": 69.0,
+    "impacts": 2,
+    "pattern": "vine",
+    "pokemon": "Sarzenia",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Felswacht",
+    "form": 74,
+    "id": 74.0,
+    "impacts": 4,
+    "pattern": "rampart",
+    "pokemon": "Kleinstein",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Felswacht",
+    "form": 75,
+    "id": 74.0,
+    "impacts": 4,
+    "pattern": "rampart",
+    "pokemon": "Georok",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Felswacht",
+    "form": 76,
+    "id": 74.0,
+    "impacts": 4,
+    "pattern": "rampart",
+    "pokemon": "Geowaz",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Rizeross Schutzstoß",
+    "form": 111,
+    "id": 111.0,
+    "impacts": 2,
+    "pattern": "ram",
+    "pokemon": "Rihorn",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Rizeross Schutzstoß",
+    "form": 111,
+    "id": 111.0,
+    "impacts": 2,
+    "pattern": "ram",
+    "pokemon": "Rihorn",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Rizeross Schutzstoß",
+    "form": 112,
+    "id": 111.0,
+    "impacts": 2,
+    "pattern": "ram",
+    "pokemon": "Rizeros",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Pantimoss Kraftstoß",
+    "form": 122,
+    "id": 122.0,
+    "impacts": 2,
+    "pattern": "mirror",
+    "pokemon": "Pantimos",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Pantimoss Kraftstoß",
+    "form": 122,
+    "id": 122.0,
+    "impacts": 2,
+    "pattern": "mirror",
+    "pokemon": "Pantimos",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Pantimoss Kraftstoß",
+    "form": 122,
+    "id": 122.0,
+    "impacts": 2,
+    "pattern": "mirror",
+    "pokemon": "Pantimos",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Flammenrad",
+    "form": 155,
+    "id": 155.0,
+    "impacts": 6,
+    "pattern": "wheel",
+    "pokemon": "Feurigel",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Flammenrad",
+    "form": 156,
+    "id": 155.0,
+    "impacts": 6,
+    "pattern": "wheel",
+    "pokemon": "Igelavar",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Flammenrad",
+    "form": 157,
+    "id": 155.0,
+    "impacts": 6,
+    "pattern": "wheel",
+    "pokemon": "Tornupto",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Superzahn",
+    "form": 161,
+    "id": 161.0,
+    "impacts": 2,
+    "pattern": "bite",
+    "pokemon": "Wiesor",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Superzahn",
+    "form": 161,
+    "id": 161.0,
+    "impacts": 2,
+    "pattern": "bite",
+    "pokemon": "Wiesor",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Superzahn",
+    "form": 162,
+    "id": 161.0,
+    "impacts": 2,
+    "pattern": "bite",
+    "pokemon": "Wiesenior",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Kettenblitz",
+    "form": 172,
+    "id": 172.0,
+    "impacts": 6,
+    "pattern": "chain",
+    "pokemon": "Pichu",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Kettenblitz",
+    "form": 25,
+    "id": 172.0,
+    "impacts": 6,
+    "pattern": "chain",
+    "pokemon": "Pikachu",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Kettenblitz",
+    "form": 26,
+    "id": 172.0,
+    "impacts": 6,
+    "pattern": "chain",
+    "pokemon": "Raichu",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Pixis Lebensfunke",
+    "form": 173,
+    "id": 173.0,
+    "impacts": 2,
+    "pattern": "moon",
+    "pokemon": "Pii",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Pixis Lebensfunke",
+    "form": 35,
+    "id": 173.0,
+    "impacts": 2,
+    "pattern": "moon",
+    "pokemon": "Piepi",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Pixis Lebensfunke",
+    "form": 36,
+    "id": 173.0,
+    "impacts": 2,
+    "pattern": "moon",
+    "pokemon": "Pixi",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Donnerwelle",
+    "form": 179,
+    "id": 179.0,
+    "impacts": 4,
+    "pattern": "rings",
+    "pokemon": "Voltilamm",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Donnerwelle",
+    "form": 180,
+    "id": 179.0,
+    "impacts": 4,
+    "pattern": "rings",
+    "pokemon": "Waaty",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Donnerwelle",
+    "form": 181,
+    "id": 179.0,
+    "impacts": 4,
+    "pattern": "rings",
+    "pokemon": "Ampharos",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Rossanas Kraftstoß",
+    "form": 238,
+    "id": 238.0,
+    "impacts": 2,
+    "pattern": "beam",
+    "pokemon": "Kussilla",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Rossanas Kraftstoß",
+    "form": 238,
+    "id": 238.0,
+    "impacts": 2,
+    "pattern": "beam",
+    "pokemon": "Kussilla",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Rossanas Kraftstoß",
+    "form": 124,
+    "id": 238.0,
+    "impacts": 2,
+    "pattern": "beam",
+    "pokemon": "Rossana",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Doppelkick",
+    "form": 255,
+    "id": 255.0,
+    "impacts": 3,
+    "pattern": "kick",
+    "pokemon": "Flemmli",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Doppelkick",
+    "form": 256,
+    "id": 255.0,
+    "impacts": 3,
+    "pattern": "kick",
+    "pokemon": "Jungglut",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Doppelkick",
+    "form": 257,
+    "id": 255.0,
+    "impacts": 3,
+    "pattern": "kick",
+    "pokemon": "Lohgock",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Karateschlag",
+    "form": 66,
+    "id": 66.0,
+    "impacts": 2,
+    "pattern": "chop",
+    "pokemon": "Machollo",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Karateschlag",
+    "form": 67,
+    "id": 66.0,
+    "impacts": 2,
+    "pattern": "chop",
+    "pokemon": "Maschock",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Karateschlag",
+    "form": 68,
+    "id": 66.0,
+    "impacts": 2,
+    "pattern": "chop",
+    "pokemon": "Machomei",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Magnetfeld",
+    "form": 81,
+    "id": 81.0,
+    "impacts": 5,
+    "pattern": "magnet",
+    "pokemon": "Magnetilo",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Magnetfeld",
+    "form": 81,
+    "id": 81.0,
+    "impacts": 5,
+    "pattern": "magnet",
+    "pokemon": "Magnetilo",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Magnetfeld",
+    "form": 82,
+    "id": 81.0,
+    "impacts": 5,
+    "pattern": "magnet",
+    "pokemon": "Magneton",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Nachtmahr",
+    "form": 92,
+    "id": 92.0,
+    "impacts": 2,
+    "pattern": "nightmare",
+    "pokemon": "Nebulak",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Nachtmahr",
+    "form": 93,
+    "id": 92.0,
+    "impacts": 2,
+    "pattern": "nightmare",
+    "pokemon": "Alpollo",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Nachtmahr",
+    "form": 94,
+    "id": 92.0,
+    "impacts": 2,
+    "pattern": "nightmare",
+    "pokemon": "Gengar",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Erdbeben",
+    "form": 95,
+    "id": 95.0,
+    "impacts": 6,
+    "pattern": "quake",
+    "pokemon": "Onix",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Erdbeben",
+    "form": 95,
+    "id": 95.0,
+    "impacts": 6,
+    "pattern": "quake",
+    "pokemon": "Onix",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Erdbeben",
+    "form": 208,
+    "id": 95.0,
+    "impacts": 6,
+    "pattern": "quake",
+    "pokemon": "Stahlos",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Sternenlicht",
+    "form": 120,
+    "id": 120.0,
+    "impacts": 2,
+    "pattern": "star",
+    "pokemon": "Sterndu",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Sternenlicht",
+    "form": 120,
+    "id": 120.0,
+    "impacts": 2,
+    "pattern": "star",
+    "pokemon": "Sterndu",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Sternenlicht",
+    "form": 121,
+    "id": 120.0,
+    "impacts": 2,
+    "pattern": "star",
+    "pokemon": "Starmie",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Nachtaras Kraftstoß",
+    "form": 133,
+    "id": 133.0,
+    "impacts": 2,
+    "pattern": "eclipse",
+    "pokemon": "Evoli",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Nachtaras Kraftstoß",
+    "form": 133,
+    "id": 133.0,
+    "impacts": 2,
+    "pattern": "eclipse",
+    "pokemon": "Evoli",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Nachtaras Kraftstoß",
+    "form": 197,
+    "id": 133.0,
+    "impacts": 2,
+    "pattern": "eclipse",
+    "pokemon": "Nachtara",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Giftfaden",
+    "form": 167,
+    "id": 167.0,
+    "impacts": 3,
+    "pattern": "web",
+    "pokemon": "Webarak",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Giftfaden",
+    "form": 167,
+    "id": 167.0,
+    "impacts": 3,
+    "pattern": "web",
+    "pokemon": "Webarak",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Giftfaden",
+    "form": 168,
+    "id": 167.0,
+    "impacts": 3,
+    "pattern": "web",
+    "pokemon": "Ariados",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Lichtreserve",
+    "form": 170,
+    "id": 170.0,
+    "impacts": 2,
+    "pattern": "lantern",
+    "pokemon": "Lampi",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Lichtreserve",
+    "form": 170,
+    "id": 170.0,
+    "impacts": 2,
+    "pattern": "lantern",
+    "pokemon": "Lampi",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Lichtreserve",
+    "form": 171,
+    "id": 170.0,
+    "impacts": 2,
+    "pattern": "lantern",
+    "pokemon": "Lanturn",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Knuddeluffs Kraftstoß",
+    "form": 174,
+    "id": 174.0,
+    "impacts": 2,
+    "pattern": "voice",
+    "pokemon": "Fluffeluff",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Knuddeluffs Kraftstoß",
+    "form": 39,
+    "id": 174.0,
+    "impacts": 2,
+    "pattern": "voice",
+    "pokemon": "Pummeluff",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Knuddeluffs Kraftstoß",
+    "form": 40,
+    "id": 174.0,
+    "impacts": 2,
+    "pattern": "voice",
+    "pokemon": "Knuddeluff",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Stachler",
+    "form": 204,
+    "id": 204.0,
+    "impacts": 6,
+    "pattern": "spikes",
+    "pokemon": "Tannza",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Stachler",
+    "form": 204,
+    "id": 204.0,
+    "impacts": 6,
+    "pattern": "spikes",
+    "pokemon": "Tannza",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Stachler",
+    "form": 205,
+    "id": 204.0,
+    "impacts": 6,
+    "pattern": "spikes",
+    "pokemon": "Forstellka",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Lavapanzer",
+    "form": 218,
+    "id": 218.0,
+    "impacts": 4,
+    "pattern": "lava",
+    "pokemon": "Schneckmag",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Lavapanzer",
+    "form": 218,
+    "id": 218.0,
+    "impacts": 4,
+    "pattern": "lava",
+    "pokemon": "Schneckmag",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Lavapanzer",
+    "form": 219,
+    "id": 218.0,
+    "impacts": 4,
+    "pattern": "lava",
+    "pokemon": "Magcargo",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Regentanz",
+    "form": 270,
+    "id": 270.0,
+    "impacts": 4,
+    "pattern": "rain",
+    "pokemon": "Loturzel",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Regentanz",
+    "form": 271,
+    "id": 270.0,
+    "impacts": 4,
+    "pattern": "rain",
+    "pokemon": "Lombrero",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Regentanz",
+    "form": 272,
+    "id": 270.0,
+    "impacts": 4,
+    "pattern": "rain",
+    "pokemon": "Kappalores",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Kugelsaat",
+    "form": 273,
+    "id": 273.0,
+    "impacts": 3,
+    "pattern": "volley",
+    "pokemon": "Samurzel",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Kugelsaat",
+    "form": 274,
+    "id": 273.0,
+    "impacts": 3,
+    "pattern": "volley",
+    "pokemon": "Blanas",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Kugelsaat",
+    "form": 275,
+    "id": 273.0,
+    "impacts": 3,
+    "pattern": "volley",
+    "pokemon": "Tengulist",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Gedankenstoß",
+    "form": 280,
+    "id": 280.0,
+    "impacts": 6,
+    "pattern": "vortex",
+    "pokemon": "Trasla",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Gedankenstoß",
+    "form": 281,
+    "id": 280.0,
+    "impacts": 6,
+    "pattern": "vortex",
+    "pokemon": "Kirlia",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Gedankenstoß",
+    "form": 282,
+    "id": 280.0,
+    "impacts": 6,
+    "pattern": "vortex",
+    "pokemon": "Guardevoir",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Pilzfaust",
+    "form": 285,
+    "id": 285.0,
+    "impacts": 3,
+    "pattern": "punch",
+    "pokemon": "Knilz",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Pilzfaust",
+    "form": 285,
+    "id": 285.0,
+    "impacts": 3,
+    "pattern": "punch",
+    "pokemon": "Knilz",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Pilzfaust",
+    "form": 286,
+    "id": 285.0,
+    "impacts": 3,
+    "pattern": "punch",
+    "pokemon": "Kapilz",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Azumarills Kraftstoß",
+    "form": 298,
+    "id": 298.0,
+    "impacts": 2,
+    "pattern": "tail",
+    "pokemon": "Azurill",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Azumarills Kraftstoß",
+    "form": 183,
+    "id": 298.0,
+    "impacts": 2,
+    "pattern": "tail",
+    "pokemon": "Marill",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Azumarills Kraftstoß",
+    "form": 184,
+    "id": 298.0,
+    "impacts": 2,
+    "pattern": "tail",
+    "pokemon": "Azumarill",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Kreuzschere",
+    "form": 123,
+    "id": 123.0,
+    "impacts": 3,
+    "pattern": "cross",
+    "pokemon": "Sichlor",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Kreuzschere",
+    "form": 123,
+    "id": 123.0,
+    "impacts": 3,
+    "pattern": "cross",
+    "pokemon": "Sichlor",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Kreuzschere",
+    "form": 212,
+    "id": 123.0,
+    "impacts": 3,
+    "pattern": "cross",
+    "pokemon": "Scherox",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Erholung",
+    "form": 143,
+    "id": 143.0,
+    "impacts": 4,
+    "pattern": "sleep",
+    "pokemon": "Relaxo",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Erholung",
+    "form": 143,
+    "id": 143.0,
+    "impacts": 4,
+    "pattern": "sleep",
+    "pokemon": "Relaxo",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Erholung",
+    "form": 143,
+    "id": 143.0,
+    "impacts": 4,
+    "pattern": "sleep",
+    "pokemon": "Relaxo",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Spukgesang",
+    "form": 200,
+    "id": 200.0,
+    "impacts": 6,
+    "pattern": "song",
+    "pokemon": "Traunfugil",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Spukgesang",
+    "form": 200,
+    "id": 200.0,
+    "impacts": 6,
+    "pattern": "song",
+    "pokemon": "Traunfugil",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Spukgesang",
+    "form": 200,
+    "id": 200.0,
+    "impacts": 6,
+    "pattern": "song",
+    "pokemon": "Traunfugil",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Knuddler",
+    "form": 209,
+    "id": 209.0,
+    "impacts": 2,
+    "pattern": "tumble",
+    "pokemon": "Snubbull",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Knuddler",
+    "form": 209,
+    "id": 209.0,
+    "impacts": 2,
+    "pattern": "tumble",
+    "pokemon": "Snubbull",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Knuddler",
+    "form": 210,
+    "id": 209.0,
+    "impacts": 2,
+    "pattern": "tumble",
+    "pokemon": "Granbull",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Krafttrick",
+    "form": 213,
+    "id": 213.0,
+    "impacts": 4,
+    "pattern": "shell",
+    "pokemon": "Pottrott",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Krafttrick",
+    "form": 213,
+    "id": 213.0,
+    "impacts": 4,
+    "pattern": "shell",
+    "pokemon": "Pottrott",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Krafttrick",
+    "form": 213,
+    "id": 213.0,
+    "impacts": 4,
+    "pattern": "shell",
+    "pokemon": "Pottrott",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Sniebels Kraftstoß",
+    "form": 215,
+    "id": 215.0,
+    "impacts": 2,
+    "pattern": "claw",
+    "pokemon": "Sniebel",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Sniebels Kraftstoß",
+    "form": 215,
+    "id": 215.0,
+    "impacts": 2,
+    "pattern": "claw",
+    "pokemon": "Sniebel",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Sniebels Kraftstoß",
+    "form": 215,
+    "id": 215.0,
+    "impacts": 2,
+    "pattern": "claw",
+    "pokemon": "Sniebel",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Keifels Kraftstoß",
+    "form": 220,
+    "id": 220.0,
+    "impacts": 2,
+    "pattern": "snow",
+    "pokemon": "Quiekel",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Keifels Kraftstoß",
+    "form": 220,
+    "id": 220.0,
+    "impacts": 2,
+    "pattern": "snow",
+    "pokemon": "Quiekel",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Keifels Kraftstoß",
+    "form": 221,
+    "id": 220.0,
+    "impacts": 2,
+    "pattern": "snow",
+    "pokemon": "Keifel",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Stahlflügel",
+    "form": 227,
+    "id": 227.0,
+    "impacts": 4,
+    "pattern": "wings",
+    "pokemon": "Panzaeron",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Stahlflügel",
+    "form": 227,
+    "id": 227.0,
+    "impacts": 4,
+    "pattern": "wings",
+    "pokemon": "Panzaeron",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Stahlflügel",
+    "form": 227,
+    "id": 227.0,
+    "impacts": 4,
+    "pattern": "wings",
+    "pokemon": "Panzaeron",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Hundemons Kraftstoß",
+    "form": 228,
+    "id": 228.0,
+    "impacts": 2,
+    "pattern": "hellbite",
+    "pokemon": "Hunduster",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Hundemons Kraftstoß",
+    "form": 228,
+    "id": 228.0,
+    "impacts": 2,
+    "pattern": "hellbite",
+    "pokemon": "Hunduster",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Hundemons Kraftstoß",
+    "form": 229,
+    "id": 228.0,
+    "impacts": 2,
+    "pattern": "hellbite",
+    "pokemon": "Hundemon",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Ninjatoms Kraftstoß",
+    "form": 290,
+    "id": 290.0,
+    "impacts": 2,
+    "pattern": "phantom",
+    "pokemon": "Nincada",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Ninjatoms Kraftstoß",
+    "form": 290,
+    "id": 290.0,
+    "impacts": 2,
+    "pattern": "phantom",
+    "pokemon": "Nincada",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Ninjatoms Kraftstoß",
+    "form": 292,
+    "id": 290.0,
+    "impacts": 2,
+    "pattern": "phantom",
+    "pokemon": "Ninjatom",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Wirbelwurf",
+    "form": 296,
+    "id": 296.0,
+    "impacts": 5,
+    "pattern": "throw",
+    "pokemon": "Makuhita",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Wirbelwurf",
+    "form": 296,
+    "id": 296.0,
+    "impacts": 5,
+    "pattern": "throw",
+    "pokemon": "Makuhita",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Wirbelwurf",
+    "form": 297,
+    "id": 296.0,
+    "impacts": 5,
+    "pattern": "throw",
+    "pokemon": "Hariyama",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Eisenschädel",
+    "form": 304,
+    "id": 304.0,
+    "impacts": 2,
+    "pattern": "iron",
+    "pokemon": "Stollunior",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Eisenschädel",
+    "form": 305,
+    "id": 304.0,
+    "impacts": 2,
+    "pattern": "iron",
+    "pokemon": "Stollrak",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Eisenschädel",
+    "form": 306,
+    "id": 304.0,
+    "impacts": 2,
+    "pattern": "iron",
+    "pokemon": "Stolloss",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Meditaliss Kraftstoß",
+    "form": 307,
+    "id": 307.0,
+    "impacts": 2,
+    "pattern": "zen",
+    "pokemon": "Meditie",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Meditaliss Kraftstoß",
+    "form": 307,
+    "id": 307.0,
+    "impacts": 2,
+    "pattern": "zen",
+    "pokemon": "Meditie",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Meditaliss Kraftstoß",
+    "form": 308,
+    "id": 307.0,
+    "impacts": 2,
+    "pattern": "zen",
+    "pokemon": "Meditalis",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Funkensprung",
+    "form": 309,
+    "id": 309.0,
+    "impacts": 4,
+    "pattern": "jump",
+    "pokemon": "Frizelbliz",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Funkensprung",
+    "form": 309,
+    "id": 309.0,
+    "impacts": 4,
+    "pattern": "jump",
+    "pokemon": "Frizelbliz",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Funkensprung",
+    "form": 310,
+    "id": 309.0,
+    "impacts": 4,
+    "pattern": "jump",
+    "pokemon": "Voltenso",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Blütenkur",
+    "form": 315,
+    "id": 315.0,
+    "impacts": 5,
+    "pattern": "garden",
+    "pokemon": "Roselia",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Blütenkur",
+    "form": 315,
+    "id": 315.0,
+    "impacts": 5,
+    "pattern": "garden",
+    "pokemon": "Roselia",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Blütenkur",
+    "form": 315,
+    "id": 315.0,
+    "impacts": 5,
+    "pattern": "garden",
+    "pokemon": "Roselia",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Nachtnebel",
+    "form": 355,
+    "id": 355.0,
+    "impacts": 6,
+    "pattern": "fog",
+    "pokemon": "Zwirrlicht",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Nachtnebel",
+    "form": 355,
+    "id": 355.0,
+    "impacts": 6,
+    "pattern": "fog",
+    "pokemon": "Zwirrlicht",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Nachtnebel",
+    "form": 356,
+    "id": 355.0,
+    "impacts": 6,
+    "pattern": "fog",
+    "pokemon": "Zwirrklop",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Familienwacht",
+    "form": 115,
+    "id": 115.0,
+    "impacts": 3,
+    "pattern": "family",
+    "pokemon": "Kangama",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Familienwacht",
+    "form": 115,
+    "id": 115.0,
+    "impacts": 3,
+    "pattern": "family",
+    "pokemon": "Kangama",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Familienwacht",
+    "form": 115,
+    "id": 115.0,
+    "impacts": 3,
+    "pattern": "family",
+    "pokemon": "Kangama",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Polarlicht",
+    "form": 131,
+    "id": 131.0,
+    "impacts": 5,
+    "pattern": "aurora",
+    "pokemon": "Lapras",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Polarlicht",
+    "form": 131,
+    "id": 131.0,
+    "impacts": 5,
+    "pattern": "aurora",
+    "pokemon": "Lapras",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Polarlicht",
+    "form": 131,
+    "id": 131.0,
+    "impacts": 5,
+    "pattern": "aurora",
+    "pokemon": "Lapras",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Draco Meteor",
+    "form": 147,
+    "id": 147.0,
+    "impacts": 4,
+    "pattern": "meteor",
+    "pokemon": "Dratini",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Draco Meteor",
+    "form": 148,
+    "id": 147.0,
+    "impacts": 4,
+    "pattern": "meteor",
+    "pokemon": "Dragonir",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Draco Meteor",
+    "form": 149,
+    "id": 147.0,
+    "impacts": 4,
+    "pattern": "meteor",
+    "pokemon": "Dragoran",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Vielender",
+    "form": 214,
+    "id": 214.0,
+    "impacts": 2,
+    "pattern": "horn",
+    "pokemon": "Skaraborn",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Vielender",
+    "form": 214,
+    "id": 214.0,
+    "impacts": 2,
+    "pattern": "horn",
+    "pokemon": "Skaraborn",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Vielender",
+    "form": 214,
+    "id": 214.0,
+    "impacts": 2,
+    "pattern": "horn",
+    "pokemon": "Skaraborn",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Sandsturm",
+    "form": 246,
+    "id": 246.0,
+    "impacts": 4,
+    "pattern": "sand",
+    "pokemon": "Larvitar",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Sandsturm",
+    "form": 247,
+    "id": 246.0,
+    "impacts": 4,
+    "pattern": "sand",
+    "pokemon": "Pupitar",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Sandsturm",
+    "form": 248,
+    "id": 246.0,
+    "impacts": 4,
+    "pattern": "sand",
+    "pokemon": "Despotar",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Trickschutz",
+    "form": 302,
+    "id": 302.0,
+    "impacts": 5,
+    "pattern": "gem",
+    "pokemon": "Zobiris",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Trickschutz",
+    "form": 302,
+    "id": 302.0,
+    "impacts": 5,
+    "pattern": "gem",
+    "pokemon": "Zobiris",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Trickschutz",
+    "form": 302,
+    "id": 302.0,
+    "impacts": 5,
+    "pattern": "gem",
+    "pokemon": "Zobiris",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Eisenkiefer",
+    "form": 303,
+    "id": 303.0,
+    "impacts": 2,
+    "pattern": "jaw",
+    "pokemon": "Flunkifer",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Eisenkiefer",
+    "form": 303,
+    "id": 303.0,
+    "impacts": 2,
+    "pattern": "jaw",
+    "pokemon": "Flunkifer",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Eisenkiefer",
+    "form": 303,
+    "id": 303.0,
+    "impacts": 2,
+    "pattern": "jaw",
+    "pokemon": "Flunkifer",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Erdwelle",
+    "form": 328,
+    "id": 328.0,
+    "impacts": 6,
+    "pattern": "rift",
+    "pokemon": "Knacklion",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Erdwelle",
+    "form": 329,
+    "id": 328.0,
+    "impacts": 6,
+    "pattern": "rift",
+    "pokemon": "Vibrava",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Erdwelle",
+    "form": 330,
+    "id": 328.0,
+    "impacts": 6,
+    "pattern": "rift",
+    "pokemon": "Libelldra",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Himmelslied",
+    "form": 333,
+    "id": 333.0,
+    "impacts": 4,
+    "pattern": "sky",
+    "pokemon": "Wablu",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Himmelslied",
+    "form": 333,
+    "id": 333.0,
+    "impacts": 4,
+    "pattern": "sky",
+    "pokemon": "Wablu",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Himmelslied",
+    "form": 334,
+    "id": 333.0,
+    "impacts": 4,
+    "pattern": "sky",
+    "pokemon": "Altaria",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Banettes Kraftstoß",
+    "form": 353,
+    "id": 353.0,
+    "impacts": 2,
+    "pattern": "curse",
+    "pokemon": "Shuppet",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Banettes Kraftstoß",
+    "form": 353,
+    "id": 353.0,
+    "impacts": 2,
+    "pattern": "curse",
+    "pokemon": "Shuppet",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Banettes Kraftstoß",
+    "form": 354,
+    "id": 353.0,
+    "impacts": 2,
+    "pattern": "curse",
+    "pokemon": "Banette",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Unheilsklinge",
+    "form": 359,
+    "id": 359.0,
+    "impacts": 1,
+    "pattern": "crescent",
+    "pokemon": "Absol",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Unheilsklinge",
+    "form": 359,
+    "id": 359.0,
+    "impacts": 1,
+    "pattern": "crescent",
+    "pokemon": "Absol",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Unheilsklinge",
+    "form": 359,
+    "id": 359.0,
+    "impacts": 1,
+    "pattern": "crescent",
+    "pokemon": "Absol",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Drachensturz",
+    "form": 371,
+    "id": 371.0,
+    "impacts": 4,
+    "pattern": "dive",
+    "pokemon": "Kindwurm",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Drachensturz",
+    "form": 372,
+    "id": 371.0,
+    "impacts": 4,
+    "pattern": "dive",
+    "pokemon": "Draschel",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Drachensturz",
+    "form": 373,
+    "id": 371.0,
+    "impacts": 4,
+    "pattern": "dive",
+    "pokemon": "Brutalanda",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Eisorkan",
+    "form": 144,
+    "id": 144.0,
+    "impacts": 6,
+    "pattern": "blizzard",
+    "pokemon": "Arktos",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Eisorkan",
+    "form": 144,
+    "id": 144.0,
+    "impacts": 6,
+    "pattern": "blizzard",
+    "pokemon": "Arktos",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Eisorkan",
+    "form": 144,
+    "id": 144.0,
+    "impacts": 6,
+    "pattern": "blizzard",
+    "pokemon": "Arktos",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Donnergewitter",
+    "form": 145,
+    "id": 145.0,
+    "impacts": 6,
+    "pattern": "storm",
+    "pokemon": "Zapdos",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Donnergewitter",
+    "form": 145,
+    "id": 145.0,
+    "impacts": 6,
+    "pattern": "storm",
+    "pokemon": "Zapdos",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Donnergewitter",
+    "form": 145,
+    "id": 145.0,
+    "impacts": 6,
+    "pattern": "storm",
+    "pokemon": "Zapdos",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Läuterfeuer",
+    "form": 146,
+    "id": 146.0,
+    "impacts": 6,
+    "pattern": "phoenix",
+    "pokemon": "Lavados",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Läuterfeuer",
+    "form": 146,
+    "id": 146.0,
+    "impacts": 6,
+    "pattern": "phoenix",
+    "pokemon": "Lavados",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Läuterfeuer",
+    "form": 146,
+    "id": 146.0,
+    "impacts": 6,
+    "pattern": "phoenix",
+    "pokemon": "Lavados",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Donnerjagd",
+    "form": 243,
+    "id": 243.0,
+    "impacts": 4,
+    "pattern": "hunt",
+    "pokemon": "Raikou",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Donnerjagd",
+    "form": 243,
+    "id": 243.0,
+    "impacts": 4,
+    "pattern": "hunt",
+    "pokemon": "Raikou",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Donnerjagd",
+    "form": 243,
+    "id": 243.0,
+    "impacts": 4,
+    "pattern": "hunt",
+    "pokemon": "Raikou",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Vulkanwacht",
+    "form": 244,
+    "id": 244.0,
+    "impacts": 7,
+    "pattern": "volcano",
+    "pokemon": "Entei",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Vulkanwacht",
+    "form": 244,
+    "id": 244.0,
+    "impacts": 7,
+    "pattern": "volcano",
+    "pokemon": "Entei",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Vulkanwacht",
+    "form": 244,
+    "id": 244.0,
+    "impacts": 7,
+    "pattern": "volcano",
+    "pokemon": "Entei",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Frosdedjes Kraftstoß",
+    "form": 361,
+    "id": 361.0,
+    "impacts": 2,
+    "pattern": "frost",
+    "pokemon": "Schneppke",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Frosdedjes Kraftstoß",
+    "form": 361,
+    "id": 361.0,
+    "impacts": 2,
+    "pattern": "frost",
+    "pokemon": "Schneppke",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Frosdedjes Kraftstoß",
+    "form": 478,
+    "id": 361.0,
+    "impacts": 2,
+    "pattern": "frost",
+    "pokemon": "Frosdedje",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Walraisas Kraftstoß",
+    "form": 363,
+    "id": 363.0,
+    "impacts": 2,
+    "pattern": "surf",
+    "pokemon": "Seemops",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Walraisas Kraftstoß",
+    "form": 364,
+    "id": 363.0,
+    "impacts": 2,
+    "pattern": "surf",
+    "pokemon": "Seejong",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Walraisas Kraftstoß",
+    "form": 365,
+    "id": 363.0,
+    "impacts": 2,
+    "pattern": "surf",
+    "pokemon": "Walraisa",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Latiass Kraftstoß",
+    "form": 380,
+    "id": 380.0,
+    "impacts": 2,
+    "pattern": "mist",
+    "pokemon": "Latias",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Latiass Kraftstoß",
+    "form": 380,
+    "id": 380.0,
+    "impacts": 2,
+    "pattern": "mist",
+    "pokemon": "Latias",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Latiass Kraftstoß",
+    "form": 380,
+    "id": 380.0,
+    "impacts": 2,
+    "pattern": "mist",
+    "pokemon": "Latias",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Latioss Kraftstoß",
+    "form": 381,
+    "id": 381.0,
+    "impacts": 2,
+    "pattern": "luster",
+    "pokemon": "Latios",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Latioss Kraftstoß",
+    "form": 381,
+    "id": 381.0,
+    "impacts": 2,
+    "pattern": "luster",
+    "pokemon": "Latios",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Latioss Kraftstoß",
+    "form": 381,
+    "id": 381.0,
+    "impacts": 2,
+    "pattern": "luster",
+    "pokemon": "Latios",
+    "star": 3,
+    "verified": true
+  },
+  {
+    "ability": "Zenitsturm",
+    "form": 384,
+    "id": 384.0,
+    "impacts": 5,
+    "pattern": "zenith",
+    "pokemon": "Rayquaza",
+    "star": 1,
+    "verified": true
+  },
+  {
+    "ability": "Zenitsturm",
+    "form": 384,
+    "id": 384.0,
+    "impacts": 5,
+    "pattern": "zenith",
+    "pokemon": "Rayquaza",
+    "star": 2,
+    "verified": true
+  },
+  {
+    "ability": "Zenitsturm",
+    "form": 384,
+    "id": 384.0,
+    "impacts": 5,
+    "pattern": "zenith",
+    "pokemon": "Rayquaza",
+    "star": 3,
+    "verified": true
+  }
+]

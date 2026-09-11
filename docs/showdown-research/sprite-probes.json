@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://play.pokemonshowdown.com/sprites/gen5ani/bulbasaur.gif",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://play.pokemonshowdown.com/sprites/gen5ani-back/bulbasaur.gif",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://play.pokemonshowdown.com/sprites/gen5ani/venusaur.gif",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://play.pokemonshowdown.com/sprites/ani/bulbasaur.gif",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

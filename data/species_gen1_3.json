@@ -1,0 +1,4442 @@
+[
+  {
+    "id": 1,
+    "name": "Bisasam",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 2,
+    "name": "Bisaknosp",
+    "generation": 1,
+    "parent": 1,
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 3,
+    "name": "Bisaflor",
+    "generation": 1,
+    "parent": 2,
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 4,
+    "name": "Glumanda",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 5,
+    "name": "Glutexo",
+    "generation": 1,
+    "parent": 4,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 6,
+    "name": "Glurak",
+    "generation": 1,
+    "parent": 5,
+    "types": [
+      "Feuer",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 7,
+    "name": "Schiggy",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 8,
+    "name": "Schillok",
+    "generation": 1,
+    "parent": 7,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 9,
+    "name": "Turtok",
+    "generation": 1,
+    "parent": 8,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 10,
+    "name": "Raupy",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Käfer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 11,
+    "name": "Safcon",
+    "generation": 1,
+    "parent": 10,
+    "types": [
+      "Käfer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 12,
+    "name": "Smettbo",
+    "generation": 1,
+    "parent": 11,
+    "types": [
+      "Käfer",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 13,
+    "name": "Hornliu",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Käfer",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 14,
+    "name": "Kokuna",
+    "generation": 1,
+    "parent": 13,
+    "types": [
+      "Käfer",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 15,
+    "name": "Bibor",
+    "generation": 1,
+    "parent": 14,
+    "types": [
+      "Käfer",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 16,
+    "name": "Taubsi",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 17,
+    "name": "Tauboga",
+    "generation": 1,
+    "parent": 16,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 18,
+    "name": "Tauboss",
+    "generation": 1,
+    "parent": 17,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 19,
+    "name": "Rattfratz",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 20,
+    "name": "Rattikarl",
+    "generation": 1,
+    "parent": 19,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 21,
+    "name": "Habitak",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 22,
+    "name": "Ibitak",
+    "generation": 1,
+    "parent": 21,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 23,
+    "name": "Rettan",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 24,
+    "name": "Arbok",
+    "generation": 1,
+    "parent": 23,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 25,
+    "name": "Pikachu",
+    "generation": 1,
+    "parent": 172,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 26,
+    "name": "Raichu",
+    "generation": 1,
+    "parent": 25,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 27,
+    "name": "Sandan",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 28,
+    "name": "Sandamer",
+    "generation": 1,
+    "parent": 27,
+    "types": [
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 29,
+    "name": "Nidoran♀",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 30,
+    "name": "Nidorina",
+    "generation": 1,
+    "parent": 29,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 31,
+    "name": "Nidoqueen",
+    "generation": 1,
+    "parent": 30,
+    "types": [
+      "Gift",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 32,
+    "name": "Nidoran♂",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 33,
+    "name": "Nidorino",
+    "generation": 1,
+    "parent": 32,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 34,
+    "name": "Nidoking",
+    "generation": 1,
+    "parent": 33,
+    "types": [
+      "Gift",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 35,
+    "name": "Piepi",
+    "generation": 1,
+    "parent": 173,
+    "types": [
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 36,
+    "name": "Pixi",
+    "generation": 1,
+    "parent": 35,
+    "types": [
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 37,
+    "name": "Vulpix",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 38,
+    "name": "Vulnona",
+    "generation": 1,
+    "parent": 37,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 39,
+    "name": "Pummeluff",
+    "generation": 1,
+    "parent": 174,
+    "types": [
+      "Normal",
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 40,
+    "name": "Knuddeluff",
+    "generation": 1,
+    "parent": 39,
+    "types": [
+      "Normal",
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 41,
+    "name": "Zubat",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Gift",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 42,
+    "name": "Golbat",
+    "generation": 1,
+    "parent": 41,
+    "types": [
+      "Gift",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 43,
+    "name": "Myrapla",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 44,
+    "name": "Duflor",
+    "generation": 1,
+    "parent": 43,
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 45,
+    "name": "Giflor",
+    "generation": 1,
+    "parent": 44,
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 46,
+    "name": "Paras",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Käfer",
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 47,
+    "name": "Parasek",
+    "generation": 1,
+    "parent": 46,
+    "types": [
+      "Käfer",
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 48,
+    "name": "Bluzuk",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Käfer",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 49,
+    "name": "Omot",
+    "generation": 1,
+    "parent": 48,
+    "types": [
+      "Käfer",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 50,
+    "name": "Digda",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 51,
+    "name": "Digdri",
+    "generation": 1,
+    "parent": 50,
+    "types": [
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 52,
+    "name": "Mauzi",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 53,
+    "name": "Snobilikat",
+    "generation": 1,
+    "parent": 52,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 54,
+    "name": "Enton",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 55,
+    "name": "Entoron",
+    "generation": 1,
+    "parent": 54,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 56,
+    "name": "Menki",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 57,
+    "name": "Rasaff",
+    "generation": 1,
+    "parent": 56,
+    "types": [
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 58,
+    "name": "Fukano",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 59,
+    "name": "Arkani",
+    "generation": 1,
+    "parent": 58,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 60,
+    "name": "Quapsel",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 61,
+    "name": "Quaputzi",
+    "generation": 1,
+    "parent": 60,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 62,
+    "name": "Quappo",
+    "generation": 1,
+    "parent": 61,
+    "types": [
+      "Wasser",
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 63,
+    "name": "Abra",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 64,
+    "name": "Kadabra",
+    "generation": 1,
+    "parent": 63,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 65,
+    "name": "Simsala",
+    "generation": 1,
+    "parent": 64,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 66,
+    "name": "Machollo",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 67,
+    "name": "Maschock",
+    "generation": 1,
+    "parent": 66,
+    "types": [
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 68,
+    "name": "Machomei",
+    "generation": 1,
+    "parent": 67,
+    "types": [
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 69,
+    "name": "Knofensa",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 70,
+    "name": "Ultrigaria",
+    "generation": 1,
+    "parent": 69,
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 71,
+    "name": "Sarzenia",
+    "generation": 1,
+    "parent": 70,
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 72,
+    "name": "Tentacha",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 73,
+    "name": "Tentoxa",
+    "generation": 1,
+    "parent": 72,
+    "types": [
+      "Wasser",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 74,
+    "name": "Kleinstein",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Gestein",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 75,
+    "name": "Georok",
+    "generation": 1,
+    "parent": 74,
+    "types": [
+      "Gestein",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 76,
+    "name": "Geowaz",
+    "generation": 1,
+    "parent": 75,
+    "types": [
+      "Gestein",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 77,
+    "name": "Ponita",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 78,
+    "name": "Gallopa",
+    "generation": 1,
+    "parent": 77,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 79,
+    "name": "Flegmon",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 80,
+    "name": "Lahmus",
+    "generation": 1,
+    "parent": 79,
+    "types": [
+      "Wasser",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 81,
+    "name": "Magnetilo",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Elektro",
+      "Stahl"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 82,
+    "name": "Magneton",
+    "generation": 1,
+    "parent": 81,
+    "types": [
+      "Elektro",
+      "Stahl"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 83,
+    "name": "Porenta",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 84,
+    "name": "Dodu",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 85,
+    "name": "Dodri",
+    "generation": 1,
+    "parent": 84,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 86,
+    "name": "Jurob",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 87,
+    "name": "Jugong",
+    "generation": 1,
+    "parent": 86,
+    "types": [
+      "Wasser",
+      "Eis"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 88,
+    "name": "Sleima",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 89,
+    "name": "Sleimok",
+    "generation": 1,
+    "parent": 88,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 90,
+    "name": "Muschas",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 91,
+    "name": "Austos",
+    "generation": 1,
+    "parent": 90,
+    "types": [
+      "Wasser",
+      "Eis"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 92,
+    "name": "Nebulak",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Geist",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 93,
+    "name": "Alpollo",
+    "generation": 1,
+    "parent": 92,
+    "types": [
+      "Geist",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 94,
+    "name": "Gengar",
+    "generation": 1,
+    "parent": 93,
+    "types": [
+      "Geist",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 95,
+    "name": "Onix",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Gestein",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 96,
+    "name": "Traumato",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 97,
+    "name": "Hypno",
+    "generation": 1,
+    "parent": 96,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 98,
+    "name": "Krabby",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 99,
+    "name": "Kingler",
+    "generation": 1,
+    "parent": 98,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 100,
+    "name": "Voltobal",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 101,
+    "name": "Lektrobal",
+    "generation": 1,
+    "parent": 100,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 102,
+    "name": "Owei",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Pflanze",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 103,
+    "name": "Kokowei",
+    "generation": 1,
+    "parent": 102,
+    "types": [
+      "Pflanze",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 104,
+    "name": "Tragosso",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 105,
+    "name": "Knogga",
+    "generation": 1,
+    "parent": 104,
+    "types": [
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 106,
+    "name": "Kicklee",
+    "generation": 1,
+    "parent": 236,
+    "types": [
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 107,
+    "name": "Nockchan",
+    "generation": 1,
+    "parent": 236,
+    "types": [
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 108,
+    "name": "Schlurp",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 109,
+    "name": "Smogon",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 110,
+    "name": "Smogmog",
+    "generation": 1,
+    "parent": 109,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 111,
+    "name": "Rihorn",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Boden",
+      "Gestein"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 112,
+    "name": "Rizeros",
+    "generation": 1,
+    "parent": 111,
+    "types": [
+      "Boden",
+      "Gestein"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 113,
+    "name": "Chaneira",
+    "generation": 1,
+    "parent": 440,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 114,
+    "name": "Tangela",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 115,
+    "name": "Kangama",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 116,
+    "name": "Seeper",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 117,
+    "name": "Seemon",
+    "generation": 1,
+    "parent": 116,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 118,
+    "name": "Goldini",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 119,
+    "name": "Golking",
+    "generation": 1,
+    "parent": 118,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 120,
+    "name": "Sterndu",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 121,
+    "name": "Starmie",
+    "generation": 1,
+    "parent": 120,
+    "types": [
+      "Wasser",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 122,
+    "name": "Pantimos",
+    "generation": 1,
+    "parent": 439,
+    "types": [
+      "Psycho",
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 123,
+    "name": "Sichlor",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Käfer",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 124,
+    "name": "Rossana",
+    "generation": 1,
+    "parent": 238,
+    "types": [
+      "Eis",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 125,
+    "name": "Elektek",
+    "generation": 1,
+    "parent": 239,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 126,
+    "name": "Magmar",
+    "generation": 1,
+    "parent": 240,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 127,
+    "name": "Pinsir",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Käfer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 128,
+    "name": "Tauros",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 129,
+    "name": "Karpador",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 130,
+    "name": "Garados",
+    "generation": 1,
+    "parent": 129,
+    "types": [
+      "Wasser",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 131,
+    "name": "Lapras",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Eis"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 132,
+    "name": "Ditto",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 133,
+    "name": "Evoli",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 134,
+    "name": "Aquana",
+    "generation": 1,
+    "parent": 133,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 135,
+    "name": "Blitza",
+    "generation": 1,
+    "parent": 133,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 136,
+    "name": "Flamara",
+    "generation": 1,
+    "parent": 133,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 137,
+    "name": "Porygon",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 138,
+    "name": "Amonitas",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Gestein",
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 139,
+    "name": "Amoroso",
+    "generation": 1,
+    "parent": 138,
+    "types": [
+      "Gestein",
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 140,
+    "name": "Kabuto",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Gestein",
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 141,
+    "name": "Kabutops",
+    "generation": 1,
+    "parent": 140,
+    "types": [
+      "Gestein",
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 142,
+    "name": "Aerodactyl",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Gestein",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 143,
+    "name": "Relaxo",
+    "generation": 1,
+    "parent": 446,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 144,
+    "name": "Arktos",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Eis",
+      "Flug"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 145,
+    "name": "Zapdos",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Elektro",
+      "Flug"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 146,
+    "name": "Lavados",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Feuer",
+      "Flug"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 147,
+    "name": "Dratini",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Drache"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 148,
+    "name": "Dragonir",
+    "generation": 1,
+    "parent": 147,
+    "types": [
+      "Drache"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 149,
+    "name": "Dragoran",
+    "generation": 1,
+    "parent": 148,
+    "types": [
+      "Drache",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 150,
+    "name": "Mewtu",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 151,
+    "name": "Mew",
+    "generation": 1,
+    "parent": 0,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": true
+  },
+  {
+    "id": 152,
+    "name": "Endivie",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 153,
+    "name": "Lorblatt",
+    "generation": 2,
+    "parent": 152,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 154,
+    "name": "Meganie",
+    "generation": 2,
+    "parent": 153,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 155,
+    "name": "Feurigel",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 156,
+    "name": "Igelavar",
+    "generation": 2,
+    "parent": 155,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 157,
+    "name": "Tornupto",
+    "generation": 2,
+    "parent": 156,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 158,
+    "name": "Karnimani",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 159,
+    "name": "Tyracroc",
+    "generation": 2,
+    "parent": 158,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 160,
+    "name": "Impergator",
+    "generation": 2,
+    "parent": 159,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 161,
+    "name": "Wiesor",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 162,
+    "name": "Wiesenior",
+    "generation": 2,
+    "parent": 161,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 163,
+    "name": "Hoothoot",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 164,
+    "name": "Noctuh",
+    "generation": 2,
+    "parent": 163,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 165,
+    "name": "Ledyba",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Käfer",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 166,
+    "name": "Ledian",
+    "generation": 2,
+    "parent": 165,
+    "types": [
+      "Käfer",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 167,
+    "name": "Webarak",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Käfer",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 168,
+    "name": "Ariados",
+    "generation": 2,
+    "parent": 167,
+    "types": [
+      "Käfer",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 169,
+    "name": "Iksbat",
+    "generation": 2,
+    "parent": 42,
+    "types": [
+      "Gift",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 170,
+    "name": "Lampi",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 171,
+    "name": "Lanturn",
+    "generation": 2,
+    "parent": 170,
+    "types": [
+      "Wasser",
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 172,
+    "name": "Pichu",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 173,
+    "name": "Pii",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 174,
+    "name": "Fluffeluff",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Normal",
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 175,
+    "name": "Togepi",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 176,
+    "name": "Togetic",
+    "generation": 2,
+    "parent": 175,
+    "types": [
+      "Fee",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 177,
+    "name": "Natu",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Psycho",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 178,
+    "name": "Xatu",
+    "generation": 2,
+    "parent": 177,
+    "types": [
+      "Psycho",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 179,
+    "name": "Voltilamm",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 180,
+    "name": "Waaty",
+    "generation": 2,
+    "parent": 179,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 181,
+    "name": "Ampharos",
+    "generation": 2,
+    "parent": 180,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 182,
+    "name": "Blubella",
+    "generation": 2,
+    "parent": 44,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 183,
+    "name": "Marill",
+    "generation": 2,
+    "parent": 298,
+    "types": [
+      "Wasser",
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 184,
+    "name": "Azumarill",
+    "generation": 2,
+    "parent": 183,
+    "types": [
+      "Wasser",
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 185,
+    "name": "Mogelbaum",
+    "generation": 2,
+    "parent": 438,
+    "types": [
+      "Gestein"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 186,
+    "name": "Quaxo",
+    "generation": 2,
+    "parent": 61,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 187,
+    "name": "Hoppspross",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Pflanze",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 188,
+    "name": "Hubelupf",
+    "generation": 2,
+    "parent": 187,
+    "types": [
+      "Pflanze",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 189,
+    "name": "Papungha",
+    "generation": 2,
+    "parent": 188,
+    "types": [
+      "Pflanze",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 190,
+    "name": "Griffel",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 191,
+    "name": "Sonnkern",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 192,
+    "name": "Sonnflora",
+    "generation": 2,
+    "parent": 191,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 193,
+    "name": "Yanma",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Käfer",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 194,
+    "name": "Felino",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 195,
+    "name": "Morlord",
+    "generation": 2,
+    "parent": 194,
+    "types": [
+      "Wasser",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 196,
+    "name": "Psiana",
+    "generation": 2,
+    "parent": 133,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 197,
+    "name": "Nachtara",
+    "generation": 2,
+    "parent": 133,
+    "types": [
+      "Unlicht"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 198,
+    "name": "Kramurx",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Unlicht",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 199,
+    "name": "Laschoking",
+    "generation": 2,
+    "parent": 79,
+    "types": [
+      "Wasser",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 200,
+    "name": "Traunfugil",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Geist"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 201,
+    "name": "Icognito",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 202,
+    "name": "Woingenau",
+    "generation": 2,
+    "parent": 360,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 203,
+    "name": "Girafarig",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Normal",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 204,
+    "name": "Tannza",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Käfer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 205,
+    "name": "Forstellka",
+    "generation": 2,
+    "parent": 204,
+    "types": [
+      "Käfer",
+      "Stahl"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 206,
+    "name": "Dummisel",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 207,
+    "name": "Skorgla",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Boden",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 208,
+    "name": "Stahlos",
+    "generation": 2,
+    "parent": 95,
+    "types": [
+      "Stahl",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 209,
+    "name": "Snubbull",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 210,
+    "name": "Granbull",
+    "generation": 2,
+    "parent": 209,
+    "types": [
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 211,
+    "name": "Baldorfish",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 212,
+    "name": "Scherox",
+    "generation": 2,
+    "parent": 123,
+    "types": [
+      "Käfer",
+      "Stahl"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 213,
+    "name": "Pottrott",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Käfer",
+      "Gestein"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 214,
+    "name": "Skaraborn",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Käfer",
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 215,
+    "name": "Sniebel",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Unlicht",
+      "Eis"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 216,
+    "name": "Teddiursa",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 217,
+    "name": "Ursaring",
+    "generation": 2,
+    "parent": 216,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 218,
+    "name": "Schneckmag",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 219,
+    "name": "Magcargo",
+    "generation": 2,
+    "parent": 218,
+    "types": [
+      "Feuer",
+      "Gestein"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 220,
+    "name": "Quiekel",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Eis",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 221,
+    "name": "Keifel",
+    "generation": 2,
+    "parent": 220,
+    "types": [
+      "Eis",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 222,
+    "name": "Corasonn",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Gestein"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 223,
+    "name": "Remoraid",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 224,
+    "name": "Octillery",
+    "generation": 2,
+    "parent": 223,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 225,
+    "name": "Botogel",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Eis",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 226,
+    "name": "Mantax",
+    "generation": 2,
+    "parent": 458,
+    "types": [
+      "Wasser",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 227,
+    "name": "Panzaeron",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Stahl",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 228,
+    "name": "Hunduster",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Unlicht",
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 229,
+    "name": "Hundemon",
+    "generation": 2,
+    "parent": 228,
+    "types": [
+      "Unlicht",
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 230,
+    "name": "Seedraking",
+    "generation": 2,
+    "parent": 117,
+    "types": [
+      "Wasser",
+      "Drache"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 231,
+    "name": "Phanpy",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 232,
+    "name": "Donphan",
+    "generation": 2,
+    "parent": 231,
+    "types": [
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 233,
+    "name": "Porygon2",
+    "generation": 2,
+    "parent": 137,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 234,
+    "name": "Damhirplex",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 235,
+    "name": "Farbeagle",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 236,
+    "name": "Rabauz",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 237,
+    "name": "Kapoera",
+    "generation": 2,
+    "parent": 236,
+    "types": [
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 238,
+    "name": "Kussilla",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Eis",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 239,
+    "name": "Elekid",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 240,
+    "name": "Magby",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 241,
+    "name": "Miltank",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 242,
+    "name": "Heiteira",
+    "generation": 2,
+    "parent": 113,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 243,
+    "name": "Raikou",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 244,
+    "name": "Entei",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 245,
+    "name": "Suicune",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 246,
+    "name": "Larvitar",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Gestein",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 247,
+    "name": "Pupitar",
+    "generation": 2,
+    "parent": 246,
+    "types": [
+      "Gestein",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 248,
+    "name": "Despotar",
+    "generation": 2,
+    "parent": 247,
+    "types": [
+      "Gestein",
+      "Unlicht"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 249,
+    "name": "Lugia",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Psycho",
+      "Flug"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 250,
+    "name": "Ho-Oh",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Feuer",
+      "Flug"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 251,
+    "name": "Celebi",
+    "generation": 2,
+    "parent": 0,
+    "types": [
+      "Psycho",
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": true
+  },
+  {
+    "id": 252,
+    "name": "Geckarbor",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 253,
+    "name": "Reptain",
+    "generation": 3,
+    "parent": 252,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 254,
+    "name": "Gewaldro",
+    "generation": 3,
+    "parent": 253,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 255,
+    "name": "Flemmli",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 256,
+    "name": "Jungglut",
+    "generation": 3,
+    "parent": 255,
+    "types": [
+      "Feuer",
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 257,
+    "name": "Lohgock",
+    "generation": 3,
+    "parent": 256,
+    "types": [
+      "Feuer",
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 258,
+    "name": "Hydropi",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 259,
+    "name": "Moorabbel",
+    "generation": 3,
+    "parent": 258,
+    "types": [
+      "Wasser",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 260,
+    "name": "Sumpex",
+    "generation": 3,
+    "parent": 259,
+    "types": [
+      "Wasser",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 261,
+    "name": "Fiffyen",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Unlicht"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 262,
+    "name": "Magnayen",
+    "generation": 3,
+    "parent": 261,
+    "types": [
+      "Unlicht"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 263,
+    "name": "Zigzachs",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 264,
+    "name": "Geradaks",
+    "generation": 3,
+    "parent": 263,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 265,
+    "name": "Waumpel",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Käfer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 266,
+    "name": "Schaloko",
+    "generation": 3,
+    "parent": 265,
+    "types": [
+      "Käfer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 267,
+    "name": "Papinella",
+    "generation": 3,
+    "parent": 266,
+    "types": [
+      "Käfer",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 268,
+    "name": "Panekon",
+    "generation": 3,
+    "parent": 265,
+    "types": [
+      "Käfer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 269,
+    "name": "Pudox",
+    "generation": 3,
+    "parent": 268,
+    "types": [
+      "Käfer",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 270,
+    "name": "Loturzel",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 271,
+    "name": "Lombrero",
+    "generation": 3,
+    "parent": 270,
+    "types": [
+      "Wasser",
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 272,
+    "name": "Kappalores",
+    "generation": 3,
+    "parent": 271,
+    "types": [
+      "Wasser",
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 273,
+    "name": "Samurzel",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 274,
+    "name": "Blanas",
+    "generation": 3,
+    "parent": 273,
+    "types": [
+      "Pflanze",
+      "Unlicht"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 275,
+    "name": "Tengulist",
+    "generation": 3,
+    "parent": 274,
+    "types": [
+      "Pflanze",
+      "Unlicht"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 276,
+    "name": "Schwalbini",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 277,
+    "name": "Schwalboss",
+    "generation": 3,
+    "parent": 276,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 278,
+    "name": "Wingull",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 279,
+    "name": "Pelipper",
+    "generation": 3,
+    "parent": 278,
+    "types": [
+      "Wasser",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 280,
+    "name": "Trasla",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Psycho",
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 281,
+    "name": "Kirlia",
+    "generation": 3,
+    "parent": 280,
+    "types": [
+      "Psycho",
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 282,
+    "name": "Guardevoir",
+    "generation": 3,
+    "parent": 281,
+    "types": [
+      "Psycho",
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 283,
+    "name": "Gehweiher",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Käfer",
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 284,
+    "name": "Maskeregen",
+    "generation": 3,
+    "parent": 283,
+    "types": [
+      "Käfer",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 285,
+    "name": "Knilz",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 286,
+    "name": "Kapilz",
+    "generation": 3,
+    "parent": 285,
+    "types": [
+      "Pflanze",
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 287,
+    "name": "Bummelz",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 288,
+    "name": "Muntier",
+    "generation": 3,
+    "parent": 287,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 289,
+    "name": "Letarking",
+    "generation": 3,
+    "parent": 288,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 290,
+    "name": "Nincada",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Käfer",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 291,
+    "name": "Ninjask",
+    "generation": 3,
+    "parent": 290,
+    "types": [
+      "Käfer",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 292,
+    "name": "Ninjatom",
+    "generation": 3,
+    "parent": 290,
+    "types": [
+      "Käfer",
+      "Geist"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 293,
+    "name": "Flurmel",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 294,
+    "name": "Krakeelo",
+    "generation": 3,
+    "parent": 293,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 295,
+    "name": "Krawumms",
+    "generation": 3,
+    "parent": 294,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 296,
+    "name": "Makuhita",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 297,
+    "name": "Hariyama",
+    "generation": 3,
+    "parent": 296,
+    "types": [
+      "Kampf"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 298,
+    "name": "Azurill",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Normal",
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 299,
+    "name": "Nasgnet",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Gestein"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 300,
+    "name": "Eneco",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 301,
+    "name": "Enekoro",
+    "generation": 3,
+    "parent": 300,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 302,
+    "name": "Zobiris",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Unlicht",
+      "Geist"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 303,
+    "name": "Flunkifer",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Stahl",
+      "Fee"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 304,
+    "name": "Stollunior",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Stahl",
+      "Gestein"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 305,
+    "name": "Stollrak",
+    "generation": 3,
+    "parent": 304,
+    "types": [
+      "Stahl",
+      "Gestein"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 306,
+    "name": "Stolloss",
+    "generation": 3,
+    "parent": 305,
+    "types": [
+      "Stahl",
+      "Gestein"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 307,
+    "name": "Meditie",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Kampf",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 308,
+    "name": "Meditalis",
+    "generation": 3,
+    "parent": 307,
+    "types": [
+      "Kampf",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 309,
+    "name": "Frizelbliz",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 310,
+    "name": "Voltenso",
+    "generation": 3,
+    "parent": 309,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 311,
+    "name": "Plusle",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 312,
+    "name": "Minun",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Elektro"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 313,
+    "name": "Volbeat",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Käfer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 314,
+    "name": "Illumise",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Käfer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 315,
+    "name": "Roselia",
+    "generation": 3,
+    "parent": 406,
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 316,
+    "name": "Schluppuck",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 317,
+    "name": "Schlukwech",
+    "generation": 3,
+    "parent": 316,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 318,
+    "name": "Kanivanha",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Unlicht"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 319,
+    "name": "Tohaido",
+    "generation": 3,
+    "parent": 318,
+    "types": [
+      "Wasser",
+      "Unlicht"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 320,
+    "name": "Wailmer",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 321,
+    "name": "Wailord",
+    "generation": 3,
+    "parent": 320,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 322,
+    "name": "Camaub",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Feuer",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 323,
+    "name": "Camerupt",
+    "generation": 3,
+    "parent": 322,
+    "types": [
+      "Feuer",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 324,
+    "name": "Qurtel",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Feuer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 325,
+    "name": "Spoink",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 326,
+    "name": "Groink",
+    "generation": 3,
+    "parent": 325,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 327,
+    "name": "Pandir",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 328,
+    "name": "Knacklion",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 329,
+    "name": "Vibrava",
+    "generation": 3,
+    "parent": 328,
+    "types": [
+      "Boden",
+      "Drache"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 330,
+    "name": "Libelldra",
+    "generation": 3,
+    "parent": 329,
+    "types": [
+      "Boden",
+      "Drache"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 331,
+    "name": "Tuska",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 332,
+    "name": "Noktuska",
+    "generation": 3,
+    "parent": 331,
+    "types": [
+      "Pflanze",
+      "Unlicht"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 333,
+    "name": "Wablu",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 334,
+    "name": "Altaria",
+    "generation": 3,
+    "parent": 333,
+    "types": [
+      "Drache",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 335,
+    "name": "Sengo",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 336,
+    "name": "Vipitis",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Gift"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 337,
+    "name": "Lunastein",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Gestein",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 338,
+    "name": "Sonnfel",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Gestein",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 339,
+    "name": "Schmerbe",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 340,
+    "name": "Welsar",
+    "generation": 3,
+    "parent": 339,
+    "types": [
+      "Wasser",
+      "Boden"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 341,
+    "name": "Krebscorps",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 342,
+    "name": "Krebutack",
+    "generation": 3,
+    "parent": 341,
+    "types": [
+      "Wasser",
+      "Unlicht"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 343,
+    "name": "Puppance",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Boden",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 344,
+    "name": "Lepumentas",
+    "generation": 3,
+    "parent": 343,
+    "types": [
+      "Boden",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 345,
+    "name": "Liliep",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Gestein",
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 346,
+    "name": "Wielie",
+    "generation": 3,
+    "parent": 345,
+    "types": [
+      "Gestein",
+      "Pflanze"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 347,
+    "name": "Anorith",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Gestein",
+      "Käfer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 348,
+    "name": "Armaldo",
+    "generation": 3,
+    "parent": 347,
+    "types": [
+      "Gestein",
+      "Käfer"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 349,
+    "name": "Barschwa",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 350,
+    "name": "Milotic",
+    "generation": 3,
+    "parent": 349,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 351,
+    "name": "Formeo",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 352,
+    "name": "Kecleon",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Normal"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 353,
+    "name": "Shuppet",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Geist"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 354,
+    "name": "Banette",
+    "generation": 3,
+    "parent": 353,
+    "types": [
+      "Geist"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 355,
+    "name": "Zwirrlicht",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Geist"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 356,
+    "name": "Zwirrklop",
+    "generation": 3,
+    "parent": 355,
+    "types": [
+      "Geist"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 357,
+    "name": "Tropius",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Pflanze",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 358,
+    "name": "Palimpalim",
+    "generation": 3,
+    "parent": 433,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 359,
+    "name": "Absol",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Unlicht"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 360,
+    "name": "Isso",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 361,
+    "name": "Schneppke",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Eis"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 362,
+    "name": "Firnontor",
+    "generation": 3,
+    "parent": 361,
+    "types": [
+      "Eis"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 363,
+    "name": "Seemops",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Eis",
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 364,
+    "name": "Seejong",
+    "generation": 3,
+    "parent": 363,
+    "types": [
+      "Eis",
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 365,
+    "name": "Walraisa",
+    "generation": 3,
+    "parent": 364,
+    "types": [
+      "Eis",
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 366,
+    "name": "Perlu",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 367,
+    "name": "Aalabyss",
+    "generation": 3,
+    "parent": 366,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 368,
+    "name": "Saganabyss",
+    "generation": 3,
+    "parent": 366,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 369,
+    "name": "Relicanth",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser",
+      "Gestein"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 370,
+    "name": "Liebiskus",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 371,
+    "name": "Kindwurm",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Drache"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 372,
+    "name": "Draschel",
+    "generation": 3,
+    "parent": 371,
+    "types": [
+      "Drache"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 373,
+    "name": "Brutalanda",
+    "generation": 3,
+    "parent": 372,
+    "types": [
+      "Drache",
+      "Flug"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 374,
+    "name": "Tanhel",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Stahl",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 375,
+    "name": "Metang",
+    "generation": 3,
+    "parent": 374,
+    "types": [
+      "Stahl",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 376,
+    "name": "Metagross",
+    "generation": 3,
+    "parent": 375,
+    "types": [
+      "Stahl",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "id": 377,
+    "name": "Regirock",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Gestein"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 378,
+    "name": "Regice",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Eis"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 379,
+    "name": "Registeel",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Stahl"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 380,
+    "name": "Latias",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Drache",
+      "Psycho"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 381,
+    "name": "Latios",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Drache",
+      "Psycho"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 382,
+    "name": "Kyogre",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Wasser"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 383,
+    "name": "Groudon",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Boden"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 384,
+    "name": "Rayquaza",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Drache",
+      "Flug"
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "id": 385,
+    "name": "Jirachi",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Stahl",
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": true
+  },
+  {
+    "id": 386,
+    "name": "Deoxys",
+    "generation": 3,
+    "parent": 0,
+    "types": [
+      "Psycho"
+    ],
+    "legendary": false,
+    "mythical": true
+  },
+  {
+    "id": 478,
+    "name": "Frosdedje",
+    "generation": 4,
+    "parent": 361,
+    "types": [
+      "Eis",
+      "Geist"
+    ],
+    "legendary": false,
+    "mythical": false
+  }
+]

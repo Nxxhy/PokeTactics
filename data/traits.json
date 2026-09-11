@@ -1,0 +1,128 @@
+{
+  "Feuer": [
+    "Überhitzen",
+    "+10 % Tempo.",
+    "Jeder 5. Angriff: +1 Hitze (max. 5).",
+    "Bei 5 Hitze wird der nächste Angriff kritisch (×1,5) und trifft Radius 1 mit 50 % Angriff. Danach 3 s −30 % Tempo.",
+    "Überhitzen verbrennt 5 s: 5 % Ziel-Max-LP/s."
+  ],
+  "Wasser": [
+    "Flut",
+    "Fähigkeit: Wasserfeld am Ziel, Radius 1, 4 s.",
+    "Radius 2, 6 s.",
+    "Eigene Verbündete im Wasser: +20 % Tempo, −15 % Schaden.",
+    "Wasser bedeckt die eigene Spielfeldhälfte. Elektro-Fähigkeiten im Wasser: +1 Sprung; Pflanzen im Wasser: 2 % Max-LP/s."
+  ],
+  "Pflanze": [
+    "Wachstum",
+    "Alle 5 s +1 Wachstum: +2 % Fähigkeitsstärke und 1 % Schadensheilung je Stapel, maximal 5.",
+    "Beim ersten 5. Stapel: 15 % Max-LP heilen.",
+    "Maximal 20 Stapel (100 s).",
+    "Bei 20: Erblüht, +50 % Stärke, +30 % Tempo, −20 % Manakosten."
+  ],
+  "Elektro": [
+    "Kettenladung",
+    "20 % je Fähigkeit: Blitz mit 40 % Stärke; Fähigkeit-Kill gibt 30 Mana.",
+    "Bis zu 3 Blitze auf verschiedene Ziele.",
+    "Je Sprung +25 % Schaden.",
+    "Bis zu 3 Sprünge dürfen Ziele wiederholen; Wasser gibt höchstens einen weiteren. Keine Folgeauslösung."
+  ],
+  "Eis": [
+    "Frost",
+    "Jeder Angriff +1 Frost; 3 Stapel: 3 s −20 % Tempo. Unter Stufe 4 werden sie verbraucht.",
+    "5 Stapel: verbrauchen, 1,5 s eingefroren. Neue Stapel erst nach 3,5 s.",
+    "Eingefrorene Ziele erleiden +20 % Schaden.",
+    "Einfrieren verteilt 2 Stapel in Radius 1 (max. 4; kein Ketten-Einfrieren)."
+  ],
+  "Kampf": [
+    "Kampfgeist",
+    "Start mit 2 Stapeln. Jeder primäre Schadenstreffer +1, maximal 10; je +2 % Angriff.",
+    "Kill setzt auf 5 zurück. Laufendes Unaufhaltsam bleibt aktiv.",
+    "Erreichen von 10: 4 s Unaufhaltsam, 30 % Lebensraub und betäubungsimmun.",
+    "Kill setzt auf 10; mindestens 4 s Unaufhaltsam oder verlängert um 3 s."
+  ],
+  "Gift": [
+    "Toxin",
+    "Normale Treffer und primäre Fähigkeitstreffer: 5 s Toxin, 0,5 % Ziel-Max-LP/s.",
+    "Toxin: −40 % erhaltene Heilung.",
+    "Bis zu 10 Stapel, Treffer erneuern 5 s.",
+    "10 Stapel: 5 s verstärktes, nicht reinigbares Toxin; 8 % Max-LP/s, −50 % Heilung ersetzt −40 %."
+  ],
+  "Gestein": [
+    "Bollwerk",
+    "−15 % Schaden von vorne: Gegner auf gleicher oder gegnerischer Y-Seite.",
+    "Startschild: 20 % eigene Max-LP.",
+    "Trait-Schild zerstört: Radius 1, 10 % gegnerische Max-LP als Schaden.",
+    "Trait-Schild einmal nach 8 s ab Zerstörung erneuern."
+  ],
+  "Käfer": [
+    "Schwarm",
+    "+10 % Tempo.",
+    "Tod: Larve mit 10 % LP, 15 % Angriff, 5 s Lebensdauer.",
+    "Larve wird nach 5 s zu 50 % zufälliger Basis-Käfer: 35 % Basiswerte, 15 s Lebensdauer.",
+    "Tod: Pheromone für lebende Käfer, 5 s +25 % Tempo. Beschwörungen lösen keine weiteren Todes-Boni aus."
+  ],
+  "Geist": [
+    "Phantom",
+    "Erstmals bei ≤50 % LP: 1,5 s unverwundbar, keine Aktionen.",
+    "Phantom bewegt sich auf ein freies Feld in Gegnernähe.",
+    "Rückkehr heilt 20 % Max-LP.",
+    "Nach erstem Tod einmal 30 % LP und 1 s Rückkehrphase. Keine erneute 50-%-Auslösung."
+  ],
+  "Drache": [
+    "Drachenblut",
+    "+15 % Fähigkeitsschaden.",
+    "Erster natürlicher Verbündeten-Tod: +10 % Schaden für Drachen.",
+    "Pro unterschiedlichem natürlichen Verbündeten stapelbar, max. 10.",
+    "Nur noch natürliche Drachen leben: +50 % Schaden, +50 % Tempo, −30 % Schaden. Beschwörungen und zweite Tode zählen nicht."
+  ],
+  "Unlicht": [
+    "Raubtier",
+    "Zielt auf niedrigsten LP-Anteil. Unter 50 % LP: +25 Prozentpunkte Kritchance, ×1,5 Schaden.",
+    "Kritischer Schaden gegen diese Ziele steigt auf ×2.",
+    "Kill: +40 Mana.",
+    "Automatischer Prioritätswechsel auf lebenden Gegner mit höchstem verursachten Schaden (Gleichstand: ID)."
+  ],
+  "Psycho": [
+    "Fokus",
+    "+20 % Mana-Erzeugung aus allen Quellen.",
+    "Automatisch bei 125 % Mana wirken; normaler Effekt.",
+    "Bei 150 % wirken: 150 % Schaden, Heilung und Schild.",
+    "Bei 200 %: doppelte Reichweite und 200 % Schaden/Heilung/Schild. Zusatzeffekt folgt der individuellen ersten Fähigkeit-Komponente."
+  ],
+  "Fee": [
+    "Verzauberung",
+    "Segen auf Verbündeten mit niedrigsten absoluten LP: +15 % Tempo, +10 % erhaltene Heilung.",
+    "Zwei Verbündete segnen.",
+    "Alle Verbündeten segnen.",
+    "Tod: Segen an schwächsten ungesegneten Verbündeten; kein Stapeln."
+  ],
+  "Flug": [
+    "Luftüberlegenheit",
+    "+1 Tile Angriffsreichweite.",
+    "Angriffe ignorieren 20 % Rüstung.",
+    "Kampfbeginn: freies Landefeld in Reichweite eines hinteren Gegners.",
+    "Nach Fähigkeiten Sprung zum Ziel mit höchstem verursachten Schaden; freie Felder, keine Mehrfachbelegung."
+  ],
+  "Boden": [
+    "Erdbeben",
+    "Angriffe: 10 % Chance auf 1,5 s Verlangsamung.",
+    "Jedes Boden-Pokémon alle 8 s: Radius 2, 2 s Verlangsamung.",
+    "Zusätzlich 50 % Stärke als Schaden und 1 s Hochwerfen; unterbricht vorbereitete Aktionen.",
+    "Erdbeben hinterlässt 4 s Risse in Radius 2: Gegner −30 % Tempo."
+  ],
+  "Stahl": [
+    "Festung",
+    "+20 Rüstung.",
+    "Alle 5 s +5 Rüstung.",
+    "Bei ≤30 % LP einmal 4 s −50 % Schaden.",
+    "Zweite Ladung frühestens 6 s nach erster Auslösung und erneut ≤30 % LP."
+  ],
+  "Normal": [
+    "Anpassung",
+    "+5 % und +2 % je anderem aufgestellten Typ auf LP, Angriff, Rüstung und Stärke.",
+    "Diversitätsbonus +4 % je anderem Typ.",
+    "Ein Normal-Pokémon (kleinste ID) kopiert den 2er-Effekt des stärksten anderen aktiven Traits.",
+    "Alle Normal-Pokémon erhalten zusätzlich 2er-Effekte anderer vertretener Typen. Keine Zähler, keine rekursiven Kopien."
+  ]
+}

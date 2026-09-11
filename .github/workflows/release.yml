@@ -1,0 +1,81 @@
+name: Windows release
+run-name: Release ${{ inputs.version || github.ref_name }}
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Stable version x.y.z
+        required: true
+      notes:
+        description: Release notes
+        required: true
+  push:
+    tags: ['v*']
+  release:
+    types: [published]
+permissions:
+  contents: write
+concurrency:
+  group: poketactics-release
+  cancel-in-progress: false
+jobs:
+  windows:
+    if: github.repository == 'Nxxhy/PokeTactics' && !github.event.release.prerelease
+    runs-on: windows-latest
+    environment: release
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Validate version and event
+        shell: pwsh
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          RELEASE_NOTES: ${{ inputs.notes || github.event.release.body }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag=if($env:INPUT_VERSION){'v'+$env:INPUT_VERSION}elseif($env:RELEASE_TAG){$env:RELEASE_TAG}else{$env:GITHUB_REF_NAME}
+          if($tag -notmatch '^v(0|[1-9][0-9]{0,4})\.(0|[1-9][0-9]{0,4})\.(0|[1-9][0-9]{0,4})$') {throw 'Stable vX.Y.Z tag required'}
+          $version=$tag.Substring(1)
+          if($version.Split('.') | Where-Object {[int]$_ -gt 65535}) {throw 'Windows version component exceeds 65535'}
+          "RELEASE_VERSION=$version" >> $env:GITHUB_ENV
+          [IO.File]::WriteAllText((Join-Path $env:RUNNER_TEMP 'notes.txt'),$env:RELEASE_NOTES)
+          # Publishing a completed draft also triggers this event. Do not rebuild immutable assets.
+          $release=gh api "repos/$env:GITHUB_REPOSITORY/releases/tags/$tag" 2>$null | ConvertFrom-Json
+          if($LASTEXITCODE -eq 0 -and ($release.assets | Where-Object name -eq 'update-win-x64.json')) { 'RELEASE_DONE=true' >> $env:GITHUB_ENV }
+          $global:LASTEXITCODE=0
+      - name: Install pinned Godot and Inno Setup
+        if: env.RELEASE_DONE != 'true'
+        shell: pwsh
+        run: ./tools/ci-tools.ps1
+      - name: Build and test game and launcher
+        if: env.RELEASE_DONE != 'true'
+        shell: pwsh
+        run: |
+          ./tools/build-platform.ps1 -Version $env:RELEASE_VERSION -Godot $env:GODOT_EXE -Inno $env:INNO_EXE
+          ./tools/test-github-updates.ps1 -Godot $env:GODOT_EXE
+      - name: Sign Windows update package
+        if: env.RELEASE_DONE != 'true'
+        shell: pwsh
+        env:
+          UPDATE_SIGNING_PRIVATE_KEY: ${{ secrets.UPDATE_SIGNING_PRIVATE_KEY }}
+        run: dotnet run --project platform/ReleaseTools/ReleaseTools.csproj -c Release -- $env:RELEASE_VERSION
+      - name: Upload complete release (draft stays draft)
+        if: env.RELEASE_DONE != 'true'
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: ./tools/release-github.ps1 -Version $env:RELEASE_VERSION -NotesFile (Join-Path $env:RUNNER_TEMP 'notes.txt')
+      - name: Keep test logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-test-logs
+          path: |
+            docs/github-update-tests.txt
+            docs/github-core-test.log
+          if-no-files-found: ignore

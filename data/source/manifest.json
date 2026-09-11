@@ -1,0 +1,27 @@
+[
+  {
+    "file": "pokemon_species.csv",
+    "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species.csv",
+    "sha256": "9878f19c0637095cdd9a4134b4aac8fb2b64776d3bdc599aa68f15c3a011b87c"
+  },
+  {
+    "file": "pokemon_species_names.csv",
+    "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv",
+    "sha256": "820cde17074cdb1c2b0595c997fb8f998e773bd5da3bb525dec85703c86c5fd9"
+  },
+  {
+    "file": "pokemon_types.csv",
+    "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_types.csv",
+    "sha256": "f1fc4bfd657a034ea3bf6972423b10276424aa068577b304a78a08996425ba05"
+  },
+  {
+    "file": "type_efficacy.csv",
+    "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/type_efficacy.csv",
+    "sha256": "cdd7de4066680414d0a2433af805f139f425d6350cbf998ecab559a0fe8ff587"
+  },
+  {
+    "file": "type_names.csv",
+    "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/type_names.csv",
+    "sha256": "685230c51074cf2f723debcf827a4df4c36ab0ec7e929c806ad65a3e40958705"
+  }
+]

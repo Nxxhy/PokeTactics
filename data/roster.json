@@ -1,0 +1,2789 @@
+[
+  {
+    "id": 1,
+    "name": "Bisasam",
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "cost": 1,
+    "range": 2,
+    "forms": [
+      1,
+      2,
+      3
+    ],
+    "role": "Unterstützer",
+    "mana": 65,
+    "ability": "Egelsamen",
+    "description": "Entzieht dem nächsten Gegner Kraft und heilt den schwächsten Verbündeten.",
+    "power": 100,
+    "hp": 620,
+    "attack": 46,
+    "armor": 22,
+    "interval": 12,
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1
+      },
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.4
+      }
+    ],
+    "generation": 1,
+    "attack_type": "Pflanze",
+    "ability_type": "Pflanze",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 4,
+    "name": "Glumanda",
+    "types": [
+      "Feuer"
+    ],
+    "cost": 1,
+    "range": 2,
+    "forms": [
+      4,
+      5,
+      6
+    ],
+    "role": "Angreifer",
+    "mana": 60,
+    "ability": "Glut",
+    "description": "Trifft einen Gegner und verbrennt ihn 4 Sekunden lang.",
+    "power": 120,
+    "hp": 550,
+    "attack": 62,
+    "armor": 15,
+    "interval": 11,
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1
+      },
+      {
+        "kind": "burn",
+        "target": "enemy",
+        "duration": 40,
+        "scale": 0.15
+      }
+    ],
+    "generation": 1,
+    "attack_type": "Feuer",
+    "ability_type": "Feuer",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 43,
+    "name": "Myrapla",
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "cost": 1,
+    "range": 2,
+    "forms": [
+      43,
+      44,
+      182
+    ],
+    "role": "Unterstützer",
+    "mana": 55,
+    "ability": "Heilpollen",
+    "description": "Heilt den schwächsten Verbündeten und vergiftet den nächsten Gegner.",
+    "power": 115,
+    "hp": 570,
+    "attack": 39,
+    "armor": 18,
+    "interval": 13,
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.6
+      },
+      {
+        "kind": "poison",
+        "target": "enemy",
+        "duration": 50,
+        "scale": 0.18
+      }
+    ],
+    "generation": 1,
+    "attack_type": "Pflanze",
+    "ability_type": "Pflanze",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 48,
+    "name": "Bluzuk",
+    "types": [
+      "Käfer",
+      "Gift"
+    ],
+    "cost": 1,
+    "range": 2,
+    "forms": [
+      48,
+      49
+    ],
+    "role": "Angreifer",
+    "mana": 68,
+    "ability": "Omots Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 23
+      }
+    ],
+    "hp": 670,
+    "attack": 50,
+    "armor": 19,
+    "power": 132,
+    "interval": 13,
+    "generation": 1,
+    "attack_type": "Käfer",
+    "ability_type": "Käfer",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.3 Sekunden."
+  },
+  {
+    "id": 60,
+    "name": "Quapsel",
+    "types": [
+      "Wasser"
+    ],
+    "cost": 1,
+    "range": 2,
+    "forms": [
+      60,
+      61,
+      62
+    ],
+    "role": "Angreifer",
+    "mana": 68,
+    "ability": "Quappos Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 23
+      }
+    ],
+    "hp": 670,
+    "attack": 50,
+    "armor": 19,
+    "power": 132,
+    "interval": 13,
+    "generation": 1,
+    "attack_type": "Wasser",
+    "ability_type": "Wasser",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.3 Sekunden."
+  },
+  {
+    "id": 69,
+    "name": "Knofensa",
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "cost": 1,
+    "range": 2,
+    "forms": [
+      69,
+      70,
+      71
+    ],
+    "role": "Unterstützer",
+    "mana": 68,
+    "ability": "Sarzenias Lebensfunke",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.1
+      }
+    ],
+    "hp": 670,
+    "attack": 50,
+    "armor": 19,
+    "power": 132,
+    "interval": 13,
+    "generation": 1,
+    "attack_type": "Pflanze",
+    "ability_type": "Pflanze",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Heilt den schwächsten Verbündeten mit 110 % Stärke."
+  },
+  {
+    "id": 74,
+    "name": "Kleinstein",
+    "types": [
+      "Gestein",
+      "Boden"
+    ],
+    "cost": 1,
+    "range": 1,
+    "forms": [
+      74,
+      75,
+      76
+    ],
+    "role": "Tank",
+    "mana": 65,
+    "ability": "Felswacht",
+    "description": "Schützt sich mit einem Schild und zieht nahe Gegner 3 Sekunden auf sich.",
+    "power": 185,
+    "hp": 970,
+    "attack": 43,
+    "armor": 45,
+    "interval": 15,
+    "effects": [
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.6
+      },
+      {
+        "kind": "taunt",
+        "target": "near_enemies",
+        "duration": 30
+      }
+    ],
+    "generation": 1,
+    "attack_type": "Gestein",
+    "ability_type": "Gestein",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 111,
+    "name": "Rihorn",
+    "types": [
+      "Boden",
+      "Gestein"
+    ],
+    "cost": 1,
+    "range": 1,
+    "forms": [
+      111,
+      112
+    ],
+    "role": "Tank",
+    "mana": 68,
+    "ability": "Rizeross Schutzstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.0
+      }
+    ],
+    "hp": 870,
+    "attack": 50,
+    "armor": 19,
+    "power": 132,
+    "interval": 13,
+    "generation": 1,
+    "attack_type": "Boden",
+    "ability_type": "Boden",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Erhält einen Schild mit 100 % Stärke."
+  },
+  {
+    "id": 122,
+    "name": "Pantimos",
+    "types": [
+      "Psycho",
+      "Fee"
+    ],
+    "cost": 1,
+    "range": 2,
+    "forms": [
+      122
+    ],
+    "role": "Magier",
+    "mana": 68,
+    "ability": "Pantimoss Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 23
+      }
+    ],
+    "hp": 670,
+    "attack": 50,
+    "armor": 19,
+    "power": 132,
+    "interval": 13,
+    "generation": 1,
+    "attack_type": "Psycho",
+    "ability_type": "Psycho",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.3 Sekunden."
+  },
+  {
+    "role": "Magier",
+    "range": 2,
+    "ability": "Flammenrad",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 1.2
+      },
+      {
+        "kind": "burn",
+        "target": "area",
+        "scale": 0.12,
+        "duration": 40
+      }
+    ],
+    "hp": 590,
+    "attack": 51,
+    "armor": 17,
+    "power": 115,
+    "mana": 85,
+    "interval": 13,
+    "description": "Schaden → Gegner im Radius 1 um das Ziel; Brand → Gegner im Radius 1 um das Ziel.",
+    "id": 155,
+    "name": "Feurigel",
+    "cost": 1,
+    "forms": [
+      155,
+      156,
+      157
+    ],
+    "types": [
+      "Feuer"
+    ],
+    "generation": 2,
+    "attack_type": "Feuer",
+    "ability_type": "Feuer",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Angreifer",
+    "range": 1,
+    "ability": "Superzahn",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.8
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 40
+      }
+    ],
+    "hp": 590,
+    "attack": 66,
+    "armor": 17,
+    "power": 115,
+    "mana": 65,
+    "interval": 10,
+    "description": "Schaden → Hauptziel; Rüstungsbruch → Hauptziel.",
+    "id": 161,
+    "name": "Wiesor",
+    "cost": 1,
+    "forms": [
+      161,
+      162
+    ],
+    "types": [
+      "Normal"
+    ],
+    "generation": 2,
+    "attack_type": "Normal",
+    "ability_type": "Normal",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 172,
+    "name": "Pichu",
+    "types": [
+      "Elektro"
+    ],
+    "cost": 1,
+    "range": 3,
+    "forms": [
+      172,
+      25,
+      26
+    ],
+    "role": "Angreifer",
+    "mana": 80,
+    "ability": "Kettenblitz",
+    "description": "Ein Blitz springt auf bis zu 3 Gegner und betäubt sie kurz.",
+    "power": 155,
+    "hp": 580,
+    "attack": 69,
+    "armor": 16,
+    "interval": 10,
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "count": 3,
+        "scale": 0.8
+      },
+      {
+        "kind": "stun",
+        "target": "chain",
+        "count": 3,
+        "duration": 5
+      }
+    ],
+    "generation": 2,
+    "attack_type": "Elektro",
+    "ability_type": "Elektro",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 173,
+    "name": "Pii",
+    "types": [
+      "Fee"
+    ],
+    "cost": 1,
+    "range": 2,
+    "forms": [
+      173,
+      35,
+      36
+    ],
+    "role": "Unterstützer",
+    "mana": 68,
+    "ability": "Pixis Lebensfunke",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.1
+      }
+    ],
+    "hp": 670,
+    "attack": 50,
+    "armor": 19,
+    "power": 132,
+    "interval": 13,
+    "generation": 2,
+    "attack_type": "Fee",
+    "ability_type": "Fee",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Heilt den schwächsten Verbündeten mit 110 % Stärke."
+  },
+  {
+    "role": "Magier",
+    "range": 3,
+    "ability": "Donnerwelle",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "scale": 0.8,
+        "count": 3
+      },
+      {
+        "kind": "stun",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 15
+      }
+    ],
+    "hp": 590,
+    "attack": 51,
+    "armor": 17,
+    "power": 115,
+    "mana": 85,
+    "interval": 13,
+    "description": "Schaden → nächste Gegner am Ziel; Betäubung → Hauptziel.",
+    "id": 179,
+    "name": "Voltilamm",
+    "cost": 1,
+    "forms": [
+      179,
+      180,
+      181
+    ],
+    "types": [
+      "Elektro"
+    ],
+    "generation": 2,
+    "attack_type": "Elektro",
+    "ability_type": "Elektro",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 238,
+    "name": "Kussilla",
+    "types": [
+      "Eis",
+      "Psycho"
+    ],
+    "cost": 1,
+    "range": 2,
+    "forms": [
+      238,
+      124
+    ],
+    "role": "Magier",
+    "mana": 68,
+    "ability": "Rossanas Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 23
+      }
+    ],
+    "hp": 670,
+    "attack": 50,
+    "armor": 19,
+    "power": 132,
+    "interval": 13,
+    "generation": 2,
+    "attack_type": "Eis",
+    "ability_type": "Eis",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.3 Sekunden."
+  },
+  {
+    "role": "Angreifer",
+    "range": 1,
+    "ability": "Doppelkick",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1
+      },
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "scale": 1,
+        "duration": 30
+      }
+    ],
+    "hp": 590,
+    "attack": 66,
+    "armor": 17,
+    "power": 115,
+    "mana": 65,
+    "interval": 10,
+    "description": "Schaden → Hauptziel; Schaden → Hauptziel; Tempo → sich selbst.",
+    "id": 255,
+    "name": "Flemmli",
+    "cost": 1,
+    "forms": [
+      255,
+      256,
+      257
+    ],
+    "types": [
+      "Feuer"
+    ],
+    "generation": 3,
+    "attack_type": "Feuer",
+    "ability_type": "Kampf",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 66,
+    "name": "Machollo",
+    "types": [
+      "Kampf"
+    ],
+    "cost": 2,
+    "range": 1,
+    "forms": [
+      66,
+      67,
+      68
+    ],
+    "role": "Angreifer",
+    "mana": 55,
+    "ability": "Karateschlag",
+    "description": "Bricht 18 Rüstung für 5 Sekunden und trifft danach hart.",
+    "power": 145,
+    "hp": 850,
+    "attack": 65,
+    "armor": 28,
+    "interval": 12,
+    "effects": [
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 50
+      },
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.2
+      }
+    ],
+    "generation": 1,
+    "attack_type": "Kampf",
+    "ability_type": "Kampf",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 81,
+    "name": "Magnetilo",
+    "types": [
+      "Elektro",
+      "Stahl"
+    ],
+    "cost": 2,
+    "range": 3,
+    "forms": [
+      81,
+      82
+    ],
+    "role": "Tank",
+    "mana": 85,
+    "ability": "Magnetfeld",
+    "description": "Schützt den schwächsten Verbündeten; lähmt und trifft zwei Gegner.",
+    "power": 160,
+    "hp": 740,
+    "attack": 52,
+    "armor": 40,
+    "interval": 13,
+    "effects": [
+      {
+        "kind": "shield",
+        "target": "weak_ally",
+        "scale": 1.1
+      },
+      {
+        "kind": "damage",
+        "target": "chain",
+        "count": 2,
+        "scale": 0.8
+      },
+      {
+        "kind": "stun",
+        "target": "chain",
+        "count": 2,
+        "duration": 8
+      }
+    ],
+    "generation": 1,
+    "attack_type": "Elektro",
+    "ability_type": "Elektro",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 92,
+    "name": "Nebulak",
+    "types": [
+      "Geist",
+      "Gift"
+    ],
+    "cost": 2,
+    "range": 3,
+    "forms": [
+      92,
+      93,
+      94
+    ],
+    "role": "Magier",
+    "mana": 70,
+    "ability": "Nachtmahr",
+    "description": "Spukschaden am schwächsten Gegner und 4 Sekunden Gift.",
+    "power": 205,
+    "hp": 540,
+    "attack": 58,
+    "armor": 14,
+    "interval": 12,
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "weak_enemy",
+        "scale": 1.1
+      },
+      {
+        "kind": "poison",
+        "target": "weak_enemy",
+        "duration": 40,
+        "scale": 0.16
+      }
+    ],
+    "generation": 1,
+    "attack_type": "Geist",
+    "ability_type": "Geist",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 95,
+    "name": "Onix",
+    "types": [
+      "Gestein",
+      "Boden"
+    ],
+    "cost": 2,
+    "range": 1,
+    "forms": [
+      95,
+      208
+    ],
+    "role": "Tank",
+    "mana": 100,
+    "ability": "Erdbeben",
+    "description": "Trifft alle Gegner im Umkreis von 2 Feldern und betäubt 1,4 Sekunden.",
+    "power": 240,
+    "hp": 1500,
+    "attack": 60,
+    "armor": 55,
+    "interval": 15,
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "near_enemies",
+        "scale": 1
+      },
+      {
+        "kind": "stun",
+        "target": "near_enemies",
+        "duration": 14
+      }
+    ],
+    "generation": 1,
+    "attack_type": "Gestein",
+    "ability_type": "Gestein",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 120,
+    "name": "Sterndu",
+    "types": [
+      "Wasser"
+    ],
+    "cost": 2,
+    "range": 3,
+    "forms": [
+      120,
+      121
+    ],
+    "role": "Unterstützer",
+    "mana": 80,
+    "ability": "Sternenlicht",
+    "description": "Heilt den schwächsten Verbündeten; alle anderen Verbündeten erhalten 15 Mana.",
+    "power": 150,
+    "hp": 650,
+    "attack": 51,
+    "armor": 22,
+    "interval": 11,
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.7
+      },
+      {
+        "kind": "mana",
+        "target": "other_allies",
+        "amount": 15
+      }
+    ],
+    "generation": 1,
+    "attack_type": "Wasser",
+    "ability_type": "Wasser",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 133,
+    "name": "Evoli",
+    "types": [
+      "Normal"
+    ],
+    "cost": 2,
+    "range": 2,
+    "forms": [
+      133,
+      197
+    ],
+    "role": "Angreifer",
+    "mana": 76,
+    "ability": "Nachtaras Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 26
+      }
+    ],
+    "hp": 820,
+    "attack": 62,
+    "armor": 24,
+    "power": 174,
+    "interval": 13,
+    "generation": 1,
+    "attack_type": "Unlicht",
+    "ability_type": "Unlicht",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.6 Sekunden."
+  },
+  {
+    "role": "Magier",
+    "range": 2,
+    "ability": "Giftfaden",
+    "effects": [
+      {
+        "kind": "poison",
+        "target": "enemy",
+        "scale": 0.25,
+        "duration": 60
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 50
+      },
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 0.6
+      }
+    ],
+    "hp": 730,
+    "attack": 67,
+    "armor": 22,
+    "power": 160,
+    "mana": 95,
+    "interval": 13,
+    "description": "Gift → Hauptziel; Langsam → Hauptziel; Schaden → Hauptziel.",
+    "id": 167,
+    "name": "Webarak",
+    "cost": 2,
+    "forms": [
+      167,
+      168
+    ],
+    "types": [
+      "Käfer",
+      "Gift"
+    ],
+    "generation": 2,
+    "attack_type": "Käfer",
+    "ability_type": "Gift",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Unterstützer",
+    "range": 3,
+    "ability": "Lichtreserve",
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "weak_ally",
+        "scale": 1.8
+      },
+      {
+        "kind": "mana",
+        "target": "other_allies",
+        "scale": 1,
+        "amount": 12
+      }
+    ],
+    "hp": 730,
+    "attack": 67,
+    "armor": 22,
+    "power": 160,
+    "mana": 95,
+    "interval": 13,
+    "description": "Heilung → schwächster Verbündeter; Mana → andere Verbündete.",
+    "id": 170,
+    "name": "Lampi",
+    "cost": 2,
+    "forms": [
+      170,
+      171
+    ],
+    "types": [
+      "Wasser",
+      "Elektro"
+    ],
+    "generation": 2,
+    "attack_type": "Wasser",
+    "ability_type": "Wasser",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 174,
+    "name": "Fluffeluff",
+    "types": [
+      "Normal",
+      "Fee"
+    ],
+    "cost": 2,
+    "range": 2,
+    "forms": [
+      174,
+      39,
+      40
+    ],
+    "role": "Angreifer",
+    "mana": 76,
+    "ability": "Knuddeluffs Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 26
+      }
+    ],
+    "hp": 820,
+    "attack": 62,
+    "armor": 24,
+    "power": 174,
+    "interval": 13,
+    "generation": 2,
+    "attack_type": "Normal",
+    "ability_type": "Normal",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.6 Sekunden."
+  },
+  {
+    "role": "Tank",
+    "range": 1,
+    "ability": "Stachler",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "near_enemies",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "near_enemies",
+        "scale": 1,
+        "duration": 50
+      }
+    ],
+    "hp": 950,
+    "attack": 67,
+    "armor": 36,
+    "power": 160,
+    "mana": 75,
+    "interval": 13,
+    "description": "Schaden → Gegner im Radius 2; Rüstungsbruch → Gegner im Radius 2.",
+    "id": 204,
+    "name": "Tannza",
+    "cost": 2,
+    "forms": [
+      204,
+      205
+    ],
+    "types": [
+      "Käfer"
+    ],
+    "generation": 2,
+    "attack_type": "Käfer",
+    "ability_type": "Boden",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Tank",
+    "range": 1,
+    "ability": "Lavapanzer",
+    "effects": [
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.5
+      },
+      {
+        "kind": "burn",
+        "target": "near_enemies",
+        "scale": 0.2,
+        "duration": 50
+      }
+    ],
+    "hp": 950,
+    "attack": 67,
+    "armor": 36,
+    "power": 160,
+    "mana": 75,
+    "interval": 13,
+    "description": "Schild → sich selbst; Brand → Gegner im Radius 2.",
+    "id": 218,
+    "name": "Schneckmag",
+    "cost": 2,
+    "forms": [
+      218,
+      219
+    ],
+    "types": [
+      "Feuer"
+    ],
+    "generation": 2,
+    "attack_type": "Feuer",
+    "ability_type": "Feuer",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Unterstützer",
+    "range": 2,
+    "ability": "Regentanz",
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "all_allies",
+        "scale": 0.55
+      },
+      {
+        "kind": "haste",
+        "target": "all_allies",
+        "scale": 1,
+        "duration": 30
+      }
+    ],
+    "hp": 730,
+    "attack": 67,
+    "armor": 22,
+    "power": 160,
+    "mana": 95,
+    "interval": 13,
+    "description": "Heilung → alle Verbündeten; Tempo → alle Verbündeten.",
+    "id": 270,
+    "name": "Loturzel",
+    "cost": 2,
+    "forms": [
+      270,
+      271,
+      272
+    ],
+    "types": [
+      "Wasser",
+      "Pflanze"
+    ],
+    "generation": 3,
+    "attack_type": "Wasser",
+    "ability_type": "Wasser",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Angreifer",
+    "range": 3,
+    "ability": "Kugelsaat",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "scale": 1.2,
+        "count": 3
+      }
+    ],
+    "hp": 730,
+    "attack": 82,
+    "armor": 22,
+    "power": 160,
+    "mana": 75,
+    "interval": 10,
+    "description": "Schaden → nächste Gegner am Ziel.",
+    "id": 273,
+    "name": "Samurzel",
+    "cost": 2,
+    "forms": [
+      273,
+      274,
+      275
+    ],
+    "types": [
+      "Pflanze"
+    ],
+    "generation": 3,
+    "attack_type": "Pflanze",
+    "ability_type": "Pflanze",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Magier",
+    "range": 3,
+    "ability": "Gedankenstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 1.6
+      },
+      {
+        "kind": "break",
+        "target": "area",
+        "scale": 1,
+        "duration": 40
+      }
+    ],
+    "hp": 730,
+    "attack": 67,
+    "armor": 22,
+    "power": 160,
+    "mana": 95,
+    "interval": 13,
+    "description": "Schaden → Gegner im Radius 1 um das Ziel; Rüstungsbruch → Gegner im Radius 1 um das Ziel.",
+    "id": 280,
+    "name": "Trasla",
+    "cost": 2,
+    "forms": [
+      280,
+      281,
+      282
+    ],
+    "types": [
+      "Psycho",
+      "Fee"
+    ],
+    "generation": 3,
+    "attack_type": "Psycho",
+    "ability_type": "Psycho",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Angreifer",
+    "range": 1,
+    "ability": "Pilzfaust",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.6
+      },
+      {
+        "kind": "stun",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 25
+      },
+      {
+        "kind": "heal",
+        "target": "self",
+        "scale": 0.5
+      }
+    ],
+    "hp": 730,
+    "attack": 82,
+    "armor": 22,
+    "power": 160,
+    "mana": 75,
+    "interval": 10,
+    "description": "Schaden → Hauptziel; Betäubung → Hauptziel; Heilung → sich selbst.",
+    "id": 285,
+    "name": "Knilz",
+    "cost": 2,
+    "forms": [
+      285,
+      286
+    ],
+    "types": [
+      "Pflanze"
+    ],
+    "generation": 3,
+    "attack_type": "Pflanze",
+    "ability_type": "Kampf",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 298,
+    "name": "Azurill",
+    "types": [
+      "Normal",
+      "Fee"
+    ],
+    "cost": 2,
+    "range": 2,
+    "forms": [
+      298,
+      183,
+      184
+    ],
+    "role": "Angreifer",
+    "mana": 76,
+    "ability": "Azumarills Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 26
+      }
+    ],
+    "hp": 820,
+    "attack": 62,
+    "armor": 24,
+    "power": 174,
+    "interval": 13,
+    "generation": 3,
+    "attack_type": "Wasser",
+    "ability_type": "Wasser",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.6 Sekunden."
+  },
+  {
+    "id": 123,
+    "name": "Sichlor",
+    "types": [
+      "Käfer",
+      "Flug"
+    ],
+    "cost": 3,
+    "hp": 1150,
+    "attack": 125,
+    "armor": 28,
+    "range": 1,
+    "interval": 8,
+    "role": "Angreifer",
+    "mana": 60,
+    "ability": "Kreuzschere",
+    "description": "Zwei Schnitte gegen das schwächste Ziel; erhält 4 Sekunden erhöhtes Angriffstempo.",
+    "power": 210,
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "weak_enemy",
+        "scale": 0.95
+      },
+      {
+        "kind": "damage",
+        "target": "weak_enemy",
+        "scale": 0.95
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "duration": 40
+      }
+    ],
+    "forms": [
+      123,
+      212
+    ],
+    "generation": 1,
+    "attack_type": "Käfer",
+    "ability_type": "Käfer",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 143,
+    "name": "Relaxo",
+    "types": [
+      "Normal"
+    ],
+    "cost": 3,
+    "range": 1,
+    "forms": [
+      143
+    ],
+    "role": "Tank",
+    "mana": 110,
+    "ability": "Erholung",
+    "description": "Heilt sich stark und zieht nahe Gegner 2 Sekunden auf sich.",
+    "power": 290,
+    "hp": 1650,
+    "attack": 71,
+    "armor": 35,
+    "interval": 16,
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "self",
+        "scale": 2
+      },
+      {
+        "kind": "taunt",
+        "target": "near_enemies",
+        "duration": 20
+      }
+    ],
+    "generation": 1,
+    "attack_type": "Normal",
+    "ability_type": "Normal",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Magier",
+    "range": 3,
+    "ability": "Spukgesang",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "all_enemies",
+        "scale": 0.8
+      },
+      {
+        "kind": "break",
+        "target": "all_enemies",
+        "scale": 1,
+        "duration": 30
+      }
+    ],
+    "hp": 870,
+    "attack": 83,
+    "armor": 27,
+    "power": 205,
+    "mana": 105,
+    "interval": 13,
+    "description": "Schaden → alle Gegner; Rüstungsbruch → alle Gegner.",
+    "id": 200,
+    "name": "Traunfugil",
+    "cost": 3,
+    "forms": [
+      200
+    ],
+    "types": [
+      "Geist"
+    ],
+    "generation": 2,
+    "attack_type": "Geist",
+    "ability_type": "Geist",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Angreifer",
+    "range": 1,
+    "ability": "Knuddler",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 2.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 50
+      }
+    ],
+    "hp": 870,
+    "attack": 98,
+    "armor": 27,
+    "power": 205,
+    "mana": 85,
+    "interval": 10,
+    "description": "Schaden → Hauptziel; Langsam → Hauptziel.",
+    "id": 209,
+    "name": "Snubbull",
+    "cost": 3,
+    "forms": [
+      209,
+      210
+    ],
+    "types": [
+      "Fee"
+    ],
+    "generation": 2,
+    "attack_type": "Fee",
+    "ability_type": "Fee",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Tank",
+    "range": 1,
+    "ability": "Krafttrick",
+    "effects": [
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 2.2
+      },
+      {
+        "kind": "poison",
+        "target": "near_enemies",
+        "scale": 0.2,
+        "duration": 60
+      }
+    ],
+    "hp": 1090,
+    "attack": 83,
+    "armor": 41,
+    "power": 205,
+    "mana": 85,
+    "interval": 13,
+    "description": "Schild → sich selbst; Gift → Gegner im Radius 2.",
+    "id": 213,
+    "name": "Pottrott",
+    "cost": 3,
+    "forms": [
+      213
+    ],
+    "types": [
+      "Käfer",
+      "Gestein"
+    ],
+    "generation": 2,
+    "attack_type": "Käfer",
+    "ability_type": "Käfer",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 215,
+    "name": "Sniebel",
+    "types": [
+      "Unlicht",
+      "Eis"
+    ],
+    "cost": 3,
+    "range": 2,
+    "forms": [
+      215
+    ],
+    "role": "Angreifer",
+    "mana": 84,
+    "ability": "Sniebels Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 29
+      }
+    ],
+    "hp": 970,
+    "attack": 74,
+    "armor": 29,
+    "power": 216,
+    "interval": 13,
+    "generation": 2,
+    "attack_type": "Unlicht",
+    "ability_type": "Unlicht",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.9 Sekunden."
+  },
+  {
+    "id": 220,
+    "name": "Quiekel",
+    "types": [
+      "Eis",
+      "Boden"
+    ],
+    "cost": 3,
+    "range": 2,
+    "forms": [
+      220,
+      221
+    ],
+    "role": "Magier",
+    "mana": 84,
+    "ability": "Keifels Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 29
+      }
+    ],
+    "hp": 970,
+    "attack": 74,
+    "armor": 29,
+    "power": 216,
+    "interval": 13,
+    "generation": 2,
+    "attack_type": "Eis",
+    "ability_type": "Eis",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.9 Sekunden."
+  },
+  {
+    "role": "Tank",
+    "range": 1,
+    "ability": "Stahlflügel",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "near_enemies",
+        "scale": 1.6
+      },
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.3
+      }
+    ],
+    "hp": 1090,
+    "attack": 83,
+    "armor": 41,
+    "power": 205,
+    "mana": 85,
+    "interval": 13,
+    "description": "Schaden → Gegner im Radius 2; Schild → sich selbst.",
+    "id": 227,
+    "name": "Panzaeron",
+    "cost": 3,
+    "forms": [
+      227
+    ],
+    "types": [
+      "Stahl",
+      "Flug"
+    ],
+    "generation": 2,
+    "attack_type": "Stahl",
+    "ability_type": "Stahl",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 228,
+    "name": "Hunduster",
+    "types": [
+      "Unlicht",
+      "Feuer"
+    ],
+    "cost": 3,
+    "range": 2,
+    "forms": [
+      228,
+      229
+    ],
+    "role": "Angreifer",
+    "mana": 84,
+    "ability": "Hundemons Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 29
+      }
+    ],
+    "hp": 970,
+    "attack": 74,
+    "armor": 29,
+    "power": 216,
+    "interval": 13,
+    "generation": 2,
+    "attack_type": "Unlicht",
+    "ability_type": "Unlicht",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.9 Sekunden."
+  },
+  {
+    "id": 290,
+    "name": "Nincada",
+    "types": [
+      "Käfer",
+      "Boden"
+    ],
+    "cost": 3,
+    "range": 2,
+    "forms": [
+      290,
+      292
+    ],
+    "role": "Angreifer",
+    "mana": 84,
+    "ability": "Ninjatoms Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 29
+      }
+    ],
+    "hp": 970,
+    "attack": 74,
+    "armor": 29,
+    "power": 216,
+    "interval": 13,
+    "generation": 3,
+    "attack_type": "Käfer",
+    "ability_type": "Käfer",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.9 Sekunden."
+  },
+  {
+    "role": "Tank",
+    "range": 1,
+    "ability": "Wirbelwurf",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 2
+      },
+      {
+        "kind": "stun",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 30
+      },
+      {
+        "kind": "taunt",
+        "target": "near_enemies",
+        "scale": 1,
+        "duration": 30
+      }
+    ],
+    "hp": 1090,
+    "attack": 83,
+    "armor": 41,
+    "power": 205,
+    "mana": 85,
+    "interval": 13,
+    "description": "Schaden → Hauptziel; Betäubung → Hauptziel; Provokation → Gegner im Radius 2.",
+    "id": 296,
+    "name": "Makuhita",
+    "cost": 3,
+    "forms": [
+      296,
+      297
+    ],
+    "types": [
+      "Kampf"
+    ],
+    "generation": 3,
+    "attack_type": "Kampf",
+    "ability_type": "Kampf",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Tank",
+    "range": 1,
+    "ability": "Eisenschädel",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 2.1
+      },
+      {
+        "kind": "stun",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 25
+      }
+    ],
+    "hp": 1090,
+    "attack": 83,
+    "armor": 41,
+    "power": 205,
+    "mana": 85,
+    "interval": 13,
+    "description": "Schaden → Hauptziel; Betäubung → Hauptziel.",
+    "id": 304,
+    "name": "Stollunior",
+    "cost": 3,
+    "forms": [
+      304,
+      305,
+      306
+    ],
+    "types": [
+      "Stahl",
+      "Gestein"
+    ],
+    "generation": 3,
+    "attack_type": "Stahl",
+    "ability_type": "Stahl",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 307,
+    "name": "Meditie",
+    "types": [
+      "Kampf",
+      "Psycho"
+    ],
+    "cost": 3,
+    "range": 2,
+    "forms": [
+      307,
+      308
+    ],
+    "role": "Angreifer",
+    "mana": 84,
+    "ability": "Meditaliss Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 29
+      }
+    ],
+    "hp": 970,
+    "attack": 74,
+    "armor": 29,
+    "power": 216,
+    "interval": 13,
+    "generation": 3,
+    "attack_type": "Kampf",
+    "ability_type": "Kampf",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 2.9 Sekunden."
+  },
+  {
+    "role": "Angreifer",
+    "range": 3,
+    "ability": "Funkensprung",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "scale": 1.25,
+        "count": 4
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "scale": 1,
+        "duration": 30
+      }
+    ],
+    "hp": 870,
+    "attack": 98,
+    "armor": 27,
+    "power": 205,
+    "mana": 85,
+    "interval": 10,
+    "description": "Schaden → nächste Gegner am Ziel; Tempo → sich selbst.",
+    "id": 309,
+    "name": "Frizelbliz",
+    "cost": 3,
+    "forms": [
+      309,
+      310
+    ],
+    "types": [
+      "Elektro"
+    ],
+    "generation": 3,
+    "attack_type": "Elektro",
+    "ability_type": "Elektro",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Unterstützer",
+    "range": 3,
+    "ability": "Blütenkur",
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "all_allies",
+        "scale": 0.7
+      },
+      {
+        "kind": "poison",
+        "target": "area",
+        "scale": 0.2,
+        "duration": 50
+      }
+    ],
+    "hp": 870,
+    "attack": 83,
+    "armor": 27,
+    "power": 205,
+    "mana": 105,
+    "interval": 13,
+    "description": "Heilung → alle Verbündeten; Gift → Gegner im Radius 1 um das Ziel.",
+    "id": 315,
+    "name": "Roselia",
+    "cost": 3,
+    "forms": [
+      315
+    ],
+    "types": [
+      "Pflanze",
+      "Gift"
+    ],
+    "generation": 3,
+    "attack_type": "Pflanze",
+    "ability_type": "Pflanze",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Magier",
+    "range": 2,
+    "ability": "Nachtnebel",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 1.4
+      },
+      {
+        "kind": "slow",
+        "target": "area",
+        "scale": 1,
+        "duration": 60
+      }
+    ],
+    "hp": 870,
+    "attack": 83,
+    "armor": 27,
+    "power": 205,
+    "mana": 105,
+    "interval": 13,
+    "description": "Schaden → Gegner im Radius 1 um das Ziel; Langsam → Gegner im Radius 1 um das Ziel.",
+    "id": 355,
+    "name": "Zwirrlicht",
+    "cost": 3,
+    "forms": [
+      355,
+      356
+    ],
+    "types": [
+      "Geist"
+    ],
+    "generation": 3,
+    "attack_type": "Geist",
+    "ability_type": "Geist",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 115,
+    "name": "Kangama",
+    "types": [
+      "Normal"
+    ],
+    "cost": 4,
+    "hp": 1900,
+    "attack": 90,
+    "armor": 45,
+    "range": 1,
+    "interval": 13,
+    "role": "Tank",
+    "mana": 100,
+    "ability": "Familienwacht",
+    "description": "Schützt sich und den schwächsten Verbündeten; kontert mit einem harten Schlag.",
+    "power": 310,
+    "effects": [
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.3
+      },
+      {
+        "kind": "shield",
+        "target": "weak_ally",
+        "scale": 1.1
+      },
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1
+      }
+    ],
+    "forms": [
+      115
+    ],
+    "generation": 1,
+    "attack_type": "Normal",
+    "ability_type": "Normal",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 131,
+    "name": "Lapras",
+    "types": [
+      "Wasser",
+      "Eis"
+    ],
+    "cost": 4,
+    "hp": 1400,
+    "attack": 70,
+    "armor": 35,
+    "range": 3,
+    "interval": 13,
+    "role": "Unterstützer",
+    "mana": 115,
+    "ability": "Polarlicht",
+    "description": "Heilt das gesamte Team; die eisige Welle verlangsamt alle Gegner 3 Sekunden.",
+    "power": 250,
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "all_allies",
+        "scale": 0.95
+      },
+      {
+        "kind": "slow",
+        "target": "all_enemies",
+        "duration": 30
+      }
+    ],
+    "forms": [
+      131
+    ],
+    "generation": 1,
+    "attack_type": "Wasser",
+    "ability_type": "Wasser",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 147,
+    "name": "Dratini",
+    "types": [
+      "Drache"
+    ],
+    "cost": 4,
+    "hp": 1800,
+    "attack": 145,
+    "armor": 40,
+    "range": 2,
+    "interval": 10,
+    "role": "Angreifer",
+    "mana": 120,
+    "ability": "Draco Meteor",
+    "description": "Ein Meteor trifft das Zielgebiet; der Drache erhält einen mächtigen Schild.",
+    "power": 450,
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 1.3
+      },
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.1
+      }
+    ],
+    "forms": [
+      147,
+      148,
+      149
+    ],
+    "generation": 1,
+    "attack_type": "Drache",
+    "ability_type": "Drache",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Angreifer",
+    "range": 1,
+    "ability": "Vielender",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "scale": 1,
+        "duration": 50
+      }
+    ],
+    "hp": 1010,
+    "attack": 114,
+    "armor": 32,
+    "power": 250,
+    "mana": 95,
+    "interval": 10,
+    "description": "Schaden → Hauptziel; Rüstungsbruch → Hauptziel.",
+    "id": 214,
+    "name": "Skaraborn",
+    "cost": 4,
+    "forms": [
+      214
+    ],
+    "types": [
+      "Käfer",
+      "Kampf"
+    ],
+    "generation": 2,
+    "attack_type": "Käfer",
+    "ability_type": "Käfer",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Tank",
+    "range": 1,
+    "ability": "Sandsturm",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "all_enemies",
+        "scale": 1
+      },
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 1.2
+      }
+    ],
+    "hp": 1230,
+    "attack": 99,
+    "armor": 46,
+    "power": 250,
+    "mana": 95,
+    "interval": 13,
+    "description": "Schaden → alle Gegner; Schild → sich selbst.",
+    "id": 246,
+    "name": "Larvitar",
+    "cost": 4,
+    "forms": [
+      246,
+      247,
+      248
+    ],
+    "types": [
+      "Gestein",
+      "Boden"
+    ],
+    "generation": 2,
+    "attack_type": "Gestein",
+    "ability_type": "Gestein",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Unterstützer",
+    "range": 2,
+    "ability": "Trickschutz",
+    "effects": [
+      {
+        "kind": "cleanse",
+        "target": "all_allies",
+        "scale": 1
+      },
+      {
+        "kind": "shield",
+        "target": "all_allies",
+        "scale": 0.8
+      },
+      {
+        "kind": "mana",
+        "target": "weak_ally",
+        "scale": 1,
+        "amount": 30
+      }
+    ],
+    "hp": 1010,
+    "attack": 99,
+    "armor": 32,
+    "power": 250,
+    "mana": 115,
+    "interval": 13,
+    "description": "Reinigung → alle Verbündeten; Schild → alle Verbündeten; Mana → schwächster Verbündeter.",
+    "id": 302,
+    "name": "Zobiris",
+    "cost": 4,
+    "forms": [
+      302
+    ],
+    "types": [
+      "Unlicht",
+      "Geist"
+    ],
+    "generation": 3,
+    "attack_type": "Unlicht",
+    "ability_type": "Unlicht",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Tank",
+    "range": 1,
+    "ability": "Eisenkiefer",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 2.5
+      },
+      {
+        "kind": "heal",
+        "target": "self",
+        "scale": 1
+      }
+    ],
+    "hp": 1230,
+    "attack": 99,
+    "armor": 46,
+    "power": 250,
+    "mana": 95,
+    "interval": 13,
+    "description": "Schaden → Hauptziel; Heilung → sich selbst.",
+    "id": 303,
+    "name": "Flunkifer",
+    "cost": 4,
+    "forms": [
+      303
+    ],
+    "types": [
+      "Stahl",
+      "Fee"
+    ],
+    "generation": 3,
+    "attack_type": "Stahl",
+    "ability_type": "Stahl",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Angreifer",
+    "range": 2,
+    "ability": "Erdwelle",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 2
+      },
+      {
+        "kind": "break",
+        "target": "area",
+        "scale": 1,
+        "duration": 60
+      }
+    ],
+    "hp": 1010,
+    "attack": 114,
+    "armor": 32,
+    "power": 250,
+    "mana": 95,
+    "interval": 10,
+    "description": "Schaden → Gegner im Radius 1 um das Ziel; Rüstungsbruch → Gegner im Radius 1 um das Ziel.",
+    "id": 328,
+    "name": "Knacklion",
+    "cost": 4,
+    "forms": [
+      328,
+      329,
+      330
+    ],
+    "types": [
+      "Boden"
+    ],
+    "generation": 3,
+    "attack_type": "Boden",
+    "ability_type": "Boden",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Unterstützer",
+    "range": 3,
+    "ability": "Himmelslied",
+    "effects": [
+      {
+        "kind": "heal",
+        "target": "all_allies",
+        "scale": 0.8
+      },
+      {
+        "kind": "haste",
+        "target": "all_allies",
+        "scale": 1,
+        "duration": 50
+      }
+    ],
+    "hp": 1010,
+    "attack": 99,
+    "armor": 32,
+    "power": 250,
+    "mana": 115,
+    "interval": 13,
+    "description": "Heilung → alle Verbündeten; Tempo → alle Verbündeten.",
+    "id": 333,
+    "name": "Wablu",
+    "cost": 4,
+    "forms": [
+      333,
+      334
+    ],
+    "types": [
+      "Normal",
+      "Flug"
+    ],
+    "generation": 3,
+    "attack_type": "Normal",
+    "ability_type": "Normal",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 353,
+    "name": "Shuppet",
+    "types": [
+      "Geist"
+    ],
+    "cost": 4,
+    "range": 2,
+    "forms": [
+      353,
+      354
+    ],
+    "role": "Magier",
+    "mana": 92,
+    "ability": "Banettes Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 32
+      }
+    ],
+    "hp": 1120,
+    "attack": 86,
+    "armor": 34,
+    "power": 258,
+    "interval": 13,
+    "generation": 3,
+    "attack_type": "Geist",
+    "ability_type": "Geist",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 3.2 Sekunden."
+  },
+  {
+    "role": "Angreifer",
+    "range": 1,
+    "ability": "Unheilsklinge",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "weak_enemy",
+        "scale": 3.2
+      }
+    ],
+    "hp": 1010,
+    "attack": 114,
+    "armor": 32,
+    "power": 250,
+    "mana": 95,
+    "interval": 10,
+    "description": "Schaden → schwächster Gegner.",
+    "id": 359,
+    "name": "Absol",
+    "cost": 4,
+    "forms": [
+      359
+    ],
+    "types": [
+      "Unlicht"
+    ],
+    "generation": 3,
+    "attack_type": "Unlicht",
+    "ability_type": "Unlicht",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Angreifer",
+    "range": 2,
+    "ability": "Drachensturz",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 2.1
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "scale": 1,
+        "duration": 50
+      }
+    ],
+    "hp": 1010,
+    "attack": 114,
+    "armor": 32,
+    "power": 250,
+    "mana": 95,
+    "interval": 10,
+    "description": "Schaden → Gegner im Radius 1 um das Ziel; Tempo → sich selbst.",
+    "id": 371,
+    "name": "Kindwurm",
+    "cost": 4,
+    "forms": [
+      371,
+      372,
+      373
+    ],
+    "types": [
+      "Drache"
+    ],
+    "generation": 3,
+    "attack_type": "Drache",
+    "ability_type": "Drache",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Magier",
+    "range": 4,
+    "ability": "Eisorkan",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "all_enemies",
+        "scale": 1.4
+      },
+      {
+        "kind": "slow",
+        "target": "all_enemies",
+        "scale": 1,
+        "duration": 60
+      }
+    ],
+    "hp": 1150,
+    "attack": 115,
+    "armor": 37,
+    "power": 295,
+    "mana": 125,
+    "interval": 13,
+    "description": "Schaden → alle Gegner; Langsam → alle Gegner.",
+    "id": 144,
+    "name": "Arktos",
+    "cost": 5,
+    "forms": [
+      144
+    ],
+    "types": [
+      "Eis",
+      "Flug"
+    ],
+    "generation": 1,
+    "attack_type": "Eis",
+    "ability_type": "Eis",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 145,
+    "name": "Zapdos",
+    "types": [
+      "Elektro",
+      "Flug"
+    ],
+    "cost": 5,
+    "hp": 1350,
+    "attack": 105,
+    "armor": 32,
+    "range": 3,
+    "interval": 11,
+    "role": "Magier",
+    "mana": 130,
+    "ability": "Donnergewitter",
+    "description": "Vier Blitzschläge treffen verschiedene Gegner und betäuben sie 1,5 Sekunden.",
+    "power": 410,
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "count": 4,
+        "scale": 1.1
+      },
+      {
+        "kind": "stun",
+        "target": "chain",
+        "count": 4,
+        "duration": 15
+      }
+    ],
+    "forms": [
+      145
+    ],
+    "generation": 1,
+    "attack_type": "Elektro",
+    "ability_type": "Elektro",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Magier",
+    "range": 4,
+    "ability": "Läuterfeuer",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "area",
+        "scale": 2
+      },
+      {
+        "kind": "burn",
+        "target": "all_enemies",
+        "scale": 0.18,
+        "duration": 60
+      }
+    ],
+    "hp": 1150,
+    "attack": 115,
+    "armor": 37,
+    "power": 295,
+    "mana": 125,
+    "interval": 13,
+    "description": "Schaden → Gegner im Radius 1 um das Ziel; Brand → alle Gegner.",
+    "id": 146,
+    "name": "Lavados",
+    "cost": 5,
+    "forms": [
+      146
+    ],
+    "types": [
+      "Feuer",
+      "Flug"
+    ],
+    "generation": 1,
+    "attack_type": "Feuer",
+    "ability_type": "Feuer",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Angreifer",
+    "range": 3,
+    "ability": "Donnerjagd",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "chain",
+        "scale": 1.7,
+        "count": 5
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "scale": 1,
+        "duration": 60
+      }
+    ],
+    "hp": 1150,
+    "attack": 130,
+    "armor": 37,
+    "power": 295,
+    "mana": 105,
+    "interval": 10,
+    "description": "Schaden → nächste Gegner am Ziel; Tempo → sich selbst.",
+    "id": 243,
+    "name": "Raikou",
+    "cost": 5,
+    "forms": [
+      243
+    ],
+    "types": [
+      "Elektro"
+    ],
+    "generation": 2,
+    "attack_type": "Elektro",
+    "ability_type": "Elektro",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "role": "Tank",
+    "range": 1,
+    "ability": "Vulkanwacht",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "near_enemies",
+        "scale": 2
+      },
+      {
+        "kind": "shield",
+        "target": "self",
+        "scale": 2
+      },
+      {
+        "kind": "taunt",
+        "target": "near_enemies",
+        "scale": 1,
+        "duration": 60
+      }
+    ],
+    "hp": 1370,
+    "attack": 115,
+    "armor": 51,
+    "power": 295,
+    "mana": 105,
+    "interval": 13,
+    "description": "Schaden → Gegner im Radius 2; Schild → sich selbst; Provokation → Gegner im Radius 2.",
+    "id": 244,
+    "name": "Entei",
+    "cost": 5,
+    "forms": [
+      244
+    ],
+    "types": [
+      "Feuer"
+    ],
+    "generation": 2,
+    "attack_type": "Feuer",
+    "ability_type": "Feuer",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  },
+  {
+    "id": 361,
+    "name": "Schneppke",
+    "types": [
+      "Eis"
+    ],
+    "cost": 5,
+    "range": 2,
+    "forms": [
+      361,
+      478
+    ],
+    "role": "Magier",
+    "mana": 100,
+    "ability": "Frosdedjes Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 35
+      }
+    ],
+    "hp": 1270,
+    "attack": 98,
+    "armor": 39,
+    "power": 300,
+    "interval": 13,
+    "generation": 3,
+    "attack_type": "Eis",
+    "ability_type": "Eis",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 3.5 Sekunden."
+  },
+  {
+    "id": 363,
+    "name": "Seemops",
+    "types": [
+      "Eis",
+      "Wasser"
+    ],
+    "cost": 5,
+    "range": 2,
+    "forms": [
+      363,
+      364,
+      365
+    ],
+    "role": "Magier",
+    "mana": 100,
+    "ability": "Walraisas Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "slow",
+        "target": "enemy",
+        "duration": 35
+      }
+    ],
+    "hp": 1270,
+    "attack": 98,
+    "armor": 39,
+    "power": 300,
+    "interval": 13,
+    "generation": 3,
+    "attack_type": "Eis",
+    "ability_type": "Eis",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 3.5 Sekunden."
+  },
+  {
+    "id": 380,
+    "name": "Latias",
+    "types": [
+      "Drache",
+      "Psycho"
+    ],
+    "cost": 5,
+    "range": 2,
+    "forms": [
+      380
+    ],
+    "role": "Angreifer",
+    "mana": 100,
+    "ability": "Latiass Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 35
+      }
+    ],
+    "hp": 1270,
+    "attack": 98,
+    "armor": 39,
+    "power": 300,
+    "interval": 13,
+    "generation": 3,
+    "attack_type": "Drache",
+    "ability_type": "Drache",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 3.5 Sekunden."
+  },
+  {
+    "id": 381,
+    "name": "Latios",
+    "types": [
+      "Drache",
+      "Psycho"
+    ],
+    "cost": 5,
+    "range": 2,
+    "forms": [
+      381
+    ],
+    "role": "Angreifer",
+    "mana": 100,
+    "ability": "Latioss Kraftstoß",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 1.3
+      },
+      {
+        "kind": "break",
+        "target": "enemy",
+        "duration": 35
+      }
+    ],
+    "hp": 1270,
+    "attack": 98,
+    "armor": 39,
+    "power": 300,
+    "interval": 13,
+    "generation": 3,
+    "attack_type": "Drache",
+    "ability_type": "Drache",
+    "ability_range": "Auslösung in Angriffsreichweite. Unterstützer global.",
+    "description": "Trifft das Hauptziel mit 130 % Fähigkeitsstärke. Schwächt das Ziel für 3.5 Sekunden."
+  },
+  {
+    "role": "Angreifer",
+    "range": 3,
+    "ability": "Zenitsturm",
+    "effects": [
+      {
+        "kind": "damage",
+        "target": "all_enemies",
+        "scale": 1.5
+      },
+      {
+        "kind": "damage",
+        "target": "enemy",
+        "scale": 2
+      },
+      {
+        "kind": "haste",
+        "target": "self",
+        "scale": 1,
+        "duration": 40
+      }
+    ],
+    "hp": 1150,
+    "attack": 130,
+    "armor": 37,
+    "power": 295,
+    "mana": 105,
+    "interval": 10,
+    "description": "Schaden → alle Gegner; Schaden → Hauptziel; Tempo → sich selbst.",
+    "id": 384,
+    "name": "Rayquaza",
+    "cost": 5,
+    "forms": [
+      384
+    ],
+    "types": [
+      "Drache",
+      "Flug"
+    ],
+    "generation": 3,
+    "attack_type": "Drache",
+    "ability_type": "Drache",
+    "ability_range": "Auslösung: Angriffsreichweite; Unterstützer global. Flächen: Manhattan-Radius 1 am Ziel bzw. 2 am Anwender. Ketten und globale Effekte ohne Distanzlimit."
+  }
+]

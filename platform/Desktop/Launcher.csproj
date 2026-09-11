@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework><UseWindowsForms>true</UseWindowsForms><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><EnableDefaultCompileItems>false</EnableDefaultCompileItems><AssemblyName>PokeLauncher</AssemblyName><Version>9.1.0</Version><ApplicationIcon>../icon.ico</ApplicationIcon></PropertyGroup>
+ <ItemGroup><Compile Include="Common.cs"/><Compile Include="GitHubUpdates.cs"/><Compile Include="SecureStore.cs"/><Compile Include="Launcher.cs"/><EmbeddedResource Include="../../assets/fonts/pkmnem.ttf" LogicalName="pixel.ttf"/></ItemGroup>
+</Project>
