@@ -4,3 +4,5 @@ $ErrorActionPreference='Stop'
 if($LASTEXITCODE -ne 0) {throw 'GitHub update integration tests failed'}
 & $Godot --headless --path . --log-file (Join-Path (Get-Location) 'docs/github-core-test.log') --script res://tests/test_core.gd
 if($LASTEXITCODE -ne 0) {throw 'Core regression tests failed'}
+& $Godot --headless --path . --log-file (Join-Path (Get-Location) 'docs/launch-gate-tests.log') --script res://tests/test_launch_gate.gd
+if($LASTEXITCODE -ne 0) {throw 'Launcher handoff tests failed'}

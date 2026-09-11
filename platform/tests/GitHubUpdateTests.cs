@@ -33,6 +33,22 @@ class GitHubUpdateTests {
   GitHubUpdates Client(Fixture f,string? cache=null,string? token=null)=>new(cfg,cache ?? Cache(),token,new HttpClient(f){Timeout=TimeSpan.FromMinutes(2)});
   using(var c=Client(fx)) {var offer=await c.Latest("9.0.0");Check(offer?.Manifest.Version=="9.1.0","Complete stable release selected and signature verified");var zip=Path.Combine(Work,"verified.zip");await c.Download(offer!,zip,null);Check(Files.Hash(zip)==fx.Hash,"Signed package downloaded and hash checked");}
   Check(fx.NoLeakedAuth,"CDN redirects carry no GitHub credentials");
+  var strictCache=Cache();var strict=new Fixture(rsa,"9.1.0");
+  using(var c=Client(strict,strictCache)) {
+   await c.Latest("9.1.0",requireOnline:true);Check(c.CurrentConfirmed,"Equal signed online version authorizes start");
+   await c.Latest("9.1.0",requireOnline:true);Check(c.CurrentConfirmed&&strict.ApiCalls==2,"Every start revalidates online despite normal polling cache");
+   strict.Mode="304";
+   await c.Latest("9.1.0",requireOnline:true);Check(c.CurrentConfirmed&&strict.SawEtag,"Online 304 plus signed cached release authorizes current version");
+   strict.Mode="offline";
+   await Reject(async()=>{await c.Latest("9.1.0",requireOnline:true);},"Cached successful check cannot authorize offline start");
+   Check(!c.CurrentConfirmed,"Failed online check revokes authorization");
+  }
+  foreach(var mode in new[]{"missing","signature","draft","prerelease"}) {
+   using var c=Client(new Fixture(rsa,"9.1.0",mode));
+   await Reject(async()=>{await c.Latest("9.1.0",requireOnline:true);},"Current version still requires valid stable metadata: "+mode);
+   Check(!c.CurrentConfirmed,"Invalid metadata never authorizes: "+mode);
+  }
+  using(var c=Client(new Fixture(rsa,"9.0.0"))) await Reject(async()=>{await c.Latest("9.1.0",requireOnline:true);},"Unpublished newer installed version cannot start");
   foreach(var mode in new[]{"missing","uploading","signature","checksum","repo","version","platform","size"}) {
    var f=new Fixture(rsa,"9.1.0",mode);using var c=Client(f);await Reject(async()=>{await c.Latest("9.0.0");},"Reject release: "+mode);
   }
@@ -46,6 +62,7 @@ class GitHubUpdateTests {
   using(var c=Client(cached,cache)) Check(await c.Latest("9.0.0")==null&&cached.SawEtag,"Conditional ETag / 304 response");
   var rate=new Fixture(rsa,"9.1.0","rate");cache=Cache();using(var c=Client(rate,cache)) await Reject(async()=>{await c.Latest("9.0.0");},"GitHub rate limit handled");
   using(var c=Client(rate,cache)) {await c.Latest("9.0.0");Check(rate.ApiCalls==1,"Rate-limit backoff survives new client");}
+  using(var c=Client(rate,cache)) {await Reject(async()=>{await c.Latest("9.0.0",requireOnline:true);},"Strict online start respects rate-limit backoff");Check(rate.ApiCalls==1,"Strict start does not bypass GitHub rate limit");}
   var credential=Path.Combine(Work,"reader.dpapi");SecureStore.Save(credential,"individual-test-token");Check(SecureStore.Load(credential)=="individual-test-token"&&!Encoding.UTF8.GetString(File.ReadAllBytes(credential)).Contains("individual-test-token"),"Windows DPAPI credential storage");
   File.WriteAllText(Path.Combine(AppContext.BaseDirectory,"build.json"),"{\"version\":\"9.0.0\"}");
   string Home(string name) {
@@ -56,11 +73,22 @@ class GitHubUpdateTests {
    return home;
   }
   var installed=Home("installed");
+  var currentFixture=new Fixture(rsa,"9.0.0");
+  using(var launcher=new Launcher(new[]{"--home",Home("strict-start")},true,()=>Client(currentFixture))) {
+   await Update(launcher);Check(Field<Button>(launcher,"play").Enabled,"Valid online current release enables play button");
+   currentFixture.Mode="offline";
+   typeof(Launcher).GetMethod("StartGame",BindingFlags.NonPublic|BindingFlags.Instance)!.Invoke(launcher,null);
+   for(var i=0;i<100&&Field<bool>(launcher,"busy");i++) await Task.Delay(10);
+   Check(!Field<Button>(launcher,"play").Enabled&&!Field<bool>(launcher,"currentConfirmed")&&Field<Process?>(launcher,"game")==null,"Play click rechecks connection and never launches after going offline");
+   currentFixture.Mode="";
+   await Update(launcher);Check(Field<Button>(launcher,"play").Enabled,"Successful retry unlocks current version again");
+  }
   using(var launcher=new Launcher(new[]{"--home",installed},true,()=>Client(new Fixture(rsa,"9.1.0",real:true)))) {
    await Update(launcher);Check(File.ReadAllText(Path.Combine(installed,"active.txt"))=="9.1.0","Actual launcher activates 9.0.0 -> 9.1.0");
    Check(File.Exists(Path.Combine(installed,"versions/9.0.0/PokeTactics.exe")),"Previous game preserved");
    Check(File.ReadAllText(Path.Combine(installed,"settings-sentinel.cfg"))=="Trainer=Preserved","Settings outside version directories preserved");
    var psi=new ProcessStartInfo(Path.Combine(installed,"versions/9.1.0/PokeTactics.exe")){UseShellExecute=false,CreateNoWindow=true,WorkingDirectory=Path.Combine(installed,"versions/9.1.0"),ArgumentList={"--headless","--path",Path.Combine(installed,"versions/9.1.0"),"--quit-after","5","--log-file",Path.Combine(Work,"game.log")}};
+   Ticket(psi,"9.1.0");
    using var game=Process.Start(psi)!;await game.WaitForExitAsync();Check(game.ExitCode==0&&!File.ReadAllText(Path.Combine(Work,"game.log")).Contains("SCRIPT ERROR"),"Updated actual game starts successfully");
   }
   File.WriteAllText(Path.Combine(AppContext.BaseDirectory,"build.json"),"{\"version\":\"9.1.0\"}");
@@ -68,7 +96,8 @@ class GitHubUpdateTests {
   File.WriteAllText(Path.Combine(AppContext.BaseDirectory,"build.json"),"{\"version\":\"9.0.0\"}");
   foreach(var mode in new[]{"offline","missing","truncated","corrupt","zipslip"}) {
    var home=Home(mode);using var launcher=new Launcher(new[]{"--home",home},true,()=>Client(new Fixture(rsa,"9.1.0",mode)));
-   await Update(launcher);Check(File.ReadAllText(Path.Combine(home,"active.txt"))=="9.0.0"&&Field<Button>(launcher,"play").Enabled,"Old game start remains enabled after "+mode);
+   Check(!Field<Button>(launcher,"play").Enabled,"Start is locked before first check: "+mode);
+   await Update(launcher);Check(File.ReadAllText(Path.Combine(home,"active.txt"))=="9.0.0"&&!Field<Button>(launcher,"play").Enabled&&!Field<bool>(launcher,"currentConfirmed"),"Old files preserved but start locked after "+mode);
   }
   var locked=Home("locked");
   using(var launcher=new Launcher(new[]{"--home",locked},true,()=>Client(new Fixture(rsa,"9.1.0",real:true)))) {
@@ -78,6 +107,8 @@ class GitHubUpdateTests {
   }
   var running=Home("running");
   var start=new ProcessStartInfo(Path.Combine(running,"versions/9.0.0/PokeTactics.exe")){UseShellExecute=false,CreateNoWindow=true,WorkingDirectory=Path.Combine(running,"versions/9.0.0"),ArgumentList={"--headless","--path",Path.Combine(running,"versions/9.0.0"),"--log-file",Path.Combine(Work,"running-game.log")}};
+  File.WriteAllText(Path.Combine(running,"versions/9.0.0/build.json"),"{\"version\":\"9.0.0\"}");
+  Ticket(start,"9.0.0");
   using(var game=Process.Start(start)!) {
    try {using var launcher=new Launcher(new[]{"--home",running},true,()=>Client(new Fixture(rsa,"9.1.0",real:true)));
     typeof(Launcher).GetField("game",BindingFlags.NonPublic|BindingFlags.Instance)!.SetValue(launcher,game);
@@ -88,6 +119,11 @@ class GitHubUpdateTests {
     Check(File.ReadAllText(Path.Combine(running,"active.txt"))=="9.1.0","Staged update activates only after game exits");
    }finally{if(!game.HasExited)game.Kill();}
   }
+ }
+ static void Ticket(ProcessStartInfo start,string version) {
+  var path=Path.Combine(Work,Guid.NewGuid()+".json");
+  File.WriteAllText(path,JsonSerializer.Serialize(new {version,expires=DateTimeOffset.UtcNow.ToUnixTimeSeconds()+30}));
+  start.Environment["POKE_LAUNCH_TICKET"]=path;
  }
  sealed class Fixture : HttpMessageHandler {
   public string Mode;public int ApiCalls,AssetCalls; public bool NoLeakedAuth=true,SawAuth,SawEtag;

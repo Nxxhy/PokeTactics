@@ -11,7 +11,7 @@ record UpdateManifest(string Repository, string Version, string Tag, string Plat
 record ReleaseAsset(long Id, string Name, long Size, string State);
 record GitRelease(long Id, [property:JsonPropertyName("tag_name")] string Tag, bool Draft, bool Prerelease, string? Body, ReleaseAsset[] Assets);
 record UpdateOffer(GitRelease Release, UpdateManifest Manifest, ReleaseAsset Package);
-record CheckCache(string? Etag, string? Body, DateTimeOffset NextCheck);
+record CheckCache(string? Etag, string? Body, DateTimeOffset NextCheck, bool Backoff = false);
 
 static class StableVersion {
  // Stable SemVer subset also representable in Windows version resources and safe directory names.
@@ -23,6 +23,7 @@ static class StableVersion {
 }
 
 sealed class GitHubUpdates : IDisposable {
+ public bool CurrentConfirmed { get; private set; }
  readonly UpdateConfig config;
  readonly HttpClient client;
  readonly string cachePath;
@@ -46,18 +47,19 @@ sealed class GitHubUpdates : IDisposable {
   }
   return q;
  }
- public async Task<UpdateOffer?> Latest(string installed, bool force=false) {
+ public async Task<UpdateOffer?> Latest(string installed, bool force=false, bool requireOnline=false) {
+  CurrentConfirmed=false;
   StableVersion.Parse(installed);
   CheckCache cache=new(null,null,DateTimeOffset.MinValue);
   try { if(File.Exists(cachePath)) cache=Files.Read<CheckCache>(cachePath); } catch { }
-  if(DateTimeOffset.UtcNow<cache.NextCheck) {
-   if(!force) return null;
+  if(DateTimeOffset.UtcNow<cache.NextCheck && (!requireOnline || cache.Backoff)) {
+   if(!force && !requireOnline) return null;
    throw new Exception("GitHub-Abfragepause bis "+cache.NextCheck.ToLocalTime().ToString("HH:mm:ss")+". Danach erneut versuchen.");
   }
   // Persistent pacing applies across launcher restarts and even when requests fail.
-  void Save(DateTimeOffset next,string? etag=null,string? body=null) {
+  void Save(DateTimeOffset next,string? etag=null,string? body=null,bool backoff=true) {
    Directory.CreateDirectory(Path.GetDirectoryName(cachePath)!);
-   cache=new CheckCache(etag ?? cache.Etag,body ?? cache.Body,next);
+   cache=new CheckCache(etag ?? cache.Etag,body ?? cache.Body,next,backoff);
    Files.Atomic(cachePath,JsonSerializer.Serialize(cache,Files.Json));
   }
   Save(DateTimeOffset.UtcNow.AddMinutes(1));
@@ -79,11 +81,22 @@ sealed class GitHubUpdates : IDisposable {
   else { response.EnsureSuccessStatusCode(); body=await response.Content.ReadAsStringAsync(cts.Token); }
   Save(DateTimeOffset.UtcNow.AddMinutes(1),response.Headers.ETag?.ToString(),body);
   var release=JsonSerializer.Deserialize<GitRelease>(body,Files.Json) ?? throw new Exception("Release-Metadaten fehlen.");
-  if(release.Draft || release.Prerelease) return null;
+  if(release.Draft || release.Prerelease) {
+   if(requireOnline) throw new Exception("Keine gültige stabile Veröffentlichung bestätigt.");
+   return null;
+  }
   if(!release.Tag.StartsWith('v')) throw new Exception("Release-Tag muss vX.Y.Z sein.");
   var version=release.Tag[1..];
-  if(StableVersion.Parse(version)<=StableVersion.Parse(installed)) { Save(DateTimeOffset.UtcNow.AddMinutes(15)); return null; }
+  if(StableVersion.Parse(version)<=StableVersion.Parse(installed)) {
+   if(requireOnline) {
+    if(version!=installed) throw new Exception("Installierte Version entspricht nicht der aktuellen stabilen Veröffentlichung.");
+    await Validate(release);
+    CurrentConfirmed=true;
+   }
+   Save(DateTimeOffset.UtcNow.AddMinutes(15),backoff:false); return null;
+  }
   var offer=await Validate(release);
+  Save(DateTimeOffset.UtcNow.AddMinutes(1),backoff:false);
   // Failed installation can be retried after the one-minute minimum instead of waiting 15 minutes.
   return offer;
  }

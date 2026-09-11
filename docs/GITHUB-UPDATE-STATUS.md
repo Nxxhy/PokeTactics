@@ -1,5 +1,13 @@
 # Prüfung vom 11. September 2026
 
+## Versionspflicht 9.1.2
+
+Die neue Launcher-Version erlaubt Spielstarts nur nach einer aktuellen Online-Bestätigung der exakt gleichen stabilen Release-Version einschließlich gültiger signierter Metadaten. Ohne Internet, bei unvollständigen Releases, falschen Signaturen und fehlgeschlagener Installation bleibt der Start gesperrt. Ein erfolgreicher früherer Check ersetzt die erneute Prüfung beim Klick auf Spielen nicht. Direkte Starts der neuen Spiel-EXE werden zum Launcher zurückgeführt; eine einmalige, 30 Sekunden gültige Startfreigabe verbindet Launcher und Spiel. Laufende Spiele werden weiterhin nicht beendet.
+
+Lokal bestanden: 71 Updater-Prüfungen, 11 Prüfungen für die einmalige Startfreigabe und 1.005 Spiellogik-Prüfungen. Dazu gehören Online-ETag/304, Startversuch nach Verbindungsverlust, erneute Freigabe nach Fehlerbehebung, Abfragelimit, ungültige aktuelle Release-Metadaten, Versionswechsel und das Warten auf einen tatsächlichen Spielprozess. Die unten dokumentierten öffentlichen Tests 9.1.0 → 9.1.1 sind historische Nachweise für den Update-Weg, nicht für die neue Versionspflicht.
+
+Bereits ausgelieferte ältere Offline-Versionen und absichtlich modifizierte Clients lassen sich durch diese lokale Startprüfung nicht rückwirkend sperren. Öffentliche Multiplayer-Kämpfe benötigen zusätzlich eine serverseitige Versionskontrolle.
+
 ## Lokal abgeschlossen
 
 - Spiel-Repository lokal initialisiert; Remote `https://github.com/Nxxhy/PokeTactics.git`, öffentlicher Zielkanal nach Nutzerentscheidung.

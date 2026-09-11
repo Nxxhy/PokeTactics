@@ -1,4 +1,6 @@
-# Poké Tactics – GitHub-Updates (9.1)
+# Poké Tactics – verbindliche GitHub-Updates (9.1.2)
+
+Ab 9.1.2 ist zum Starten eine erfolgreiche Online-Prüfung der neuesten stabilen Version erforderlich. Updates werden automatisch installiert; ohne Verbindung oder bei Update-Fehlern bleibt der Spielstart gesperrt. Laufende Partien werden nicht unterbrochen. Alte Offline-Versionen lassen sich nicht rückwirkend sperren.
 
 Spiel-Repository: [Nxxhy/PokeTactics](https://github.com/Nxxhy/PokeTactics) (öffentlich). Spiel und Launcher werden zusammen über signierte Windows-Pakete aus [GitHub Releases](https://github.com/Nxxhy/PokeTactics/releases/latest) aktualisiert. Die Entwickler-App startet denselben GitHub-Actions-Workflow und veröffentlicht fertige Entwürfe.
 

@@ -70,6 +70,11 @@ var ability_fx = preload("res://ui/ability_fx.gd").new()
 var last_visual_tick = -1
 
 func _ready():
+ if not preload("res://ui/launch_gate.gd").admit():
+  set_process(false)
+  set_process_input(false)
+  get_tree().quit()
+  return
  if save_path == "user://match.json" and "--fresh-demo" not in OS.get_cmdline_user_args() and not OS.has_feature("web"):
   get_window().mode = Window.MODE_FULLSCREEN
  texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST

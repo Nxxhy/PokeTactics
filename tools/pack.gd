@@ -17,6 +17,7 @@ func _init():
  files.append_array(["core/difficulty.gd","assets/fonts/AtkinsonHyperlegible-Regular.ttf","assets/fonts/PixelifySans.ttf"])
  files.append_array(["core/traits.gd","data/traits.json","data/roster-v7-backup.json"])
  files.append("assets/fonts/pkmnem.ttf")
+ files.append("ui/launch_gate.gd")
  files.append("assets/fonts/pkmnemn.ttf")
  files.append_array(["ui/forest.gd","ui/forest_layer.gd","assets/animated/manifest.json"])
  for filename in DirAccess.get_files_at("res://assets/animated"):

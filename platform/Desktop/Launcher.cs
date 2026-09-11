@@ -16,7 +16,7 @@ class Launcher : PixelForm {
  readonly string home;
  readonly Service service;
  readonly UpdateConfig updateConfig;
- readonly System.Windows.Forms.Timer polling = new() { Interval = 60000 };
+ readonly System.Windows.Forms.Timer polling = new() { Interval = 900000 };
  readonly string credentials;
  readonly Func<GitHubUpdates>? updateFactory;
  string version;
@@ -26,6 +26,7 @@ class Launcher : PixelForm {
  readonly ProgressBar progress;
  Process? game;
  bool busy;
+ bool currentConfirmed;
  readonly bool integration;
  public Launcher(string[] args, bool integrationTest = false, Func<GitHubUpdates>? updateFactory = null) : base("POKÉ TACTICS · LAUNCHER") {
   integration = integrationTest; this.updateFactory=updateFactory;
@@ -40,6 +41,7 @@ class Launcher : PixelForm {
   progress = new ProgressBar { Width=700, Height=22 }; Body.Controls.Add(progress);
   Label("Versionshinweise"); notes = Input("",true); notes.ReadOnly=true; notes.Height=180;
   play = Button("Spielen",StartGame);
+  play.Enabled=false;
   Button("Erneut prüfen / Aktualisieren",()=>_ = Check(true));
   if(updateConfig.PrivateRepository) {
    Label("Privates Repository: persönlicher GitHub-Token mit Contents: Read (nur auf diesem PC)").Height=80;
@@ -48,24 +50,31 @@ class Launcher : PixelForm {
     Directory.CreateDirectory(Path.GetDirectoryName(credentials)!); SecureStore.Save(credentials,access.Text); access.Clear();
     status.Text="Persönlicher Zugriff gespeichert. Erneut prüfen.";
    });
-   Button("Gespeicherten GitHub-Zugriff entfernen",()=>{if(File.Exists(credentials)) File.Delete(credentials); status.Text="Zugriff entfernt. Einzelspieler bleibt verfügbar.";});
+   Button("Gespeicherten GitHub-Zugriff entfernen",()=>{if(File.Exists(credentials)) File.Delete(credentials); currentConfirmed=false; play.Enabled=false; status.Text="Zugriff entfernt. Spielstart erfordert eine erfolgreiche Online-Prüfung.";});
   }
   Button("Beenden",Close);
-  Shown += async (_,_) => { await Check(); if(!IsDisposed) polling.Start(); };
+  Shown += async (_,_) => { await Check(true); if(!IsDisposed) polling.Start(); };
   polling.Tick += async (_,_) => await Check();
   Disposed += (_,_) => polling.Dispose();
   FormClosing += (_,e) => { if (busy) { e.Cancel=true; status.Text="Bitte warte, bis die laufende Aktualisierung abgeschlossen ist."; } };
  }
  string ActiveDirectory => Path.Combine(home,"versions",File.ReadAllText(Path.Combine(home,"active.txt")).Trim());
- void StartGame() {
+ async void StartGame() {
   if (busy || game is { HasExited:false }) return;
+  await Check(true);
+  if(IsDisposed || !currentConfirmed || busy) return;
   try {
    var path = Directory.Exists(Path.Combine(home,"versions")) ? ActiveDirectory : AppContext.BaseDirectory;
    var start = new ProcessStartInfo(Path.Combine(path,"PokeTactics.exe")) { WorkingDirectory=path,UseShellExecute=false };
    start.Environment["POKE_SERVICE"] = service.Endpoint;
+   var ticket=Path.Combine(Path.GetTempPath(),"poketactics-launch-"+Guid.NewGuid()+".json");
+   Files.Atomic(ticket,JsonSerializer.Serialize(new { version, expires=DateTimeOffset.UtcNow.ToUnixTimeSeconds()+30 },Files.Json));
+   start.Environment["POKE_LAUNCH_TICKET"] = ticket;
    game = Process.Start(start); status.Text="Spiel läuft. Neue Updates werden erst nach dem Beenden aktiviert.";
+   _ = RemoveTicket(ticket);
   } catch(Exception e) { status.Text="Spielstart fehlgeschlagen: "+e.Message; }
  }
+ static async Task RemoveTicket(string path) { await Task.Delay(35000); try { File.Delete(path); } catch(IOException) { } }
  async Task Check(bool force=false) {
   if (busy) return;
   busy=true; play.Enabled=false;
@@ -73,13 +82,19 @@ class Launcher : PixelForm {
   try {
    if (updateConfig.Repository.Length==0 || updateConfig.PublicKey.Length==0) {
     versions.Text="Installiert: "+version+" · GitHub-Updates noch nicht eingerichtet";
-    status.Text="Einzelspieler startbereit. Spiel-Repository und öffentlicher Signierschlüssel fehlen."; return;
+    throw new Exception("Spiel-Repository oder öffentlicher Signierschlüssel fehlt.");
    }
    var personalToken=updateConfig.PrivateRepository && File.Exists(credentials)?SecureStore.Load(credentials):null;
    if(updateConfig.PrivateRepository && string.IsNullOrEmpty(personalToken)) throw new Exception("Persönlicher GitHub-Zugriff für das private Repository fehlt.");
    using var updates=updateFactory?.Invoke() ?? new GitHubUpdates(updateConfig,Path.Combine(home,"github-update-cache.json"),personalToken);
-   var offer=await updates.Latest(version,force);
-   if(offer==null) { versions.Text="Installiert: "+version; status.Text="Startbereit · regelmäßige GitHub-Prüfung aktiv."; return; }
+   var offer=await updates.Latest(version,force,requireOnline:true);
+   if(offer==null) {
+    currentConfirmed=updates.CurrentConfirmed;
+    versions.Text="Installiert: "+version;
+    status.Text=currentConfirmed ? "Aktuelle Version bestätigt. Vor dem Spielstart wird erneut online geprüft." : "Spielstart gesperrt. Bitte die aktuelle Version online prüfen.";
+    return;
+   }
+   currentConfirmed=false;
    var manifest=offer.Manifest;
    versions.Text="Installiert: "+version+" · Neue Version: "+manifest.Version;
    notes.Text=offer.Release.Body ?? "Keine Versionshinweise vorhanden.";
@@ -115,8 +130,8 @@ class Launcher : PixelForm {
    catch { Files.Atomic(active,previousVersion); version=previousVersion; throw; }
    // New process waits for this process to release the update lock.
    busy=false; Close();
-  } catch(Exception e) { status.Text="Update nicht aktiviert: "+e.Message+" Einzelspieler bleibt startfähig."; }
-  finally { progress.Style=ProgressBarStyle.Continuous; if(staging!=null) { try { Directory.Delete(staging,true); } catch(IOException) { } } busy=false; play.Enabled=true; }
+  } catch(Exception e) { currentConfirmed=false; status.Text="Spielstart gesperrt: "+e.Message+" Bitte erneut prüfen. Eine laufende Partie wird nicht unterbrochen."; }
+  finally { progress.Style=ProgressBarStyle.Continuous; if(staging!=null) { try { Directory.Delete(staging,true); } catch(IOException) { } } busy=false; play.Enabled=currentConfirmed; }
  }
  bool GameRunning() {
   if(game is { HasExited:false }) return true;
