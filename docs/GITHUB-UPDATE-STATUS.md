@@ -6,6 +6,10 @@ Die neue Launcher-Version erlaubt Spielstarts nur nach einer aktuellen Online-Be
 
 Lokal bestanden: 71 Updater-Prüfungen, 11 Prüfungen für die einmalige Startfreigabe und 1.005 Spiellogik-Prüfungen. Dazu gehören Online-ETag/304, Startversuch nach Verbindungsverlust, erneute Freigabe nach Fehlerbehebung, Abfragelimit, ungültige aktuelle Release-Metadaten, Versionswechsel und das Warten auf einen tatsächlichen Spielprozess. Die unten dokumentierten öffentlichen Tests 9.1.0 → 9.1.1 sind historische Nachweise für den Update-Weg, nicht für die neue Versionspflicht.
 
+[GitHub-Build 9.1.2](https://github.com/Nxxhy/PokeTactics/actions/runs/34587270436) einschließlich Tests, Signierung und Upload erfolgreich; [Release v9.1.2](https://github.com/Nxxhy/PokeTactics/releases/tag/v9.1.2) ist veröffentlicht. Fünf zusätzliche Live-Prüfungen bestanden: aktuelle öffentliche Release-Metadaten und Signatur, Download mit SHA-256-Prüfung, Online-Freigabe im tatsächlichen Launcher-Code, Start des von GitHub gebauten Spiels mit einmaliger Freigabe und Rückleitung eines direkten EXE-Starts an den ausgelieferten Launcher. Das direkte Startprotokoll enthält keine Skriptfehler. Testdateien liegen isoliert unter `dist/StrictLive-9.1.2-*`; keine Benutzerinstallation wurde ersetzt.
+
+Der Live-Test ist mit `dotnet run --project platform/tests/LiveStrictUpdateTests.csproj -c Release -- 9.1.2` wiederholbar, solange 9.1.2 das aktuelle öffentliche Release ist. Er benötigt Internet, lädt das signierte Paket und startet kurz das Spiel sowie gegebenenfalls den Launcher. Protokoll: `docs/github-strict-live-tests.txt`. Ein vorhandener Benutzer-Launcher wird dabei erhalten; in diesem Fall entfällt ausschließlich der zusätzliche direkte EXE-Starttest.
+
 Bereits ausgelieferte ältere Offline-Versionen und absichtlich modifizierte Clients lassen sich durch diese lokale Startprüfung nicht rückwirkend sperren. Öffentliche Multiplayer-Kämpfe benötigen zusätzlich eine serverseitige Versionskontrolle.
 
 ## Lokal abgeschlossen
