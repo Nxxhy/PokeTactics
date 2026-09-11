@@ -8,13 +8,20 @@
 - 1.005 Spiellogik-Prüfungen und 16 HTTP-Lobby-Prüfungen bestanden. Die beiden alten Update-/Publisher-Endpunkte liefern jetzt 404.
 - Tatsächliche Setup-Migration getestet: vorhandenen 9.0.0-Installer installiert, 9.1.0 darüber installiert, neuen aktiven Launcher, vorherige Version, GitHub-Konfiguration und unveränderte Einstellungs-Testdatei geprüft; installiertes Spiel erfolgreich gestartet. Testinstallation danach deinstalliert.
 - Release-Paket 9.1.0 lokal RSA-PSS-signiert. Der Signierer prüft die Übereinstimmung mit dem im Installer enthaltenen öffentlichen Schlüssel.
-- PowerShell-Syntax und Workflow-YAML geprüft. Der Workflow ist noch nicht auf einem GitHub-Runner gelaufen.
-- Öffentliche Quellen vor dem Commit auf private Schlüssel und typische GitHub-Tokens geprüft; keine Treffer. Der private Schlüssel liegt ausschließlich lokal mit Windows DPAPI geschützt und ist von Git ausgeschlossen.
+- PowerShell-Syntax und Workflow-YAML geprüft; anschließend beide Release-Builds erfolgreich auf GitHub-Runnern ausgeführt.
+- Öffentliche Quellen vor dem Commit auf private Schlüssel und typische GitHub-Tokens geprüft; keine Treffer. Die lokale Schlüsselkopie ist mit Windows DPAPI geschützt und von Git ausgeschlossen; GitHub besitzt nur das separat eingerichtete Actions-Secret.
 
-## Für den öffentlichen Betrieb noch erforderlich
+## Öffentlicher Betrieb und tatsächlicher Update-Test abgeschlossen
 
-Das externe Repository wurde noch nicht angelegt und es wurde nichts zu GitHub hochgeladen. Der Nutzer hat den GitHub-MCP-Connector installiert; dessen Werkzeuge waren in dieser laufenden Aufgabe jedoch noch nicht aufrufbar. Der alternativ geöffnete Browser zeigte eine GitHub-Anmeldeseite.
+Das öffentliche [Repository Nxxhy/PokeTactics](https://github.com/Nxxhy/PokeTactics) ist angelegt und enthält die Projektquellen. GitHub Actions ist aktiv. Der private Signierschlüssel wurde verschlüsselt als Environment-Secret `UPDATE_SIGNING_PRIVATE_KEY` in `release` hinterlegt; diese Umgebung lässt `main` und `v*`-Tags zu. Spiel und Launcher enthalten ausschließlich den öffentlichen Prüfschlüssel.
 
-Nach verfügbarem GitHub-Zugriff: Repository öffentlich anlegen, vorbereitete Quellen pushen, `UPDATE_SIGNING_PRIVATE_KEY` sicher als Actions-Secret hinterlegen, Release-Workflow ausführen und das vollständige Release gezielt veröffentlichen. Danach den geforderten Ablauf mit **zwei echten GitHub-Releases** und dem tatsächlichen Netzwerk-Download durchführen. Dieser öffentliche Ende-zu-Ende-Test ist offen und wird durch die lokalen Prüfungen nicht ersetzt.
+Zwei echte Windows-Builds wurden erfolgreich auf GitHub ausgeführt und veröffentlicht:
+
+- [Build 9.1.0](https://github.com/Nxxhy/PokeTactics/actions/runs/34582604026), [Release v9.1.0](https://github.com/Nxxhy/PokeTactics/releases/tag/v9.1.0).
+- [Build 9.1.1](https://github.com/Nxxhy/PokeTactics/actions/runs/34583111759), [Release v9.1.1](https://github.com/Nxxhy/PokeTactics/releases/tag/v9.1.1). Dieser Build wurde durch die tatsächliche Entwickler-App-Logik ausgelöst; Anmeldung über Git und Laden der Build-/Release-Historie wurden ebenfalls geprüft.
+
+Der Installer 9.1.0 wurde von GitHub heruntergeladen und in einem isolierten Testverzeichnis installiert. Nach Veröffentlichung von 9.1.1 hat der tatsächlich installierte Launcher das neue Release erkannt, die Dateien heruntergeladen, Signatur und Paket geprüft, die neue Version aktiviert und sich durch den neuen Launcher-Prozess ersetzt. Das neue Spiel wurde erfolgreich gestartet; die Einstellungen-Testdatei sowie die vorherige Version blieben erhalten. Anschließend wurde die Testinstallation entfernt. Laufprotokoll lokal: `docs/github-live-update-tests.txt`.
+
+Die Fehlerfälle (unvollständige Releases, Signatur-/Hashfehler, Download-Abbruch, Offlinebetrieb, gesperrte Installation und laufendes Spiel) wurden mit der tatsächlichen Updater-Implementierung und simulierten GitHub-Antworten getestet, ohne öffentliche Test-Releases zu beschädigen. Zusätzlich wurden die Metadaten beider öffentlichen Releases mit dem tatsächlichen GitHub-Updater und dem festgelegten Prüfschlüssel verifiziert.
 
 Lobby-Hosting bleibt unabhängig davon noch einzurichten. Ein Windows-Authenticode-Zertifikat ist nicht vorhanden; die Update-Pakete besitzen stattdessen die beschriebene eigene kryptografische Signatur.

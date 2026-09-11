@@ -1,11 +1,17 @@
 using System.Reflection;
 class LivePublisherTests {
  [STAThread] static void Main(string[] args) {
-  if(args.Length!=2 || args[0]!="--dispatch-real-release")throw new Exception("Explicit --dispatch-real-release x.y.z required; this starts an actual GitHub build.");
+  if(args.Length!=2 || (args[0]!="--dispatch-real-release" && args[0]!="--verify-real-release"))throw new Exception("Use --dispatch-real-release x.y.z to start a GitHub build, or --verify-real-release x.y.z for read-only verification.");
   StableVersion.Parse(args[1]);ApplicationConfiguration.Initialize();
   using var host=new Form {ShowInTaskbar=false,WindowState=FormWindowState.Minimized};
   host.Shown+=async(_,_)=>{
    try {
+    if(args[0]=="--verify-real-release") {
+     using var updates=new GitHubUpdates(Files.Read<UpdateConfig>("platform/updates.json"),Path.Combine(Path.GetTempPath(),"poke-verify-"+Guid.NewGuid()+".json"));
+     var offer=await updates.Latest("0.0.0");
+     if(offer?.Manifest.Version!=args[1])throw new Exception("Expected complete signed GitHub release "+args[1]);
+     Console.WriteLine("PASS Actual GitHub stable release "+args[1]+": complete metadata, signature, pinned public key, checksum file and package size verified.");return;
+    }
     using var publisher=new Publisher();
     T Field<T>(string name)=>(T)typeof(Publisher).GetField(name,BindingFlags.Instance|BindingFlags.NonPublic)!.GetValue(publisher)!;
     Task Call(string name)=>(Task)typeof(Publisher).GetMethod(name,BindingFlags.Instance|BindingFlags.NonPublic)!.Invoke(publisher,null)!;

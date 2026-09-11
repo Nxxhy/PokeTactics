@@ -1,6 +1,6 @@
 # Poké Tactics – GitHub-Updates (9.1)
 
-Spiel-Repository: `Nxxhy/PokeTactics` (öffentlich, Einrichtung in Arbeit). Spiel und Launcher werden zusammen über signierte Windows-Pakete aus GitHub Releases aktualisiert. Die Entwickler-App startet denselben GitHub-Actions-Workflow und veröffentlicht fertige Entwürfe.
+Spiel-Repository: [Nxxhy/PokeTactics](https://github.com/Nxxhy/PokeTactics) (öffentlich). Spiel und Launcher werden zusammen über signierte Windows-Pakete aus [GitHub Releases](https://github.com/Nxxhy/PokeTactics/releases/latest) aktualisiert. Die Entwickler-App startet denselben GitHub-Actions-Workflow und veröffentlicht fertige Entwürfe.
 
 Aktuelle Anleitung: [GitHub Releases](docs/GITHUB-RELEASES.md). Der frühere eigene Update-Server wurde entfernt; Lobby-Hosting bleibt separat.
 
