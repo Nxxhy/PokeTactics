@@ -36,3 +36,5 @@ Automatisiert bestanden: 101 Prüfungen der Mehrspieler-Spielregeln einschließl
 Die Layout-Prüfungen ersetzen keine visuelle Abnahme. Die Windows-Computersteuerung konnte das Launcher-Fenster nicht aktivieren; eine visuelle Prüfung im Fenster-/Maximiert-Modus bleibt offen. Ein zweiter physischer PC steht derzeit nicht zur Verfügung: LAN-Verbindung zwischen zwei Geräten und deren Windows-Firewall sind noch nicht geprüft.
 
 Entwicklertests: `tools/test-multiplayer.ps1` nach `tools/build-platform.ps1`; die Release-Automation führt beide aus. Veröffentlichungsablauf: [GitHub Releases](GITHUB-RELEASES.md).
+
+[Windows-Build 9.3.0](https://github.com/Nxxhy/PokeTactics/actions/runs/36398624022) hat alle Build-, Spiel-, Mehrspieler- und Update-Tests bestanden. [Release v9.3.0](https://github.com/Nxxhy/PokeTactics/releases/tag/v9.3.0) ist veröffentlicht. Der tatsächliche Updater hat die öffentlichen Metadaten, Signatur mit fest hinterlegtem Schlüssel, Prüfsummen-Datei und Paketgröße erfolgreich geprüft.
