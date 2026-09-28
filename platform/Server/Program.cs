@@ -25,11 +25,17 @@ bool Compatible(string version) => requiredVersion.Length>0 ? version==requiredV
 void Sweep() {
     var now = DateTimeOffset.UtcNow;
     foreach (var room in rooms.Values.ToArray()) {
-        if (now - room.Members[0].Seen > TimeSpan.FromSeconds(30)) { rooms.Remove(room.Code); continue; }
-        room.Members.RemoveAll(m => now - m.Seen > TimeSpan.FromSeconds(30));
+        if (now - room.Members[0].Seen > TimeSpan.FromSeconds(30)) { room.Worker?.Dispose();rooms.Remove(room.Code); continue; }
+        try {
+            foreach(var member in room.Members.Where(m=>now-m.Seen>TimeSpan.FromSeconds(30)).ToArray()){room.Worker?.Drop(member);room.Members.Remove(member);}
+        } catch(Exception e) {
+            Console.Error.WriteLine("Lobby engine stopped: "+e.Message);
+            room.Worker?.Dispose();rooms.Remove(room.Code);
+        }
     }
 }
-object View(Room r, Member m) => new { code = r.Code, me = m.Id, host = r.Members[0].Id, members = r.Members.Select(p => new { id = p.Id, name = p.Name, ready = p.Ready, connected = DateTimeOffset.UtcNow - p.Seen < TimeSpan.FromSeconds(5) }), reconnectSeconds = 30 };
+object View(Room r, Member m,int seen=-1,object? result=null) => new { code = r.Code, me = m.Id, host = r.Members[0].Id, members = r.Members.Select(p => new { id = p.Id, name = p.Name, ready = p.Ready, connected = DateTimeOffset.UtcNow - p.Seen < TimeSpan.FromSeconds(5) }), reconnectSeconds = 30, match_state=r.Worker?.View(m,seen),result };
+using var cleanup=new Timer(_=>{lock(gate){try{Sweep();}catch(Exception e){Console.Error.WriteLine("Lobby cleanup: "+e.Message);}}},null,1000,1000);
 IResult Error(string message, int code = 400) => Results.Json(new { message }, statusCode: code);
 app.MapGet("/health", () => Results.Ok(new { status = "ok", service="PokeTacticsLobby", instance=Environment.GetEnvironmentVariable("POKE_INSTANCE")??"", version=requiredVersion.Length>0?requiredVersion:Minimum(), minimumVersion = Minimum(), requiredVersion, lan }));
 app.MapPost("/lobby", (LobbyRequest q) => {
@@ -43,6 +49,7 @@ app.MapPost("/lobby", (LobbyRequest q) => {
             string code; do { code = Convert.ToHexString(RandomNumberGenerator.GetBytes(3)); } while (rooms.ContainsKey(code));
             room = new Room(code); rooms.Add(code, room);
         } else if (!rooms.TryGetValue(q.Code.Trim().ToUpperInvariant(), out room!)) return Error("Lobby nicht gefunden oder bereits geschlossen.", 404);
+        if(room.Worker!=null)return Error("Die Partie läuft bereits. Neue Teilnehmer können nicht nachrücken.",409);
         if (room.Members.Count >= 8) return Error("Diese Lobby ist voll (8/8).", 409);
         var member = new Member(q.Name!.Trim()); room.Members.Add(member);
         return Results.Json(new { token = member.Token, lobby = View(room, member) });
@@ -57,24 +64,42 @@ app.MapPost("/lobby/{code}/session", (string code, SessionRequest q, HttpContext
         var member = room.Members.Find(m => m.Token == token);
         if (member == null) return Error("Du bist nicht mehr Mitglied dieser Lobby.", 403);
         member.Seen = DateTimeOffset.UtcNow;
+        object? result=null;
+        try {
         switch (q.Action) {
             case "poll": break;
-            case "ready": member.Ready = q.Ready; break;
+            case "ready": if(room.Worker!=null)return Error("Die Partie läuft bereits.",409);member.Ready = q.Ready; break;
+            case "start":
+                if(room.Members[0]!=member)return Error("Nur der Host kann die Partie starten.",403);
+                if(room.Worker!=null)break;
+                if(room.Members.Count<2||room.Members.Any(m=>!m.Ready||DateTimeOffset.UtcNow-m.Seen>TimeSpan.FromSeconds(5)))return Error("Mindestens zwei verbundene Trainer müssen bereit sein.",409);
+                if(rooms.Values.Count(r=>r.Worker!=null)>=8)return Error("Zu viele laufende Partien auf diesem Host.",503);
+                room.Worker=new MatchWorker(room.Members);break;
+            case "command":
+            case "round_ready":
+            case "battle_ack":
+                if(room.Worker==null)return Error("Keine laufende Partie.",409);
+                if(q.Action=="command" && (q.Command==null||q.Command.Value.ValueKind!=JsonValueKind.Object))return Error("Ungültiger Spielbefehl.");
+                var answer=room.Worker.Call(new {op=q.Action=="command"?"command":q.Action=="round_ready"?"ready":"ack",id=member.Id,action=q.Command,revision=q.Revision,seq=q.Seq,stage=q.Stage,serial=q.Seen,seen=q.Seen});
+                result=answer.GetProperty("result");break;
             case "leave":
-                if (room.Members[0] == member) rooms.Remove(code); else room.Members.Remove(member);
+                if (room.Members[0] == member) {room.Worker?.Dispose();rooms.Remove(code);} else {room.Worker?.Drop(member);room.Members.Remove(member);}
                 return Results.Json(new { left = true });
             case "kick":
                 if (room.Members[0] != member) return Error("Nur der Host darf Spieler entfernen.", 403);
+                if(room.Worker!=null)return Error("Während der Partie können keine Trainer entfernt werden.",409);
                 if (q.Target == member.Id) return Error("Verwende Lobby schließen.");
                 room.Members.RemoveAll(m => m.Id == q.Target); break;
             default: return Error("Unbekannte Lobby-Aktion.");
         }
-        return Results.Json(View(room, member));
+        return Results.Json(View(room, member,q.Seen,result));
+        } catch(Exception e) {room.Worker?.Dispose();room.Worker=null;rooms.Remove(code);return Error("Partie abgebrochen: "+e.Message,410);}
     }
 });
 // Game updates and publishing are exclusively handled by Nxxhy/PokeTactics GitHub Releases.
+app.Lifetime.ApplicationStopping.Register(()=>{lock(gate){foreach(var room in rooms.Values)room.Worker?.Dispose();}});
 app.Run();
 record LobbyRequest(string Name, string Code, string Version);
-record SessionRequest(string Action, string Version, bool Ready = false, string Target = "");
-class Room(string code) { public string Code = code; public List<Member> Members = new(); }
+record SessionRequest(string Action, string Version, bool Ready = false, string Target = "",JsonElement? Command=null,int Revision=-1,int Seq=0,int Stage=0,int Seen=0);
+class Room(string code) { public string Code = code; public List<Member> Members = new(); public MatchWorker? Worker; }
 class Member(string name) { public string Id = Guid.NewGuid().ToString("N"); public string Token = Convert.ToHexString(RandomNumberGenerator.GetBytes(32)); public string Name = name; public bool Ready; public DateTimeOffset Seen = DateTimeOffset.UtcNow; }

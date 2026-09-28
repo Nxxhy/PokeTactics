@@ -11,13 +11,13 @@ var traits = preload("res://core/traits.gd").new()
 var combatants: Array = []
 var augment_catalog = Augments.new()
 
-func prepare(allies: Array, enemies: Array, seed_value: int,augments: Array = []) -> Array:
+func prepare(allies: Array, enemies: Array, seed_value: int,augments: Array = [], enemy_augments: Array = []) -> Array:
  var rng = RandomNumberGenerator.new()
  rng.seed = seed_value
  var fighters = []
  for side in range(2):
   var team = allies if side == 0 else enemies
-  var ids = augments if side == 0 else []
+  var ids = augments if side == 0 else enemy_augments
   var synergy = augment_catalog.counts(team,ids)
   for source in team:
    var mon = catalog.get_mon(int(source.species))
@@ -63,8 +63,8 @@ func prepare(allies: Array, enemies: Array, seed_value: int,augments: Array = []
  for u in fighters: u.cast_threshold = traits.threshold(u)
  return fighters
 
-func run(allies: Array, enemies: Array, seed_value: int,augments: Array = []) -> Dictionary:
- var fighters = prepare(allies,enemies,seed_value,augments)
+func run(allies: Array, enemies: Array, seed_value: int,augments: Array = [], enemy_augments: Array = []) -> Dictionary:
+ var fighters = prepare(allies,enemies,seed_value,augments,enemy_augments)
  var frames = [{"tick":0,"units":fighters.duplicate(true),"events":[]}]
  var winner = -1
  var final_tick = 0

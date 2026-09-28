@@ -21,6 +21,13 @@ var code_input: LineEdit
 var notice = ""
 var leave_target = "main"
 var was_paused = false
+var network_match = false
+var match_state: Dictionary = {}
+var seen_battle = 0
+var command_seq = 0
+var network_action: Dictionary = {}
+var network_before: Array = []
+var ack_pending = false
 
 func _ready():
  game_ui = get_parent()
@@ -40,7 +47,7 @@ func _ready():
   var build = JSON.parse_string(FileAccess.get_file_as_string(build_path))
   if build is Dictionary: version = str(build.get("version",VERSION))
  http = HTTPRequest.new()
- http.timeout = 5
+ http.timeout = 30
  add_child(http)
  http.request_completed.connect(_response)
  get_tree().auto_accept_quit = false
@@ -51,9 +58,11 @@ func _process(delta):
   poll_time += delta
   if poll_time >= 1 and pending.is_empty():
    poll_time = 0
-   request("poll")
+   request("battle_ack" if ack_pending else "poll")
   if status and is_instance_valid(status) and Time.get_ticks_msec()-last_success > 5000:
    status.text = "Verbindung unterbrochen – erneuter Versuch läuft (max. 30 Sekunden)."
+  if network_match and Time.get_ticks_msec()-last_success > 5000:
+   game_ui.message = "Verbindung zum Host unterbrochen. Befehle sind bis zur Wiederverbindung gesperrt."
 
 func _notification(what):
  if what == NOTIFICATION_WM_CLOSE_REQUEST: leave_game(true)
@@ -63,6 +72,13 @@ func _input(event):
   if event.keycode == KEY_F11 and screen != "game":
    DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN else DisplayServer.WINDOW_MODE_FULLSCREEN)
   if event.keycode == KEY_ESCAPE:
+   if network_match:
+    if screen == "game": leave_game(false)
+    elif screen == "multiplayer_leave": leave_target = "main"; show_screen("standings")
+    elif match_state.get("phase","") == "finished": show_screen("multiplayer_result")
+    else: show_screen("game")
+    get_viewport().set_input_as_handled()
+    return
    if screen == "game": leave_game(false)
    elif screen not in ["main","lobby","confirm"]: show_screen("main")
    get_viewport().set_input_as_handled()
@@ -177,9 +193,9 @@ func show_screen(which: String):
    for m in members:
     if m.id == room.me: me_ready = m.ready
    button("Nicht bereit" if me_ready else "Bereit",func(): request("ready",{"ready":not me_ready}))
-   var start = button("Multiplayer starten",func(): pass)
-   start.disabled = true
-   label("Multiplayer-Partien folgen in einem späteren Update",20)
+   var start = button("Multiplayer starten",func(): request("start"))
+   start.disabled = room.me != room.host or members.size() < 2 or not members.all(func(m): return m.ready and m.connected)
+   label("2–8 Trainer · 3 Leben · alle bereit → Host startet",20)
    status = label("Verbunden · Wiederverbindungsfrist: 30 Sekunden",20)
    button("Lobby schließen" if room.me == room.host else "Lobby verlassen",func(): request("leave"))
   "settings":
@@ -201,6 +217,23 @@ func show_screen(which: String):
    body.add_child(volume)
    volume.value_changed.connect(func(value): AudioServer.set_bus_volume_db(0,linear_to_db(value)); settings.set_value("audio","volume",value))
    button("Speichern und zurück",func(): player_name = name_input.text.strip_edges(); save_settings(); show_screen("main"))
+  "standings", "multiplayer_result":
+   label("PARTIE BEENDET" if which == "multiplayer_result" else "TRAINER-STAND · KAMPF %d" % int(match_state.get("stage",1)),30)
+   if which == "multiplayer_result":
+    var winner_name = "Unentschieden"
+    for entry in match_state.get("scores",[]):
+     if entry.id == match_state.get("champion",""): winner_name = entry.name+" gewinnt!"
+    label(winner_name,28)
+   for entry in match_state.get("scores",[]):
+    label("%s · %d Leben · %d Siege%s" % [entry.name,int(entry.lives),int(entry.wins)," · ausgeschieden" if entry.lives <= 0 else (" · bereit" if entry.ready else "")])
+   if which != "multiplayer_result": button("Zurück zum Spielfeld",func(): show_screen("game"))
+   button("Partie verlassen" if room.me != room.host else "Partie für alle schließen",func(): show_screen("multiplayer_leave"))
+   status = label("Ausgeschiedene Trainer können den Stand bis zum Ende verfolgen.",18)
+  "multiplayer_leave":
+   label("Multiplayer-Partie verlassen?",30)
+   label("Als Host beendest du die Partie für alle Trainer." if room.me == room.host else "Dein Team scheidet aus. Ein erneuter Beitritt ist während der Partie nicht möglich.")
+   button("Zurück",func(): leave_target = "main"; show_screen("standings"))
+   button("Verlassen",func(): request("leave"))
   "confirm":
    label("Expedition verlassen?",30)
    label("Der gesamte Fortschritt dieser Expedition geht verloren.")
@@ -240,6 +273,9 @@ func save_settings():
 
 func leave_game(quit_app: bool):
  leave_target = "quit" if quit_app else "main"
+ if network_match:
+  show_screen("multiplayer_leave" if quit_app else ("multiplayer_result" if match_state.get("phase","") == "finished" else "standings"))
+  return
  if screen == "game" and game_ui.game.state.phase != "finished":
   was_paused = game_ui.paused
   game_ui.paused = true
@@ -267,7 +303,7 @@ func request(action: String, extra: Dictionary = {}):
  if action not in ["create","join"]:
   path += "/"+str(room.code)+"/session"
   headers.append("Authorization: Bearer "+token)
-  payload = {"version":version,"action":action}
+  payload = {"version":version,"action":action,"seen":seen_battle,"stage":int(match_state.get("stage",0))}
   payload.merge(extra)
  pending = action
  if http.request(service+path,headers,HTTPClient.METHOD_POST,JSON.stringify(payload)) != OK:
@@ -284,6 +320,10 @@ func _response(result, response_code, _headers, bytes):
   if action == "leave" or response_code in [403,410,426] or (not token.is_empty() and Time.get_ticks_msec()-last_success > 30000):
    token = ""
    room = {}
+   network_match = false
+   match_state = {}
+   game_ui.playback = {}
+   game_ui.effects.clear()
    notice = error
    if action == "leave" and leave_target == "quit": get_tree().quit()
    else: show_screen("main")
@@ -292,14 +332,85 @@ func _response(result, response_code, _headers, bytes):
  if action == "leave":
   token = ""
   room = {}
+  network_match = false
+  match_state = {}
+  game_ui.playback = {}
+  game_ui.effects.clear()
   if leave_target == "quit": get_tree().quit()
   else: show_screen("main")
   return
  if action in ["create","join"]:
+  seen_battle = 0
+  command_seq = 0
+  ack_pending = false
   token = data.token
   room = data.lobby
   show_screen("lobby")
+ elif data.get("match_state") is Dictionary:
+  room = data
+  apply_network(data.match_state,data.get("result"),action)
  elif room != data:
   room = data
   show_screen("lobby")
  elif is_instance_valid(status): status.text = "Verbunden · Wiederverbindungsfrist: 30 Sekunden"
+
+func send_command(action: Dictionary, revision: int) -> Dictionary:
+ if not pending.is_empty() or Time.get_ticks_msec()-last_success > 5000:
+  return {"ok":false,"message":"Warte auf die Bestätigung des Hosts."}
+ if match_state.get("phase","") != "planning" or match_state.get("ready",false) or game_ui.game.state.lives <= 0:
+  return {"ok":false,"message":"Die Aufstellung ist bis zur nächsten Planung gesperrt."}
+ if action.type == "battle":
+  request("round_ready")
+ else:
+  command_seq += 1
+  network_action = action.duplicate(true)
+  network_before = game_ui.game.state.units.duplicate(true)
+  request("command",{"command":action,"revision":revision,"seq":command_seq})
+ return {"ok":true,"message":"Anfrage an den Host gesendet …"}
+
+func apply_network(data: Dictionary, result, action: String):
+ var first = not network_match
+ var scores_changed = match_state.get("scores",[]) != data.scores or match_state.get("stage",0) != data.stage
+ network_match = true
+ match_state = data
+ game_ui.game.state = data.state
+ game_ui.game.rng.state = int(data.state.get("rng_state","0"))
+ if action == "battle_ack": ack_pending = false
+ if first:
+  game_ui.playback = {}
+  game_ui.effects.clear()
+  game_ui.game.last_battle = {}
+  game_ui.start_open = false
+  game_ui.reset_open = false
+  game_ui.help_open = false
+  show_screen("game")
+ if action == "command" and result is Dictionary:
+  if result.get("ok",false): game_ui._action_effects(network_action,network_before)
+  game_ui.message = result.get("message","")
+  game_ui.message_error = not result.get("ok",false)
+  network_action = {}
+ else:
+  var ready_count = data.scores.filter(func(s): return s.lives > 0 and s.ready).size()
+  game_ui.message = "Multiplayer · Kampf %d · %s · %d bereit · %ds" % [int(data.stage),"Kampf läuft" if data.phase == "battle" else "Aufstellen und bereit melden",ready_count,maxi(0,int(data.deadline-Time.get_unix_time_from_system()))]
+  game_ui.message_error = false
+  if result is Dictionary and not result.get("ok",true):
+   game_ui.message = result.get("message","")
+   game_ui.message_error = true
+ if data.has("recipe") and int(data.recipe.serial) > seen_battle:
+  seen_battle = int(data.recipe.serial)
+  game_ui.game.last_battle = preload("res://core/league.gd").replay(data.recipe)
+  game_ui._replay()
+  if screen != "multiplayer_leave": show_screen("game")
+ elif game_ui.playback.is_empty():
+  if screen != "multiplayer_leave":
+   if data.phase == "finished" and (screen != "multiplayer_result" or scores_changed): show_screen("multiplayer_result")
+   elif data.phase != "finished" and game_ui.game.state.lives <= 0 and (screen != "standings" or scores_changed): show_screen("standings")
+   elif screen == "standings" and scores_changed: show_screen("standings")
+ game_ui.queue_redraw()
+
+func battle_finished():
+ ack_pending = true
+ if pending.is_empty(): request("battle_ack")
+ if screen == "multiplayer_leave": return
+ if match_state.get("phase","") == "finished": show_screen("multiplayer_result")
+ elif game_ui.game.state.lives <= 0: show_screen("standings")

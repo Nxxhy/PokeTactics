@@ -1,4 +1,4 @@
-param([string]$Version='9.2.0', [string]$Godot=(Join-Path $PSScriptRoot '..\..\Godot\Godot_v4.7.2-stable_win64_console.exe'), [string]$Inno=(Join-Path $PSScriptRoot '..\platform\inno\ISCC.exe'))
+param([string]$Version='9.3.0', [string]$Godot=(Join-Path $PSScriptRoot '..\..\Godot\Godot_v4.7.2-stable_win64_console.exe'), [string]$Inno=(Join-Path $PSScriptRoot '..\platform\inno\ISCC.exe'))
 $ErrorActionPreference='Stop'
 $projectPath=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 Push-Location $projectPath

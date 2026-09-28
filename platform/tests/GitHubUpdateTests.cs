@@ -19,7 +19,7 @@ class GitHubUpdateTests {
  [STAThread] static void Main() {
   Directory.CreateDirectory(Work); ApplicationConfiguration.Initialize();
   using var form=new Form {ShowInTaskbar=false,WindowState=FormWindowState.Minimized};
-  form.Shown+=async(_,_)=>{try {await Run();Results.Add($"{count} passed, 0 failed. Local simulated GitHub API; actual launcher installation and game process. Public GitHub release test is separate.");}catch(Exception e){Results.Add(e.ToString());Environment.ExitCode=1;}finally{File.WriteAllLines(Path.Combine(Root,"docs/github-update-tests.txt"),Results);form.Close();}};
+  form.Shown+=async(_,_)=>{try {await Run();Results.Add($"{count} passed, 0 failed. Local simulated GitHub API; actual launcher installation and game process. Public GitHub release test is separate.");}catch(Exception e){Results.Add(e.ToString());Environment.ExitCode=1;}finally{File.WriteAllLines(Path.Combine(Root,"docs/github-update-tests.txt"),Results);if(Environment.ExitCode==0){try{Directory.Delete(Work,true);}catch(IOException){}}form.Close();}};
   Application.Run(form);
  }
  static async Task Run() {
@@ -73,6 +73,19 @@ class GitHubUpdateTests {
    return home;
   }
   var installed=Home("installed");
+  using(var layout=new Launcher(new[]{"--home",Home("layout")},true,()=>Client(new Fixture(rsa,"9.0.0")))) {
+   void Arrange(Control parent) {parent.PerformLayout();foreach(Control child in parent.Controls)Arrange(child);}
+   foreach(var size in new[]{new Size(720,720),new Size(900,840),new Size(1920,1080)}) {
+    layout.Size=size;Arrange(layout);
+    var button=Field<Button>(layout,"play");
+    Check(button.Width>100&&button.Height>=32&&button.Bottom<=button.Parent!.ClientSize.Height,"Play footer fits launcher layout "+size);
+    var statusLabel=Field<Label>(layout,"status");
+    statusLabel.Text="Eine ausführliche Fehlermeldung mit einer sehr langen Versionsbeschreibung muss im Launcher umbrechen und darf die nächste Schaltfläche nicht verdecken.";
+    Arrange(layout);
+    var required=TextRenderer.MeasureText(statusLabel.Text,statusLabel.Font,new Size(statusLabel.Width-statusLabel.Padding.Horizontal,0),TextFormatFlags.WordBreak|TextFormatFlags.NoPrefix).Height+statusLabel.Padding.Vertical;
+    Check(statusLabel.Height>=required,"Long status text receives sufficient height "+size);
+   }
+  }
   var currentFixture=new Fixture(rsa,"9.0.0");
   using(var launcher=new Launcher(new[]{"--home",Home("strict-start")},true,()=>Client(currentFixture))) {
    await Update(launcher);Check(Field<Button>(launcher,"play").Enabled,"Valid online current release enables play button");

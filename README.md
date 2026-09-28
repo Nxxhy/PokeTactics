@@ -1,6 +1,6 @@
-# Poké Tactics – LAN-Lobbys und Pixel-Launcher (9.2.0)
+# Poké Tactics – LAN-Multiplayer und Pixel-Launcher (9.3.0)
 
-Neu: lokaler Lobbyserver direkt im Launcher, LAN-Adressen zum Teilen, geprüfte Gast-Verbindungen und überarbeitete Oberfläche mit getrennten Bereichen für Updates und LAN. [Anleitung für Host und Gäste](docs/LAN-UND-LAUNCHER.md). Der Server ist im Windows-Paket enthalten. Gemeinsame Multiplayer-Kämpfe sind weiterhin nicht implementiert.
+Neu: gemeinsame Partien für 2–8 Trainer mit drei Leben, wechselnden Gegnern und serverseitig berechneten Kämpfen. Der lokale Server und die Spielengine sind im Windows-Paket enthalten. Im Pixel-Launcher sind Updates und LAN getrennt; lange Texte umbrechen und der Spielstart bleibt erreichbar. [Anleitung, Regeln und Prüfgrenzen](docs/LAN-UND-LAUNCHER.md).
 
 Ab 9.1.2 ist zum Starten eine erfolgreiche Online-Prüfung der neuesten stabilen Version erforderlich. Updates werden automatisch installiert; ohne Verbindung oder bei Update-Fehlern bleibt der Spielstart gesperrt. Laufende Partien werden nicht unterbrochen. Alte Offline-Versionen lassen sich nicht rückwirkend sperren.
 

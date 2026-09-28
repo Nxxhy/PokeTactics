@@ -19,6 +19,7 @@ func _init():
  files.append("assets/fonts/pkmnem.ttf")
  files.append("ui/launch_gate.gd")
  files.append("core/lobby_endpoint.gd")
+ files.append_array(["core/league.gd","core/network_worker.gd"])
  files.append("assets/fonts/pkmnemn.ttf")
  files.append_array(["ui/forest.gd","ui/forest_layer.gd","assets/animated/manifest.json"])
  for filename in DirAccess.get_files_at("res://assets/animated"):

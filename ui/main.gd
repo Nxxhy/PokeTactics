@@ -997,6 +997,11 @@ func _get_tooltip(point: Vector2) -> String:
 func _send(action: Dictionary,revision: int = -1) -> Dictionary:
  if not playback.is_empty():
   return {"ok":false,"message":"Während des Kampfes ist die Aufstellung gesperrt."}
+ if is_instance_valid(shell) and shell.network_match:
+  var network_result = shell.send_command(action,int(game.state.revision) if revision < 0 else revision)
+  message = network_result.message
+  message_error = not network_result.ok
+  return network_result
  var old_units = game.state.units.duplicate(true)
  var result = game.command(action,int(game.state.revision) if revision < 0 else revision)
  message = result.message
@@ -1035,10 +1040,13 @@ func _finish_playback():
  elif game.state.outcome == "win":
   _visual("victory",Vector2(1218,820),Vector2(1218,820),{},1.4)
 
- if game.state.phase == "finished" and is_instance_valid(shell):
+ if is_instance_valid(shell) and shell.network_match:
+  shell.battle_finished()
+ elif game.state.phase == "finished" and is_instance_valid(shell):
   shell.show_screen("result")
 
 func _new_game():
+ if is_instance_valid(shell) and shell.network_match: return
  if OS.has_feature("web"):
   DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
  game = MatchModel.new(int(Time.get_unix_time_from_system())%1000000000,chosen_difficulty)
@@ -1385,9 +1393,14 @@ func _actions(combat: bool,s: Dictionary):
  var gap = 6
  var width = (r.size.x-20)/3
  layout.fight = Rect2(r.position+Vector2(6,6),Vector2(r.size.x-12,32))
- _button(layout.fight,"Weiter" if combat and paused else ("Pause" if combat else ("Neue Partie" if s.phase == "finished" else "Kampf starten [Leertaste]")),func():
+ var networked = is_instance_valid(shell) and shell.network_match
+ var fight_label = "Bereit für den Kampf" if networked else "Kampf starten [Leertaste]"
+ if networked and shell.match_state.get("ready",false): fight_label = "Bereit · warte auf Trainer"
+ _button(layout.fight,"Weiter" if combat and paused else ("Pause" if combat else ("Ausgeschieden" if networked and s.phase == "finished" else ("Neue Partie" if s.phase == "finished" else fight_label))),func():
   if combat: paused = not paused
-  elif s.phase == "finished": reset_open = true
+  elif s.phase == "finished":
+   if networked: shell.show_screen("standings")
+   else: reset_open = true
   else: _send({"type":"battle"}),GREEN)
  layout.reroll = Rect2(r.position+Vector2(6,43),Vector2(width,29))
  layout.xp = Rect2(r.position+Vector2(8+width,43),Vector2(width,29))

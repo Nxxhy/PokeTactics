@@ -58,6 +58,7 @@ jobs:
         run: |
           ./tools/build-platform.ps1 -Version $env:RELEASE_VERSION -Godot $env:GODOT_EXE -Inno $env:INNO_EXE
           ./tools/test-github-updates.ps1 -Godot $env:GODOT_EXE
+          ./tools/test-multiplayer.ps1 -Godot $env:GODOT_EXE
       - name: Sign Windows update package
         if: env.RELEASE_DONE != 'true'
         shell: pwsh
@@ -81,4 +82,7 @@ jobs:
             docs/lan-host-tests.txt
             docs/lobby-endpoint-tests.log
             docs/launch-gate-tests.log
+            docs/league-tests.log
+            docs/multiplayer-tests.txt
+            docs/mp-process-*.log
           if-no-files-found: ignore

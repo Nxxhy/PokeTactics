@@ -97,7 +97,7 @@ partial class Launcher {
   });page.Controls.Add(connectLan);
   page.Controls.Add(ActionButton("Konfigurierten Online-Dienst verwenden",()=>{if(GameRunning()||busy||localHost.Running)return;lobbyEndpoint=service.Endpoint;lanStatus.Text=service.Endpoint.Length>0?"Online-Dienst ausgewählt.":"Noch kein öffentlicher Lobby-Dienst eingerichtet.";}));
   Description(page,"Windows-Firewall: Zugriff für private Netzwerke erlauben. Beide PCs müssen im selben LAN/WLAN sein. Keine Router-Portfreigabe nötig. Der Host-Launcher bleibt geöffnet. Die Online-Versionsprüfung bleibt Pflicht.",18);
-  Description(page,"Lobbys unterstützen bis zu 8 Trainer und Bereitschaftsstatus. Gemeinsame Kämpfe sind noch nicht verfügbar.",18);
+  Description(page,"Gemeinsame Partien für 2–8 Trainer: Alle melden sich bereit, dann startet der Host. Drei Leben pro Trainer – das letzte verbleibende Team gewinnt.",18);
  }
 }
 
