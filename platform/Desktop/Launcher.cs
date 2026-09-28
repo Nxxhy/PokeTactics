@@ -12,7 +12,7 @@ static class LauncherProgram {
   try { Application.Run(new Launcher(args)); } finally { mutex.ReleaseMutex(); }
  }
 }
-class Launcher : PixelForm {
+partial class Launcher : PixelForm {
  readonly string home;
  readonly Service service;
  readonly UpdateConfig updateConfig;
@@ -53,20 +53,21 @@ class Launcher : PixelForm {
    Button("Gespeicherten GitHub-Zugriff entfernen",()=>{if(File.Exists(credentials)) File.Delete(credentials); currentConfirmed=false; play.Enabled=false; status.Text="Zugriff entfernt. Spielstart erfordert eine erfolgreiche Online-Prüfung.";});
   }
   Button("Beenden",Close);
+  BuildDesign();
   Shown += async (_,_) => { await Check(true); if(!IsDisposed) polling.Start(); };
   polling.Tick += async (_,_) => await Check();
   Disposed += (_,_) => polling.Dispose();
-  FormClosing += (_,e) => { if (busy) { e.Cancel=true; status.Text="Bitte warte, bis die laufende Aktualisierung abgeschlossen ist."; } };
+  FormClosing += (_,e) => { if (busy || lanBusy || (localHost.Running && GameRunning())) { e.Cancel=true; status.Text="Bitte den laufenden Vorgang bzw. das Spiel zuerst beenden. Der lokale Lobbyserver bleibt solange aktiv.";lanStatus.Text=status.Text; } };
  }
  string ActiveDirectory => Path.Combine(home,"versions",File.ReadAllText(Path.Combine(home,"active.txt")).Trim());
  async void StartGame() {
-  if (busy || game is { HasExited:false }) return;
+  if (busy || lanBusy || game is { HasExited:false }) return;
   await Check(true);
   if(IsDisposed || !currentConfirmed || busy) return;
   try {
    var path = Directory.Exists(Path.Combine(home,"versions")) ? ActiveDirectory : AppContext.BaseDirectory;
    var start = new ProcessStartInfo(Path.Combine(path,"PokeTactics.exe")) { WorkingDirectory=path,UseShellExecute=false };
-   start.Environment["POKE_SERVICE"] = service.Endpoint;
+   start.Environment["POKE_SERVICE"] = lobbyEndpoint;
    var ticket=Path.Combine(Path.GetTempPath(),"poketactics-launch-"+Guid.NewGuid()+".json");
    Files.Atomic(ticket,JsonSerializer.Serialize(new { version, expires=DateTimeOffset.UtcNow.ToUnixTimeSeconds()+30 },Files.Json));
    start.Environment["POKE_LAUNCH_TICKET"] = ticket;

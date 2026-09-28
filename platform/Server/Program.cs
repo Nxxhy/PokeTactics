@@ -4,14 +4,24 @@ using System.IO.Compression;
 using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.WebHost.ConfigureKestrel(o => o.Limits.MaxRequestBodySize = 600L * 1024 * 1024);
+builder.WebHost.ConfigureKestrel(o => o.Limits.MaxRequestBodySize = 8192);
 builder.Services.AddRateLimiter(o => { o.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(c => RateLimitPartition.GetFixedWindowLimiter(c.Connection.RemoteIpAddress?.ToString() ?? "unknown", _ => new FixedWindowRateLimiterOptions { PermitLimit = 1200, Window = TimeSpan.FromMinutes(1), QueueLimit = 0 })); o.RejectionStatusCode = 429; });
 var app = builder.Build();
+var lan = Environment.GetEnvironmentVariable("POKE_LAN")=="1";
+var requiredVersion = Environment.GetEnvironmentVariable("POKE_REQUIRED_VERSION") ?? "";
+if(lan) app.Use(async (context,next)=> {
+ var ip=context.Connection.RemoteIpAddress;
+ if(ip?.IsIPv4MappedToIPv6==true)ip=ip.MapToIPv4();
+ var b=ip?.GetAddressBytes();
+ if(b==null||b.Length!=4||!(b[0]==127||b[0]==10||(b[0]==172&&b[1]>=16&&b[1]<=31)||(b[0]==192&&b[1]==168))) {context.Response.StatusCode=403;return;}
+ await next(context);
+});
+if(Environment.GetEnvironmentVariable("POKE_PARENT_INPUT")=="1") _=Task.Run(async()=>{await Console.In.ReadLineAsync();app.Lifetime.StopApplication();});
 app.UseRateLimiter();
 var gate = new object();
 var rooms = new Dictionary<string, Room>();
 string Minimum() => Environment.GetEnvironmentVariable("POKE_MINIMUM_VERSION") ?? "9.0.0";
-bool Compatible(string version) => Version.TryParse(version, out var v) && v >= Version.Parse(Minimum());
+bool Compatible(string version) => requiredVersion.Length>0 ? version==requiredVersion : Version.TryParse(version, out var v) && v >= Version.Parse(Minimum());
 void Sweep() {
     var now = DateTimeOffset.UtcNow;
     foreach (var room in rooms.Values.ToArray()) {
@@ -21,7 +31,7 @@ void Sweep() {
 }
 object View(Room r, Member m) => new { code = r.Code, me = m.Id, host = r.Members[0].Id, members = r.Members.Select(p => new { id = p.Id, name = p.Name, ready = p.Ready, connected = DateTimeOffset.UtcNow - p.Seen < TimeSpan.FromSeconds(5) }), reconnectSeconds = 30 };
 IResult Error(string message, int code = 400) => Results.Json(new { message }, statusCode: code);
-app.MapGet("/health", () => Results.Ok(new { status = "ok", version = "9.0.0", minimumVersion = Minimum() }));
+app.MapGet("/health", () => Results.Ok(new { status = "ok", service="PokeTacticsLobby", instance=Environment.GetEnvironmentVariable("POKE_INSTANCE")??"", version=requiredVersion.Length>0?requiredVersion:Minimum(), minimumVersion = Minimum(), requiredVersion, lan }));
 app.MapPost("/lobby", (LobbyRequest q) => {
     lock (gate) {
         Sweep();

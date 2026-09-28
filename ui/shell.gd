@@ -32,7 +32,7 @@ func _ready():
   DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
  service = OS.get_environment("POKE_SERVICE").trim_suffix("/")
  var config_path = OS.get_executable_path().get_base_dir().path_join("service.json")
- if FileAccess.file_exists(config_path):
+ if service.is_empty() and FileAccess.file_exists(config_path):
   var config = JSON.parse_string(FileAccess.get_file_as_string(config_path))
   if config is Dictionary: service = str(config.get("endpoint",service)).trim_suffix("/")
  var build_path = OS.get_executable_path().get_base_dir().path_join("build.json")
@@ -146,7 +146,7 @@ func show_screen(which: String):
     code_input.max_length = 6
     code_input.placeholder_text = "ABC123"
     body.add_child(code_input)
-   status = label("Noch kein öffentlicher Server eingerichtet." if service.is_empty() else "Bereit zur Verbindung.")
+   status = label("Bitte im Launcher einen lokalen Host oder Lobby-Dienst wählen." if service.is_empty() else "Lobby-Dienst: "+service)
    button("Erstellen" if which == "create" else "Beitreten",func():
     player_name = name_input.text.strip_edges()
     save_settings()
@@ -255,10 +255,10 @@ func leave_game(quit_app: bool):
 func request(action: String, extra: Dictionary = {}):
  if not pending.is_empty(): return
  if service.is_empty():
-  status.text = "Noch kein Hosting eingerichtet. Einzelspieler ist vollständig verfügbar."
+  status.text = "Bitte im Launcher unter LAN-LOBBY einen Server starten oder die Host-Adresse wählen. Danach das Spiel neu starten."
   return
- if not service.begins_with("https://") and not service.begins_with("http://127.0.0.1:"):
-  status.text = "Der Lobby-Dienst benötigt HTTPS."
+ if not preload("res://core/lobby_endpoint.gd").allowed(service):
+  status.text = "HTTP ist nur für private IPv4-Adressen im Heimnetz erlaubt. Online-Dienste benötigen HTTPS."
   return
  var path = "/lobby"
  var headers = PackedStringArray(["Content-Type: application/json"])

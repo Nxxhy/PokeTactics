@@ -1,4 +1,4 @@
-param([string]$Version='9.1.0', [string]$Godot=(Join-Path $PSScriptRoot '..\..\Godot\Godot_v4.7.2-stable_win64_console.exe'), [string]$Inno=(Join-Path $PSScriptRoot '..\platform\inno\ISCC.exe'))
+param([string]$Version='9.2.0', [string]$Godot=(Join-Path $PSScriptRoot '..\..\Godot\Godot_v4.7.2-stable_win64_console.exe'), [string]$Inno=(Join-Path $PSScriptRoot '..\platform\inno\ISCC.exe'))
 $ErrorActionPreference='Stop'
 $projectPath=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
 Push-Location $projectPath
@@ -11,11 +11,13 @@ try {
         if ($LASTEXITCODE -ne 0) { throw "Publish failed: $($item[0])" }
     }
     New-Item -ItemType Directory -Force dist/PlayerBuild | Out-Null
+    & dotnet publish platform/Server/Server.csproj -c Release -r win-x64 --self-contained true -p:AssemblyName=PokeLobby -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:NuGetAudit=false -p:UseSharedCompilation=false -p:Version=$Version -o dist/PlayerBuild/Lobby --nologo
+    if ($LASTEXITCODE -ne 0) { throw 'Local lobby server publish failed' }
     Copy-Item -Path dist/PokeTactics/* -Destination dist/PlayerBuild -Recurse -Force
     Copy-Item -LiteralPath dist/Launcher/PokeLauncher.exe -Destination dist/PlayerBuild/PokeLauncher.exe -Force
     Set-Content -LiteralPath dist/PlayerBuild/build.json -Value ('{"version":"'+$Version+'"}') -Encoding utf8
     Copy-Item -LiteralPath tools/Animationsvorschau.cmd -Destination dist/PlayerBuild -Force
-    foreach ($doc in @('V9-ANLEITUNG.md','V9-ANIMATIONEN.md','ANIMATIONS-ZUORDNUNG.md','SHOWDOWN-NOTICES.txt')) {
+    foreach ($doc in @('V9-ANLEITUNG.md','V9-ANIMATIONEN.md','ANIMATIONS-ZUORDNUNG.md','SHOWDOWN-NOTICES.txt','LAN-UND-LAUNCHER.md')) {
         Copy-Item -LiteralPath "docs/$doc" -Destination dist/PlayerBuild/docs -Force
     }
     foreach ($license in @('LICENSE.txt','ThirdPartyNotices.txt')) {
