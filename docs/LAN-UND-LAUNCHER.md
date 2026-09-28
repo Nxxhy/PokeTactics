@@ -30,6 +30,8 @@ Zwei beschriftete Reiter trennen Spiel/Updates und LAN. Der Spielstart bleibt in
 
 `LanHost` startet ausschließlich den mitgelieferten Prozess, prüft eine zufällige Instanzkennung und stoppt nur den eigenen Server. Bei Launcher-Absturz beendet der Server sich über das geschlossene Eingaberohr. LAN-Anfragen sind auf private IPv4- und Loopback-Adressen beschränkt. Host und Gäste benötigen dieselbe Version. Öffentliche Dienste behalten HTTPS; GitHub-Updates verwenden unverändert HTTPS und signierte Pakete.
 
-Automatisiert getestet: 21 LAN-Host-Prüfungen mit dem tatsächlich gebündelten Server und zwei HTTP-Sitzungen; 12 Godot-Prüfungen der erlaubten/verbotenen Endpunkte; bestehende Updater-, Startfreigabe- und Spiellogik-Regressionen. Die Tests umfassen Portkonflikt, Neustart, verlorenen Launcher, Bereitschaft und Versionskonflikt.
+Automatisiert getestet: 21 LAN-Host-Prüfungen mit dem tatsächlich gebündelten Server und zwei HTTP-Sitzungen; 12 Godot-Prüfungen der erlaubten/verbotenen Endpunkte; sieben Integrationsprüfungen mit zwei echten Godot-Lobbyclients; 16 HTTP-Lobby-Regressionen; 217 Menüprüfungen ohne sichtbares Fenster; 71 Updater-, elf Startfreigabe- und 1.005 Spiellogik-Prüfungen. Die Tests umfassen Portkonflikt, Neustart, verlorenen Launcher, Bereitschaft und Versionskonflikt.
+
+[Windows-Build 9.2.0](https://github.com/Nxxhy/PokeTactics/actions/runs/36395314219) ist erfolgreich. [Release v9.2.0](https://github.com/Nxxhy/PokeTactics/releases/tag/v9.2.0) ist veröffentlicht; die öffentlichen Update-Metadaten, Signatur, Prüfsummen-Datei und Paketgröße wurden mit dem tatsächlichen Updater verifiziert.
 
 Die manuelle Computer-Use-Prüfung wurde durch die Escape-Taste gestoppt. Die visuelle Prüfung von Fenster-/Maximiert-Darstellung ist deshalb nicht abgeschlossen. Eine Verbindung zwischen zwei physischen Rechnern einschließlich Windows-Firewall wurde ebenfalls noch nicht geprüft.

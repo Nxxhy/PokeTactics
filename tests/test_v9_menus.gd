@@ -7,6 +7,10 @@ func _init(): call_deferred("run")
 func check(ok,label):
  if ok: passed+=1
  else: failed+=1;printerr("FAIL MENU: "+label)
+func capture(path):
+ if DisplayServer.get_name() == "headless": return
+ await RenderingServer.frame_post_draw
+ root.get_texture().get_image().save_png(path)
 func run():
  root.size=Vector2i(1280,720)
  ui=load("res://ui/main.tscn").instantiate()
@@ -32,8 +36,7 @@ func run():
   shell.show_screen("lobby")
   await process_frame;await process_frame
   check(shell.body.get_child_count()>=15,"Eight lobby slots plus controls")
-  await RenderingServer.frame_post_draw
-  root.get_texture().get_image().save_png("res://docs/v9-lobby-%d.png"%dims.x)
+  await capture("res://docs/v9-lobby-%d.png"%dims.x)
  shell.room={};shell.token=""
  shell.show_screen("game")
  ui._new_game()
@@ -53,15 +56,13 @@ func run():
  check(not ui.game.command({"type":"battle"}).ok,"Further battles rejected")
  ui.game._settle(0)
  check(before==ui.game.snapshot(),"No duplicated payout after final result")
- await RenderingServer.frame_post_draw
- root.get_texture().get_image().save_png("res://docs/v9-result.png")
+ await capture("res://docs/v9-result.png")
  ui._new_game();ui.game.state.round=30;ui.game._settle(0);ui._finish_playback()
  check(shell.screen=="result" and ui.game.state.lives==3,"Final victory opens central result screen")
  shell.show_screen("main")
  root.mode=Window.MODE_FULLSCREEN
  await process_frame;await process_frame
- await RenderingServer.frame_post_draw
- root.get_texture().get_image().save_png("res://docs/v9-main-menu.png")
+ await capture("res://docs/v9-main-menu.png")
  check(shell.root.size==ui.size,"Menu fills fullscreen viewport")
  print("V9 MENUS: %d passed, %d failed"%[passed,failed])
  quit(1 if failed else 0)

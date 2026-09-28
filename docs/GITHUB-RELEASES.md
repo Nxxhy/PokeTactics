@@ -23,6 +23,7 @@ Alternativ startet ein gepushter Tag `vX.Y.Z` denselben Workflow. Ein direkt in 
 ## Release-Dateien und Vertrauen
 
 - `PokeTactics-X.Y.Z-win-x64.zip`: vollständiges Windows-Spiel, `build.json`, Launcher und Lizenzhinweise; kein Quellcode-Download.
+  Seit 9.2.0 zusätzlich `Lobby/PokeLobby.exe` einschließlich eingebetteter .NET-/ASP.NET-Laufzeit für lokales Hosting. [LAN-Anleitung](LAN-UND-LAUNCHER.md).
 - `update-win-x64.json`: Repository, Version, Tag, Plattform, Paketname, Größe und SHA-256.
 - `update-win-x64.sig`: Base64-RSA-PSS/SHA-256-Signatur über die exakten JSON-Bytes.
 - `SHA256SUMS.txt`: lesbare Prüfsumme, mit den signierten Metadaten abgeglichen.

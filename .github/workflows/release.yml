@@ -78,4 +78,7 @@ jobs:
           path: |
             docs/github-update-tests.txt
             docs/github-core-test.log
+            docs/lan-host-tests.txt
+            docs/lobby-endpoint-tests.log
+            docs/launch-gate-tests.log
           if-no-files-found: ignore
